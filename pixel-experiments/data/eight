@@ -1,0 +1,1699 @@
+  2           0 LOAD_CONST               0 (0)
+              2 LOAD_CONST               1 (('deque',))
+              4 IMPORT_NAME              0 (collections)
+              6 IMPORT_FROM              1 (deque)
+              8 STORE_NAME               1 (deque)
+             10 POP_TOP
+
+  3          12 LOAD_CONST               0 (0)
+             14 LOAD_CONST               2 (('deepcopy',))
+             16 IMPORT_NAME              2 (copy)
+             18 IMPORT_FROM              3 (deepcopy)
+             20 STORE_NAME               3 (deepcopy)
+             22 POP_TOP
+
+  4          24 LOAD_CONST               0 (0)
+             26 LOAD_CONST               3 (('PriorityQueue',))
+             28 IMPORT_NAME              4 (queue)
+             30 IMPORT_FROM              5 (PriorityQueue)
+             32 STORE_NAME               5 (PriorityQueue)
+             34 POP_TOP
+
+ 10          36 LOAD_BUILD_CLASS
+             38 LOAD_CONST               4 (<code object Node at 0x1033d5920, file "./eight.py", line 10>)
+             40 LOAD_CONST               5 ('Node')
+             42 MAKE_FUNCTION            0
+             44 LOAD_CONST               5 ('Node')
+             46 CALL_FUNCTION            2
+             48 STORE_NAME               6 (Node)
+
+267          50 LOAD_BUILD_CLASS
+             52 LOAD_CONST               6 (<code object Solver at 0x1033d1030, file "./eight.py", line 267>)
+             54 LOAD_CONST               7 ('Solver')
+             56 MAKE_FUNCTION            0
+             58 LOAD_CONST               7 ('Solver')
+             60 CALL_FUNCTION            2
+             62 STORE_NAME               7 (Solver)
+
+380          64 LOAD_CONST               8 (<code object toWord at 0x1033d10e0, file "./eight.py", line 380>)
+             66 LOAD_CONST               9 ('toWord')
+             68 MAKE_FUNCTION            0
+             70 STORE_NAME               8 (toWord)
+             72 LOAD_CONST              10 (None)
+             74 RETURN_VALUE
+
+Disassembly of <code object Node at 0x1033d5920, file "./eight.py", line 10>:
+ 10           0 LOAD_NAME                0 (__name__)
+              2 STORE_NAME               1 (__module__)
+              4 LOAD_CONST               0 ('Node')
+              6 STORE_NAME               2 (__qualname__)
+
+ 11           8 LOAD_CONST              27 ((0, None, 0))
+             10 LOAD_CONST               3 (<code object __init__ at 0x1033bcea0, file "./eight.py", line 11>)
+             12 LOAD_CONST               4 ('Node.__init__')
+             14 MAKE_FUNCTION            1 (defaults)
+             16 STORE_NAME               3 (__init__)
+
+ 33          18 LOAD_CONST               5 (<code object getAvailableActions at 0x1033bcf50, file "./eight.py", line 33>)
+             20 LOAD_CONST               6 ('Node.getAvailableActions')
+             22 MAKE_FUNCTION            0
+             24 STORE_NAME               4 (getAvailableActions)
+
+ 55          26 LOAD_CONST               7 (<code object getResultFromAction at 0x1033d50e0, file "./eight.py", line 55>)
+             28 LOAD_CONST               8 ('Node.getResultFromAction')
+             30 MAKE_FUNCTION            0
+             32 STORE_NAME               5 (getResultFromAction)
+
+116          34 LOAD_CONST               9 (<code object isGoalState at 0x1033d5240, file "./eight.py", line 116>)
+             36 LOAD_CONST              10 ('Node.isGoalState')
+             38 MAKE_FUNCTION            0
+             40 STORE_NAME               6 (isGoalState)
+
+130          42 LOAD_CONST              11 (<code object getManhattanDistance at 0x1033d52f0, file "./eight.py", line 130>)
+             44 LOAD_CONST              12 ('Node.getManhattanDistance')
+             46 MAKE_FUNCTION            0
+             48 STORE_NAME               7 (getManhattanDistance)
+
+148          50 LOAD_CONST              13 (<code object getHammingDistance at 0x1033d5190, file "./eight.py", line 148>)
+             52 LOAD_CONST              14 ('Node.getHammingDistance')
+             54 MAKE_FUNCTION            0
+             56 STORE_NAME               8 (getHammingDistance)
+
+156          58 LOAD_CONST              15 (<code object __hash__ at 0x1033d5450, file "./eight.py", line 156>)
+             60 LOAD_CONST              16 ('Node.__hash__')
+             62 MAKE_FUNCTION            0
+             64 STORE_NAME               9 (__hash__)
+
+161          66 LOAD_CONST              17 (<code object __gt__ at 0x1033d55b0, file "./eight.py", line 161>)
+             68 LOAD_CONST              18 ('Node.__gt__')
+             70 MAKE_FUNCTION            0
+             72 STORE_NAME              10 (__gt__)
+
+182          74 LOAD_CONST              19 (<code object __ge__ at 0x1033d5660, file "./eight.py", line 182>)
+             76 LOAD_CONST              20 ('Node.__ge__')
+             78 MAKE_FUNCTION            0
+             80 STORE_NAME              11 (__ge__)
+
+203          82 LOAD_CONST              21 (<code object __lt__ at 0x1033d5710, file "./eight.py", line 203>)
+             84 LOAD_CONST              22 ('Node.__lt__')
+             86 MAKE_FUNCTION            0
+             88 STORE_NAME              12 (__lt__)
+
+224          90 LOAD_CONST              23 (<code object __le__ at 0x1033d57c0, file "./eight.py", line 224>)
+             92 LOAD_CONST              24 ('Node.__le__')
+             94 MAKE_FUNCTION            0
+             96 STORE_NAME              13 (__le__)
+
+245          98 LOAD_CONST              25 (<code object __eq__ at 0x1033d5870, file "./eight.py", line 245>)
+            100 LOAD_CONST              26 ('Node.__eq__')
+            102 MAKE_FUNCTION            0
+            104 STORE_NAME              14 (__eq__)
+            106 LOAD_CONST               2 (None)
+            108 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x1033bcea0, file "./eight.py", line 11>:
+ 24           0 LOAD_FAST                1 (state)
+              2 LOAD_FAST                0 (self)
+              4 STORE_ATTR               0 (state)
+
+ 25           6 LOAD_GLOBAL              1 (len)
+              8 LOAD_FAST                1 (state)
+             10 CALL_FUNCTION            1
+             12 LOAD_FAST                0 (self)
+             14 STORE_ATTR               2 (size)
+
+ 26          16 LOAD_FAST                2 (depth)
+             18 LOAD_FAST                0 (self)
+             20 STORE_ATTR               3 (depth)
+
+ 27          22 LOAD_FAST                4 (optimizer)
+             24 LOAD_FAST                0 (self)
+             26 STORE_ATTR               4 (optimizer)
+
+ 28          28 LOAD_FAST                3 (moves)
+             30 LOAD_CONST               1 (None)
+             32 IS_OP                    0
+             34 POP_JUMP_IF_FALSE       46
+
+ 29          36 LOAD_GLOBAL              5 (list)
+             38 CALL_FUNCTION            0
+             40 LOAD_FAST                0 (self)
+             42 STORE_ATTR               6 (moves)
+             44 JUMP_FORWARD             6 (to 52)
+
+ 31     >>   46 LOAD_FAST                3 (moves)
+             48 LOAD_FAST                0 (self)
+             50 STORE_ATTR               6 (moves)
+        >>   52 LOAD_CONST               1 (None)
+             54 RETURN_VALUE
+
+Disassembly of <code object getAvailableActions at 0x1033bcf50, file "./eight.py", line 33>:
+ 40           0 LOAD_GLOBAL              0 (list)
+              2 CALL_FUNCTION            0
+              4 STORE_FAST               1 (action)
+
+ 41           6 LOAD_GLOBAL              1 (range)
+              8 LOAD_FAST                0 (self)
+             10 LOAD_ATTR                2 (size)
+             12 CALL_FUNCTION            1
+             14 GET_ITER
+        >>   16 FOR_ITER               134 (to 152)
+             18 STORE_FAST               2 (i)
+
+ 42          20 LOAD_GLOBAL              1 (range)
+             22 LOAD_FAST                0 (self)
+             24 LOAD_ATTR                2 (size)
+             26 CALL_FUNCTION            1
+             28 GET_ITER
+        >>   30 FOR_ITER               118 (to 150)
+             32 STORE_FAST               3 (j)
+
+ 43          34 LOAD_FAST                0 (self)
+             36 LOAD_ATTR                3 (state)
+             38 LOAD_FAST                2 (i)
+             40 BINARY_SUBSCR
+             42 LOAD_FAST                3 (j)
+             44 BINARY_SUBSCR
+             46 LOAD_CONST               1 (0)
+             48 COMPARE_OP               2 (==)
+             50 POP_JUMP_IF_FALSE       30
+
+ 44          52 LOAD_FAST                2 (i)
+             54 LOAD_CONST               1 (0)
+             56 COMPARE_OP               4 (>)
+             58 POP_JUMP_IF_FALSE       70
+
+ 45          60 LOAD_FAST                1 (action)
+             62 LOAD_METHOD              4 (append)
+             64 LOAD_CONST               2 (2)
+             66 CALL_METHOD              1
+             68 POP_TOP
+
+ 46     >>   70 LOAD_FAST                3 (j)
+             72 LOAD_CONST               1 (0)
+             74 COMPARE_OP               4 (>)
+             76 POP_JUMP_IF_FALSE       88
+
+ 47          78 LOAD_FAST                1 (action)
+             80 LOAD_METHOD              4 (append)
+             82 LOAD_CONST               1 (0)
+             84 CALL_METHOD              1
+             86 POP_TOP
+
+ 48     >>   88 LOAD_FAST                2 (i)
+             90 LOAD_FAST                0 (self)
+             92 LOAD_ATTR                2 (size)
+             94 LOAD_CONST               3 (1)
+             96 BINARY_SUBTRACT
+             98 COMPARE_OP               0 (<)
+            100 POP_JUMP_IF_FALSE      112
+
+ 49         102 LOAD_FAST                1 (action)
+            104 LOAD_METHOD              4 (append)
+            106 LOAD_CONST               4 (3)
+            108 CALL_METHOD              1
+            110 POP_TOP
+
+ 50     >>  112 LOAD_FAST                3 (j)
+            114 LOAD_FAST                0 (self)
+            116 LOAD_ATTR                2 (size)
+            118 LOAD_CONST               3 (1)
+            120 BINARY_SUBTRACT
+            122 COMPARE_OP               0 (<)
+            124 POP_JUMP_IF_FALSE      136
+
+ 51         126 LOAD_FAST                1 (action)
+            128 LOAD_METHOD              4 (append)
+            130 LOAD_CONST               3 (1)
+            132 CALL_METHOD              1
+            134 POP_TOP
+
+ 52     >>  136 LOAD_FAST                1 (action)
+            138 ROT_TWO
+            140 POP_TOP
+            142 ROT_TWO
+            144 POP_TOP
+            146 RETURN_VALUE
+            148 JUMP_ABSOLUTE           30
+        >>  150 JUMP_ABSOLUTE           16
+
+ 53     >>  152 LOAD_FAST                1 (action)
+            154 RETURN_VALUE
+
+Disassembly of <code object getResultFromAction at 0x1033d50e0, file "./eight.py", line 55>:
+ 61           0 LOAD_GLOBAL              0 (deepcopy)
+              2 LOAD_FAST                0 (self)
+              4 LOAD_ATTR                1 (state)
+              6 CALL_FUNCTION            1
+              8 STORE_FAST               2 (newstate)
+
+ 62          10 LOAD_GLOBAL              0 (deepcopy)
+             12 LOAD_FAST                0 (self)
+             14 LOAD_ATTR                2 (moves)
+             16 CALL_FUNCTION            1
+             18 STORE_FAST               3 (newMoves)
+
+ 63          20 LOAD_GLOBAL              3 (range)
+             22 LOAD_FAST                0 (self)
+             24 LOAD_ATTR                4 (size)
+             26 CALL_FUNCTION            1
+             28 GET_ITER
+        >>   30 EXTENDED_ARG             1
+             32 FOR_ITER               442 (to 476)
+             34 STORE_FAST               4 (i)
+
+ 64          36 LOAD_GLOBAL              3 (range)
+             38 LOAD_FAST                0 (self)
+             40 LOAD_ATTR                4 (size)
+             42 CALL_FUNCTION            1
+             44 GET_ITER
+        >>   46 EXTENDED_ARG             1
+             48 FOR_ITER               424 (to 474)
+             50 STORE_FAST               5 (j)
+
+ 65          52 LOAD_FAST                2 (newstate)
+             54 LOAD_FAST                4 (i)
+             56 BINARY_SUBSCR
+             58 LOAD_FAST                5 (j)
+             60 BINARY_SUBSCR
+             62 LOAD_CONST               1 (0)
+             64 COMPARE_OP               2 (==)
+             66 POP_JUMP_IF_FALSE       46
+
+ 66          68 LOAD_FAST                1 (action)
+             70 LOAD_CONST               2 (2)
+             72 COMPARE_OP               2 (==)
+             74 POP_JUMP_IF_FALSE      168
+
+ 68          76 LOAD_FAST                2 (newstate)
+             78 LOAD_FAST                4 (i)
+             80 LOAD_CONST               3 (1)
+             82 BINARY_SUBTRACT
+             84 BINARY_SUBSCR
+             86 LOAD_FAST                5 (j)
+             88 BINARY_SUBSCR
+
+ 69          90 LOAD_FAST                2 (newstate)
+             92 LOAD_FAST                4 (i)
+             94 BINARY_SUBSCR
+             96 LOAD_FAST                5 (j)
+             98 BINARY_SUBSCR
+
+ 67         100 ROT_TWO
+            102 LOAD_FAST                2 (newstate)
+            104 LOAD_FAST                4 (i)
+            106 BINARY_SUBSCR
+            108 LOAD_FAST                5 (j)
+            110 STORE_SUBSCR
+            112 LOAD_FAST                2 (newstate)
+            114 LOAD_FAST                4 (i)
+            116 LOAD_CONST               3 (1)
+            118 BINARY_SUBTRACT
+            120 BINARY_SUBSCR
+            122 LOAD_FAST                5 (j)
+            124 STORE_SUBSCR
+
+ 71         126 LOAD_FAST                3 (newMoves)
+            128 LOAD_METHOD              5 (append)
+            130 LOAD_CONST               2 (2)
+            132 CALL_METHOD              1
+            134 POP_TOP
+
+ 72         136 LOAD_GLOBAL              6 (Node)
+
+ 73         138 LOAD_FAST                2 (newstate)
+
+ 74         140 LOAD_FAST                0 (self)
+            142 LOAD_ATTR                7 (depth)
+            144 LOAD_CONST               3 (1)
+            146 BINARY_ADD
+
+ 75         148 LOAD_FAST                3 (newMoves)
+
+ 76         150 LOAD_FAST                0 (self)
+            152 LOAD_ATTR                8 (optimizer)
+
+ 72         154 LOAD_CONST               4 (('depth', 'moves', 'optimizer'))
+            156 CALL_FUNCTION_KW         4
+            158 ROT_TWO
+            160 POP_TOP
+            162 ROT_TWO
+            164 POP_TOP
+            166 RETURN_VALUE
+
+ 78     >>  168 LOAD_FAST                1 (action)
+            170 LOAD_CONST               5 (3)
+            172 COMPARE_OP               2 (==)
+            174 EXTENDED_ARG             1
+            176 POP_JUMP_IF_FALSE      270
+
+ 80         178 LOAD_FAST                2 (newstate)
+            180 LOAD_FAST                4 (i)
+            182 LOAD_CONST               3 (1)
+            184 BINARY_ADD
+            186 BINARY_SUBSCR
+            188 LOAD_FAST                5 (j)
+            190 BINARY_SUBSCR
+
+ 81         192 LOAD_FAST                2 (newstate)
+            194 LOAD_FAST                4 (i)
+            196 BINARY_SUBSCR
+            198 LOAD_FAST                5 (j)
+            200 BINARY_SUBSCR
+
+ 79         202 ROT_TWO
+            204 LOAD_FAST                2 (newstate)
+            206 LOAD_FAST                4 (i)
+            208 BINARY_SUBSCR
+            210 LOAD_FAST                5 (j)
+            212 STORE_SUBSCR
+            214 LOAD_FAST                2 (newstate)
+            216 LOAD_FAST                4 (i)
+            218 LOAD_CONST               3 (1)
+            220 BINARY_ADD
+            222 BINARY_SUBSCR
+            224 LOAD_FAST                5 (j)
+            226 STORE_SUBSCR
+
+ 83         228 LOAD_FAST                3 (newMoves)
+            230 LOAD_METHOD              5 (append)
+            232 LOAD_CONST               5 (3)
+            234 CALL_METHOD              1
+            236 POP_TOP
+
+ 84         238 LOAD_GLOBAL              6 (Node)
+
+ 85         240 LOAD_FAST                2 (newstate)
+
+ 86         242 LOAD_FAST                0 (self)
+            244 LOAD_ATTR                7 (depth)
+            246 LOAD_CONST               3 (1)
+            248 BINARY_ADD
+
+ 87         250 LOAD_FAST                3 (newMoves)
+
+ 88         252 LOAD_FAST                0 (self)
+            254 LOAD_ATTR                8 (optimizer)
+
+ 84         256 LOAD_CONST               4 (('depth', 'moves', 'optimizer'))
+            258 CALL_FUNCTION_KW         4
+            260 ROT_TWO
+            262 POP_TOP
+            264 ROT_TWO
+            266 POP_TOP
+            268 RETURN_VALUE
+
+ 90     >>  270 LOAD_FAST                1 (action)
+            272 LOAD_CONST               1 (0)
+            274 COMPARE_OP               2 (==)
+            276 EXTENDED_ARG             1
+            278 POP_JUMP_IF_FALSE      372
+
+ 92         280 LOAD_FAST                2 (newstate)
+            282 LOAD_FAST                4 (i)
+            284 BINARY_SUBSCR
+            286 LOAD_FAST                5 (j)
+            288 LOAD_CONST               3 (1)
+            290 BINARY_SUBTRACT
+            292 BINARY_SUBSCR
+
+ 93         294 LOAD_FAST                2 (newstate)
+            296 LOAD_FAST                4 (i)
+            298 BINARY_SUBSCR
+            300 LOAD_FAST                5 (j)
+            302 BINARY_SUBSCR
+
+ 91         304 ROT_TWO
+            306 LOAD_FAST                2 (newstate)
+            308 LOAD_FAST                4 (i)
+            310 BINARY_SUBSCR
+            312 LOAD_FAST                5 (j)
+            314 STORE_SUBSCR
+            316 LOAD_FAST                2 (newstate)
+            318 LOAD_FAST                4 (i)
+            320 BINARY_SUBSCR
+            322 LOAD_FAST                5 (j)
+            324 LOAD_CONST               3 (1)
+            326 BINARY_SUBTRACT
+            328 STORE_SUBSCR
+
+ 95         330 LOAD_FAST                3 (newMoves)
+            332 LOAD_METHOD              5 (append)
+            334 LOAD_CONST               1 (0)
+            336 CALL_METHOD              1
+            338 POP_TOP
+
+ 96         340 LOAD_GLOBAL              6 (Node)
+
+ 97         342 LOAD_FAST                2 (newstate)
+
+ 98         344 LOAD_FAST                0 (self)
+            346 LOAD_ATTR                7 (depth)
+            348 LOAD_CONST               3 (1)
+            350 BINARY_ADD
+
+ 99         352 LOAD_FAST                3 (newMoves)
+
+100         354 LOAD_FAST                0 (self)
+            356 LOAD_ATTR                8 (optimizer)
+
+ 96         358 LOAD_CONST               4 (('depth', 'moves', 'optimizer'))
+            360 CALL_FUNCTION_KW         4
+            362 ROT_TWO
+            364 POP_TOP
+            366 ROT_TWO
+            368 POP_TOP
+            370 RETURN_VALUE
+
+102     >>  372 LOAD_FAST                1 (action)
+            374 LOAD_CONST               3 (1)
+            376 COMPARE_OP               2 (==)
+            378 POP_JUMP_IF_FALSE       46
+
+104         380 LOAD_FAST                2 (newstate)
+            382 LOAD_FAST                4 (i)
+            384 BINARY_SUBSCR
+            386 LOAD_FAST                5 (j)
+            388 LOAD_CONST               3 (1)
+            390 BINARY_ADD
+            392 BINARY_SUBSCR
+
+105         394 LOAD_FAST                2 (newstate)
+            396 LOAD_FAST                4 (i)
+            398 BINARY_SUBSCR
+            400 LOAD_FAST                5 (j)
+            402 BINARY_SUBSCR
+
+103         404 ROT_TWO
+            406 LOAD_FAST                2 (newstate)
+            408 LOAD_FAST                4 (i)
+            410 BINARY_SUBSCR
+            412 LOAD_FAST                5 (j)
+            414 STORE_SUBSCR
+            416 LOAD_FAST                2 (newstate)
+            418 LOAD_FAST                4 (i)
+            420 BINARY_SUBSCR
+            422 LOAD_FAST                5 (j)
+            424 LOAD_CONST               3 (1)
+            426 BINARY_ADD
+            428 STORE_SUBSCR
+
+107         430 LOAD_FAST                3 (newMoves)
+            432 LOAD_METHOD              5 (append)
+            434 LOAD_CONST               3 (1)
+            436 CALL_METHOD              1
+            438 POP_TOP
+
+108         440 LOAD_GLOBAL              6 (Node)
+
+109         442 LOAD_FAST                2 (newstate)
+
+110         444 LOAD_FAST                0 (self)
+            446 LOAD_ATTR                7 (depth)
+            448 LOAD_CONST               3 (1)
+            450 BINARY_ADD
+
+111         452 LOAD_FAST                3 (newMoves)
+
+112         454 LOAD_FAST                0 (self)
+            456 LOAD_ATTR                8 (optimizer)
+
+108         458 LOAD_CONST               4 (('depth', 'moves', 'optimizer'))
+            460 CALL_FUNCTION_KW         4
+            462 ROT_TWO
+            464 POP_TOP
+            466 ROT_TWO
+            468 POP_TOP
+            470 RETURN_VALUE
+            472 JUMP_ABSOLUTE           46
+        >>  474 JUMP_ABSOLUTE           30
+
+114     >>  476 LOAD_CONST               6 (None)
+            478 RETURN_VALUE
+
+Disassembly of <code object isGoalState at 0x1033d5240, file "./eight.py", line 116>:
+122           0 LOAD_GLOBAL              0 (range)
+              2 LOAD_FAST                0 (self)
+              4 LOAD_ATTR                1 (size)
+              6 CALL_FUNCTION            1
+              8 GET_ITER
+        >>   10 FOR_ITER                84 (to 96)
+             12 STORE_FAST               1 (i)
+
+123          14 LOAD_GLOBAL              0 (range)
+             16 LOAD_FAST                0 (self)
+             18 LOAD_ATTR                1 (size)
+             20 CALL_FUNCTION            1
+             22 GET_ITER
+        >>   24 FOR_ITER                68 (to 94)
+             26 STORE_FAST               2 (j)
+
+124          28 LOAD_FAST                1 (i)
+             30 LOAD_FAST                2 (j)
+             32 COMPARE_OP               2 (==)
+             34 POP_JUMP_IF_FALSE       52
+             36 LOAD_FAST                2 (j)
+             38 LOAD_FAST                0 (self)
+             40 LOAD_ATTR                1 (size)
+             42 LOAD_CONST               1 (1)
+             44 BINARY_SUBTRACT
+             46 COMPARE_OP               2 (==)
+             48 POP_JUMP_IF_FALSE       52
+
+125          50 JUMP_ABSOLUTE           24
+
+126     >>   52 LOAD_FAST                0 (self)
+             54 LOAD_ATTR                2 (state)
+             56 LOAD_FAST                1 (i)
+             58 BINARY_SUBSCR
+             60 LOAD_FAST                2 (j)
+             62 BINARY_SUBSCR
+             64 LOAD_FAST                1 (i)
+             66 LOAD_FAST                0 (self)
+             68 LOAD_ATTR                1 (size)
+             70 BINARY_MULTIPLY
+             72 LOAD_FAST                2 (j)
+             74 LOAD_CONST               1 (1)
+             76 BINARY_ADD
+             78 BINARY_ADD
+             80 COMPARE_OP               3 (!=)
+             82 POP_JUMP_IF_FALSE       24
+
+127          84 POP_TOP
+             86 POP_TOP
+             88 LOAD_CONST               2 (False)
+             90 RETURN_VALUE
+             92 JUMP_ABSOLUTE           24
+        >>   94 JUMP_ABSOLUTE           10
+
+128     >>   96 LOAD_CONST               3 (True)
+             98 RETURN_VALUE
+
+Disassembly of <code object getManhattanDistance at 0x1033d52f0, file "./eight.py", line 130>:
+136           0 LOAD_CONST               1 (0)
+              2 STORE_FAST               1 (ans)
+
+137           4 LOAD_GLOBAL              0 (range)
+              6 LOAD_FAST                0 (self)
+              8 LOAD_ATTR                1 (size)
+             10 CALL_FUNCTION            1
+             12 GET_ITER
+        >>   14 FOR_ITER               106 (to 122)
+             16 STORE_FAST               2 (i)
+
+138          18 LOAD_GLOBAL              0 (range)
+             20 LOAD_FAST                0 (self)
+             22 LOAD_ATTR                1 (size)
+             24 CALL_FUNCTION            1
+             26 GET_ITER
+        >>   28 FOR_ITER                90 (to 120)
+             30 STORE_FAST               3 (j)
+
+139          32 LOAD_FAST                0 (self)
+             34 LOAD_ATTR                2 (state)
+             36 LOAD_FAST                2 (i)
+             38 BINARY_SUBSCR
+             40 LOAD_FAST                3 (j)
+             42 BINARY_SUBSCR
+             44 LOAD_CONST               1 (0)
+             46 COMPARE_OP               3 (!=)
+             48 POP_JUMP_IF_FALSE       28
+
+141          50 LOAD_FAST                1 (ans)
+
+142          52 LOAD_GLOBAL              3 (abs)
+             54 LOAD_FAST                0 (self)
+             56 LOAD_ATTR                2 (state)
+             58 LOAD_FAST                2 (i)
+             60 BINARY_SUBSCR
+             62 LOAD_FAST                3 (j)
+             64 BINARY_SUBSCR
+             66 LOAD_CONST               2 (1)
+             68 BINARY_SUBTRACT
+             70 LOAD_FAST                0 (self)
+             72 LOAD_ATTR                1 (size)
+             74 BINARY_MODULO
+             76 LOAD_FAST                3 (j)
+             78 BINARY_SUBTRACT
+             80 CALL_FUNCTION            1
+
+141          82 BINARY_ADD
+
+143          84 LOAD_GLOBAL              3 (abs)
+             86 LOAD_FAST                0 (self)
+             88 LOAD_ATTR                2 (state)
+             90 LOAD_FAST                2 (i)
+             92 BINARY_SUBSCR
+             94 LOAD_FAST                3 (j)
+             96 BINARY_SUBSCR
+             98 LOAD_CONST               2 (1)
+            100 BINARY_SUBTRACT
+            102 LOAD_FAST                0 (self)
+            104 LOAD_ATTR                1 (size)
+            106 BINARY_FLOOR_DIVIDE
+            108 LOAD_FAST                2 (i)
+            110 BINARY_SUBTRACT
+            112 CALL_FUNCTION            1
+
+141         114 BINARY_ADD
+
+140         116 STORE_FAST               1 (ans)
+            118 JUMP_ABSOLUTE           28
+        >>  120 JUMP_ABSOLUTE           14
+
+146     >>  122 LOAD_FAST                1 (ans)
+            124 RETURN_VALUE
+
+Disassembly of <code object getHammingDistance at 0x1033d5190, file "./eight.py", line 148>:
+149           0 LOAD_CONST               1 (0)
+              2 STORE_FAST               1 (ans)
+
+150           4 LOAD_GLOBAL              0 (range)
+              6 LOAD_FAST                0 (self)
+              8 LOAD_ATTR                1 (size)
+             10 CALL_FUNCTION            1
+             12 GET_ITER
+        >>   14 FOR_ITER                76 (to 92)
+             16 STORE_FAST               2 (i)
+
+151          18 LOAD_GLOBAL              0 (range)
+             20 LOAD_FAST                0 (self)
+             22 LOAD_ATTR                1 (size)
+             24 CALL_FUNCTION            1
+             26 GET_ITER
+        >>   28 FOR_ITER                60 (to 90)
+             30 STORE_FAST               3 (j)
+
+152          32 LOAD_FAST                0 (self)
+             34 LOAD_ATTR                2 (state)
+             36 LOAD_FAST                2 (i)
+             38 BINARY_SUBSCR
+             40 LOAD_FAST                3 (j)
+             42 BINARY_SUBSCR
+             44 LOAD_CONST               1 (0)
+             46 COMPARE_OP               3 (!=)
+             48 POP_JUMP_IF_FALSE       28
+             50 LOAD_FAST                0 (self)
+             52 LOAD_ATTR                2 (state)
+             54 LOAD_FAST                2 (i)
+             56 BINARY_SUBSCR
+             58 LOAD_FAST                3 (j)
+             60 BINARY_SUBSCR
+             62 LOAD_FAST                2 (i)
+             64 LOAD_CONST               2 (3)
+             66 BINARY_MULTIPLY
+             68 LOAD_FAST                3 (j)
+             70 LOAD_CONST               3 (1)
+             72 BINARY_ADD
+             74 BINARY_ADD
+             76 COMPARE_OP               3 (!=)
+             78 POP_JUMP_IF_FALSE       28
+
+153          80 LOAD_FAST                1 (ans)
+             82 LOAD_CONST               3 (1)
+             84 BINARY_ADD
+             86 STORE_FAST               1 (ans)
+             88 JUMP_ABSOLUTE           28
+        >>   90 JUMP_ABSOLUTE           14
+
+154     >>   92 LOAD_FAST                1 (ans)
+             94 RETURN_VALUE
+
+Disassembly of <code object __hash__ at 0x1033d5450, file "./eight.py", line 156>:
+157           0 LOAD_CONST               1 (<code object <listcomp> at 0x1033d53a0, file "./eight.py", line 157>)
+              2 LOAD_CONST               2 ('Node.__hash__.<locals>.<listcomp>')
+              4 MAKE_FUNCTION            0
+              6 LOAD_FAST                0 (self)
+              8 LOAD_ATTR                0 (state)
+             10 GET_ITER
+             12 CALL_FUNCTION            1
+             14 STORE_FAST               1 (flatState)
+
+158          16 LOAD_GLOBAL              1 (tuple)
+             18 LOAD_FAST                1 (flatState)
+             20 CALL_FUNCTION            1
+             22 STORE_FAST               1 (flatState)
+
+159          24 LOAD_GLOBAL              2 (hash)
+             26 LOAD_FAST                1 (flatState)
+             28 CALL_FUNCTION            1
+             30 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x1033d53a0, file "./eight.py", line 157>:
+157           0 BUILD_LIST               0
+              2 LOAD_FAST                0 (.0)
+        >>    4 FOR_ITER                18 (to 24)
+              6 STORE_FAST               1 (sub)
+              8 LOAD_FAST                1 (sub)
+             10 GET_ITER
+        >>   12 FOR_ITER                 8 (to 22)
+             14 STORE_FAST               2 (j)
+             16 LOAD_FAST                2 (j)
+             18 LIST_APPEND              3
+             20 JUMP_ABSOLUTE           12
+        >>   22 JUMP_ABSOLUTE            4
+        >>   24 RETURN_VALUE
+
+Disassembly of <code object __gt__ at 0x1033d55b0, file "./eight.py", line 161>:
+162           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (optimizer)
+              4 LOAD_CONST               1 (0)
+              6 COMPARE_OP               2 (==)
+              8 POP_JUMP_IF_FALSE       36
+
+163          10 LOAD_FAST                0 (self)
+             12 LOAD_METHOD              1 (getManhattanDistance)
+             14 CALL_METHOD              0
+             16 LOAD_FAST                1 (other)
+             18 LOAD_METHOD              1 (getManhattanDistance)
+             20 CALL_METHOD              0
+             22 COMPARE_OP               4 (>)
+             24 POP_JUMP_IF_FALSE       30
+
+164          26 LOAD_CONST               2 (True)
+             28 RETURN_VALUE
+
+166     >>   30 LOAD_CONST               3 (False)
+             32 RETURN_VALUE
+             34 JUMP_FORWARD            86 (to 122)
+
+167     >>   36 LOAD_FAST                0 (self)
+             38 LOAD_ATTR                0 (optimizer)
+             40 LOAD_CONST               4 (1)
+             42 COMPARE_OP               2 (==)
+             44 POP_JUMP_IF_FALSE       72
+
+168          46 LOAD_FAST                0 (self)
+             48 LOAD_METHOD              2 (getHammingDistance)
+             50 CALL_METHOD              0
+             52 LOAD_FAST                1 (other)
+             54 LOAD_METHOD              2 (getHammingDistance)
+             56 CALL_METHOD              0
+             58 COMPARE_OP               4 (>)
+             60 POP_JUMP_IF_FALSE       66
+
+169          62 LOAD_CONST               2 (True)
+             64 RETURN_VALUE
+
+171     >>   66 LOAD_CONST               3 (False)
+             68 RETURN_VALUE
+             70 JUMP_FORWARD            50 (to 122)
+
+172     >>   72 LOAD_FAST                0 (self)
+             74 LOAD_ATTR                0 (optimizer)
+             76 LOAD_CONST               5 (2)
+             78 COMPARE_OP               2 (==)
+             80 POP_JUMP_IF_FALSE      122
+
+174          82 LOAD_FAST                0 (self)
+             84 LOAD_METHOD              2 (getHammingDistance)
+             86 CALL_METHOD              0
+             88 LOAD_FAST                0 (self)
+             90 LOAD_METHOD              1 (getManhattanDistance)
+             92 CALL_METHOD              0
+             94 BINARY_ADD
+
+175          96 LOAD_FAST                1 (other)
+             98 LOAD_METHOD              2 (getHammingDistance)
+            100 CALL_METHOD              0
+            102 LOAD_FAST                0 (self)
+            104 LOAD_METHOD              1 (getManhattanDistance)
+            106 CALL_METHOD              0
+            108 BINARY_ADD
+
+174         110 COMPARE_OP               4 (>)
+
+173         112 POP_JUMP_IF_FALSE      118
+
+177         114 LOAD_CONST               2 (True)
+            116 RETURN_VALUE
+
+179     >>  118 LOAD_CONST               3 (False)
+            120 RETURN_VALUE
+
+180     >>  122 LOAD_CONST               2 (True)
+            124 RETURN_VALUE
+
+Disassembly of <code object __ge__ at 0x1033d5660, file "./eight.py", line 182>:
+183           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (optimizer)
+              4 LOAD_CONST               1 (0)
+              6 COMPARE_OP               2 (==)
+              8 POP_JUMP_IF_FALSE       36
+
+184          10 LOAD_FAST                0 (self)
+             12 LOAD_METHOD              1 (getManhattanDistance)
+             14 CALL_METHOD              0
+             16 LOAD_FAST                1 (other)
+             18 LOAD_METHOD              1 (getManhattanDistance)
+             20 CALL_METHOD              0
+             22 COMPARE_OP               5 (>=)
+             24 POP_JUMP_IF_FALSE       30
+
+185          26 LOAD_CONST               2 (True)
+             28 RETURN_VALUE
+
+187     >>   30 LOAD_CONST               3 (False)
+             32 RETURN_VALUE
+             34 JUMP_FORWARD            86 (to 122)
+
+188     >>   36 LOAD_FAST                0 (self)
+             38 LOAD_ATTR                0 (optimizer)
+             40 LOAD_CONST               4 (1)
+             42 COMPARE_OP               2 (==)
+             44 POP_JUMP_IF_FALSE       72
+
+189          46 LOAD_FAST                0 (self)
+             48 LOAD_METHOD              2 (getHammingDistance)
+             50 CALL_METHOD              0
+             52 LOAD_FAST                1 (other)
+             54 LOAD_METHOD              2 (getHammingDistance)
+             56 CALL_METHOD              0
+             58 COMPARE_OP               5 (>=)
+             60 POP_JUMP_IF_FALSE       66
+
+190          62 LOAD_CONST               2 (True)
+             64 RETURN_VALUE
+
+192     >>   66 LOAD_CONST               3 (False)
+             68 RETURN_VALUE
+             70 JUMP_FORWARD            50 (to 122)
+
+193     >>   72 LOAD_FAST                0 (self)
+             74 LOAD_ATTR                0 (optimizer)
+             76 LOAD_CONST               5 (2)
+             78 COMPARE_OP               2 (==)
+             80 POP_JUMP_IF_FALSE      122
+
+195          82 LOAD_FAST                0 (self)
+             84 LOAD_METHOD              2 (getHammingDistance)
+             86 CALL_METHOD              0
+             88 LOAD_FAST                0 (self)
+             90 LOAD_METHOD              1 (getManhattanDistance)
+             92 CALL_METHOD              0
+             94 BINARY_ADD
+
+196          96 LOAD_FAST                1 (other)
+             98 LOAD_METHOD              2 (getHammingDistance)
+            100 CALL_METHOD              0
+            102 LOAD_FAST                0 (self)
+            104 LOAD_METHOD              1 (getManhattanDistance)
+            106 CALL_METHOD              0
+            108 BINARY_ADD
+
+195         110 COMPARE_OP               5 (>=)
+
+194         112 POP_JUMP_IF_FALSE      118
+
+198         114 LOAD_CONST               2 (True)
+            116 RETURN_VALUE
+
+200     >>  118 LOAD_CONST               3 (False)
+            120 RETURN_VALUE
+
+201     >>  122 LOAD_CONST               2 (True)
+            124 RETURN_VALUE
+
+Disassembly of <code object __lt__ at 0x1033d5710, file "./eight.py", line 203>:
+204           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (optimizer)
+              4 LOAD_CONST               1 (0)
+              6 COMPARE_OP               2 (==)
+              8 POP_JUMP_IF_FALSE       36
+
+205          10 LOAD_FAST                0 (self)
+             12 LOAD_METHOD              1 (getManhattanDistance)
+             14 CALL_METHOD              0
+             16 LOAD_FAST                1 (other)
+             18 LOAD_METHOD              1 (getManhattanDistance)
+             20 CALL_METHOD              0
+             22 COMPARE_OP               0 (<)
+             24 POP_JUMP_IF_FALSE       30
+
+206          26 LOAD_CONST               2 (True)
+             28 RETURN_VALUE
+
+208     >>   30 LOAD_CONST               3 (False)
+             32 RETURN_VALUE
+             34 JUMP_FORWARD            86 (to 122)
+
+209     >>   36 LOAD_FAST                0 (self)
+             38 LOAD_ATTR                0 (optimizer)
+             40 LOAD_CONST               4 (1)
+             42 COMPARE_OP               2 (==)
+             44 POP_JUMP_IF_FALSE       72
+
+210          46 LOAD_FAST                0 (self)
+             48 LOAD_METHOD              2 (getHammingDistance)
+             50 CALL_METHOD              0
+             52 LOAD_FAST                1 (other)
+             54 LOAD_METHOD              2 (getHammingDistance)
+             56 CALL_METHOD              0
+             58 COMPARE_OP               0 (<)
+             60 POP_JUMP_IF_FALSE       66
+
+211          62 LOAD_CONST               2 (True)
+             64 RETURN_VALUE
+
+213     >>   66 LOAD_CONST               3 (False)
+             68 RETURN_VALUE
+             70 JUMP_FORWARD            50 (to 122)
+
+214     >>   72 LOAD_FAST                0 (self)
+             74 LOAD_ATTR                0 (optimizer)
+             76 LOAD_CONST               5 (2)
+             78 COMPARE_OP               2 (==)
+             80 POP_JUMP_IF_FALSE      122
+
+216          82 LOAD_FAST                0 (self)
+             84 LOAD_METHOD              2 (getHammingDistance)
+             86 CALL_METHOD              0
+             88 LOAD_FAST                0 (self)
+             90 LOAD_METHOD              1 (getManhattanDistance)
+             92 CALL_METHOD              0
+             94 BINARY_ADD
+
+217          96 LOAD_FAST                1 (other)
+             98 LOAD_METHOD              2 (getHammingDistance)
+            100 CALL_METHOD              0
+            102 LOAD_FAST                0 (self)
+            104 LOAD_METHOD              1 (getManhattanDistance)
+            106 CALL_METHOD              0
+            108 BINARY_ADD
+
+216         110 COMPARE_OP               0 (<)
+
+215         112 POP_JUMP_IF_FALSE      118
+
+219         114 LOAD_CONST               2 (True)
+            116 RETURN_VALUE
+
+221     >>  118 LOAD_CONST               3 (False)
+            120 RETURN_VALUE
+
+222     >>  122 LOAD_CONST               2 (True)
+            124 RETURN_VALUE
+
+Disassembly of <code object __le__ at 0x1033d57c0, file "./eight.py", line 224>:
+225           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (optimizer)
+              4 LOAD_CONST               1 (0)
+              6 COMPARE_OP               2 (==)
+              8 POP_JUMP_IF_FALSE       36
+
+226          10 LOAD_FAST                0 (self)
+             12 LOAD_METHOD              1 (getManhattanDistance)
+             14 CALL_METHOD              0
+             16 LOAD_FAST                1 (other)
+             18 LOAD_METHOD              1 (getManhattanDistance)
+             20 CALL_METHOD              0
+             22 COMPARE_OP               1 (<=)
+             24 POP_JUMP_IF_FALSE       30
+
+227          26 LOAD_CONST               2 (True)
+             28 RETURN_VALUE
+
+229     >>   30 LOAD_CONST               3 (False)
+             32 RETURN_VALUE
+             34 JUMP_FORWARD            86 (to 122)
+
+230     >>   36 LOAD_FAST                0 (self)
+             38 LOAD_ATTR                0 (optimizer)
+             40 LOAD_CONST               4 (1)
+             42 COMPARE_OP               2 (==)
+             44 POP_JUMP_IF_FALSE       72
+
+231          46 LOAD_FAST                0 (self)
+             48 LOAD_METHOD              2 (getHammingDistance)
+             50 CALL_METHOD              0
+             52 LOAD_FAST                1 (other)
+             54 LOAD_METHOD              2 (getHammingDistance)
+             56 CALL_METHOD              0
+             58 COMPARE_OP               1 (<=)
+             60 POP_JUMP_IF_FALSE       66
+
+232          62 LOAD_CONST               2 (True)
+             64 RETURN_VALUE
+
+234     >>   66 LOAD_CONST               3 (False)
+             68 RETURN_VALUE
+             70 JUMP_FORWARD            50 (to 122)
+
+235     >>   72 LOAD_FAST                0 (self)
+             74 LOAD_ATTR                0 (optimizer)
+             76 LOAD_CONST               5 (2)
+             78 COMPARE_OP               2 (==)
+             80 POP_JUMP_IF_FALSE      122
+
+237          82 LOAD_FAST                0 (self)
+             84 LOAD_METHOD              2 (getHammingDistance)
+             86 CALL_METHOD              0
+             88 LOAD_FAST                0 (self)
+             90 LOAD_METHOD              1 (getManhattanDistance)
+             92 CALL_METHOD              0
+             94 BINARY_ADD
+
+238          96 LOAD_FAST                1 (other)
+             98 LOAD_METHOD              2 (getHammingDistance)
+            100 CALL_METHOD              0
+            102 LOAD_FAST                0 (self)
+            104 LOAD_METHOD              1 (getManhattanDistance)
+            106 CALL_METHOD              0
+            108 BINARY_ADD
+
+237         110 COMPARE_OP               1 (<=)
+
+236         112 POP_JUMP_IF_FALSE      118
+
+240         114 LOAD_CONST               2 (True)
+            116 RETURN_VALUE
+
+242     >>  118 LOAD_CONST               3 (False)
+            120 RETURN_VALUE
+
+243     >>  122 LOAD_CONST               2 (True)
+            124 RETURN_VALUE
+
+Disassembly of <code object __eq__ at 0x1033d5870, file "./eight.py", line 245>:
+246           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (optimizer)
+              4 LOAD_CONST               1 (0)
+              6 COMPARE_OP               2 (==)
+              8 POP_JUMP_IF_FALSE       36
+
+247          10 LOAD_FAST                0 (self)
+             12 LOAD_METHOD              1 (getManhattanDistance)
+             14 CALL_METHOD              0
+             16 LOAD_FAST                1 (other)
+             18 LOAD_METHOD              1 (getManhattanDistance)
+             20 CALL_METHOD              0
+             22 COMPARE_OP               2 (==)
+             24 POP_JUMP_IF_FALSE       30
+
+248          26 LOAD_CONST               2 (True)
+             28 RETURN_VALUE
+
+250     >>   30 LOAD_CONST               3 (False)
+             32 RETURN_VALUE
+             34 JUMP_FORWARD            86 (to 122)
+
+251     >>   36 LOAD_FAST                0 (self)
+             38 LOAD_ATTR                0 (optimizer)
+             40 LOAD_CONST               4 (1)
+             42 COMPARE_OP               2 (==)
+             44 POP_JUMP_IF_FALSE       72
+
+252          46 LOAD_FAST                0 (self)
+             48 LOAD_METHOD              2 (getHammingDistance)
+             50 CALL_METHOD              0
+             52 LOAD_FAST                1 (other)
+             54 LOAD_METHOD              2 (getHammingDistance)
+             56 CALL_METHOD              0
+             58 COMPARE_OP               2 (==)
+             60 POP_JUMP_IF_FALSE       66
+
+253          62 LOAD_CONST               2 (True)
+             64 RETURN_VALUE
+
+255     >>   66 LOAD_CONST               3 (False)
+             68 RETURN_VALUE
+             70 JUMP_FORWARD            50 (to 122)
+
+256     >>   72 LOAD_FAST                0 (self)
+             74 LOAD_ATTR                0 (optimizer)
+             76 LOAD_CONST               5 (2)
+             78 COMPARE_OP               2 (==)
+             80 POP_JUMP_IF_FALSE      122
+
+258          82 LOAD_FAST                0 (self)
+             84 LOAD_METHOD              2 (getHammingDistance)
+             86 CALL_METHOD              0
+             88 LOAD_FAST                0 (self)
+             90 LOAD_METHOD              1 (getManhattanDistance)
+             92 CALL_METHOD              0
+             94 BINARY_ADD
+
+259          96 LOAD_FAST                1 (other)
+             98 LOAD_METHOD              2 (getHammingDistance)
+            100 CALL_METHOD              0
+            102 LOAD_FAST                0 (self)
+            104 LOAD_METHOD              1 (getManhattanDistance)
+            106 CALL_METHOD              0
+            108 BINARY_ADD
+
+258         110 COMPARE_OP               2 (==)
+
+257         112 POP_JUMP_IF_FALSE      118
+
+261         114 LOAD_CONST               2 (True)
+            116 RETURN_VALUE
+
+263     >>  118 LOAD_CONST               3 (False)
+            120 RETURN_VALUE
+
+264     >>  122 LOAD_CONST               2 (True)
+            124 RETURN_VALUE
+
+Disassembly of <code object Solver at 0x1033d1030, file "./eight.py", line 267>:
+267           0 LOAD_NAME                0 (__name__)
+              2 STORE_NAME               1 (__module__)
+              4 LOAD_CONST               0 ('Solver')
+              6 STORE_NAME               2 (__qualname__)
+
+268           8 LOAD_CONST               1 (<code object __init__ at 0x1033d5500, file "./eight.py", line 268>)
+             10 LOAD_CONST               2 ('Solver.__init__')
+             12 MAKE_FUNCTION            0
+             14 STORE_NAME               3 (__init__)
+
+271          16 LOAD_CONST               3 (<code object isSolvable at 0x1033d5b30, file "./eight.py", line 271>)
+             18 LOAD_CONST               4 ('Solver.isSolvable')
+             20 MAKE_FUNCTION            0
+             22 STORE_NAME               4 (isSolvable)
+
+288          24 LOAD_CONST               5 (<code object breadth_first_search at 0x1033d5c90, file "./eight.py", line 288>)
+             26 LOAD_CONST               6 ('Solver.breadth_first_search')
+             28 MAKE_FUNCTION            0
+             30 STORE_NAME               5 (breadth_first_search)
+
+311          32 LOAD_CONST               7 (<code object depth_first_search at 0x1033d5df0, file "./eight.py", line 311>)
+             34 LOAD_CONST               8 ('Solver.depth_first_search')
+             36 MAKE_FUNCTION            0
+             38 STORE_NAME               6 (depth_first_search)
+
+332          40 LOAD_CONST              15 ((0,))
+             42 LOAD_CONST              10 (<code object uniform_cost_search at 0x1033d5f50, file "./eight.py", line 332>)
+             44 LOAD_CONST              11 ('Solver.uniform_cost_search')
+             46 MAKE_FUNCTION            1 (defaults)
+             48 STORE_NAME               7 (uniform_cost_search)
+
+353          50 LOAD_CONST              12 (<code object a_star at 0x1033d5a80, file "./eight.py", line 353>)
+             52 LOAD_CONST              13 ('Solver.a_star')
+             54 MAKE_FUNCTION            0
+             56 STORE_NAME               8 (a_star)
+             58 LOAD_CONST              14 (None)
+             60 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x1033d5500, file "./eight.py", line 268>:
+269           0 LOAD_FAST                1 (state)
+              2 LOAD_FAST                0 (self)
+              4 STORE_ATTR               0 (state)
+              6 LOAD_CONST               0 (None)
+              8 RETURN_VALUE
+
+Disassembly of <code object isSolvable at 0x1033d5b30, file "./eight.py", line 271>:
+276           0 LOAD_CONST               1 (<code object <listcomp> at 0x1033d59d0, file "./eight.py", line 276>)
+              2 LOAD_CONST               2 ('Solver.isSolvable.<locals>.<listcomp>')
+              4 MAKE_FUNCTION            0
+              6 LOAD_FAST                0 (self)
+              8 LOAD_ATTR                0 (state)
+             10 GET_ITER
+             12 CALL_FUNCTION            1
+             14 STORE_FAST               1 (flatState)
+
+277          16 LOAD_CONST               3 (0)
+             18 STORE_FAST               2 (inversions)
+
+278          20 LOAD_GLOBAL              1 (range)
+             22 LOAD_GLOBAL              2 (len)
+             24 LOAD_FAST                1 (flatState)
+             26 CALL_FUNCTION            1
+             28 LOAD_CONST               4 (1)
+             30 BINARY_SUBTRACT
+             32 CALL_FUNCTION            1
+             34 GET_ITER
+        >>   36 FOR_ITER                76 (to 114)
+             38 STORE_FAST               3 (i)
+
+279          40 LOAD_GLOBAL              1 (range)
+             42 LOAD_FAST                3 (i)
+             44 LOAD_CONST               4 (1)
+             46 BINARY_ADD
+             48 LOAD_GLOBAL              2 (len)
+             50 LOAD_FAST                1 (flatState)
+             52 CALL_FUNCTION            1
+             54 CALL_FUNCTION            2
+             56 GET_ITER
+        >>   58 FOR_ITER                52 (to 112)
+             60 STORE_FAST               4 (j)
+
+281          62 LOAD_FAST                1 (flatState)
+             64 LOAD_FAST                3 (i)
+             66 BINARY_SUBSCR
+             68 LOAD_CONST               3 (0)
+             70 COMPARE_OP               3 (!=)
+
+280          72 POP_JUMP_IF_FALSE       58
+
+282          74 LOAD_FAST                1 (flatState)
+             76 LOAD_FAST                4 (j)
+             78 BINARY_SUBSCR
+             80 LOAD_CONST               3 (0)
+             82 COMPARE_OP               3 (!=)
+
+280          84 POP_JUMP_IF_FALSE       58
+
+283          86 LOAD_FAST                1 (flatState)
+             88 LOAD_FAST                3 (i)
+             90 BINARY_SUBSCR
+             92 LOAD_FAST                1 (flatState)
+             94 LOAD_FAST                4 (j)
+             96 BINARY_SUBSCR
+             98 COMPARE_OP               4 (>)
+
+280         100 POP_JUMP_IF_FALSE       58
+
+285         102 LOAD_FAST                2 (inversions)
+            104 LOAD_CONST               4 (1)
+            106 BINARY_ADD
+            108 STORE_FAST               2 (inversions)
+            110 JUMP_ABSOLUTE           58
+        >>  112 JUMP_ABSOLUTE           36
+
+286     >>  114 LOAD_FAST                2 (inversions)
+            116 LOAD_CONST               5 (2)
+            118 BINARY_MODULO
+            120 LOAD_CONST               3 (0)
+            122 COMPARE_OP               2 (==)
+            124 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x1033d59d0, file "./eight.py", line 276>:
+276           0 BUILD_LIST               0
+              2 LOAD_FAST                0 (.0)
+        >>    4 FOR_ITER                18 (to 24)
+              6 STORE_FAST               1 (sub)
+              8 LOAD_FAST                1 (sub)
+             10 GET_ITER
+        >>   12 FOR_ITER                 8 (to 22)
+             14 STORE_FAST               2 (j)
+             16 LOAD_FAST                2 (j)
+             18 LIST_APPEND              3
+             20 JUMP_ABSOLUTE           12
+        >>   22 JUMP_ABSOLUTE            4
+        >>   24 RETURN_VALUE
+
+Disassembly of <code object breadth_first_search at 0x1033d5c90, file "./eight.py", line 288>:
+293           0 LOAD_FAST                0 (self)
+              2 LOAD_METHOD              0 (isSolvable)
+              4 CALL_METHOD              0
+              6 LOAD_CONST               1 (False)
+              8 COMPARE_OP               2 (==)
+             10 POP_JUMP_IF_FALSE       16
+
+294          12 LOAD_CONST               2 ((None, None))
+             14 RETURN_VALUE
+
+296     >>   16 LOAD_GLOBAL              1 (list)
+             18 CALL_FUNCTION            0
+             20 STORE_FAST               1 (closed)
+
+297          22 LOAD_GLOBAL              2 (deque)
+             24 CALL_FUNCTION            0
+             26 STORE_FAST               2 (q)
+
+298          28 LOAD_FAST                2 (q)
+             30 LOAD_METHOD              3 (append)
+             32 LOAD_GLOBAL              4 (Node)
+             34 LOAD_FAST                0 (self)
+             36 LOAD_ATTR                5 (state)
+             38 LOAD_CONST               3 (0)
+             40 LOAD_CONST               4 (('state', 'depth'))
+             42 CALL_FUNCTION_KW         2
+             44 CALL_METHOD              1
+             46 POP_TOP
+
+299     >>   48 LOAD_FAST                2 (q)
+             50 POP_JUMP_IF_FALSE      136
+
+300          52 LOAD_FAST                2 (q)
+             54 LOAD_METHOD              6 (popleft)
+             56 CALL_METHOD              0
+             58 STORE_FAST               3 (node)
+
+302          60 LOAD_FAST                3 (node)
+             62 LOAD_METHOD              7 (isGoalState)
+             64 CALL_METHOD              0
+             66 POP_JUMP_IF_FALSE       82
+
+303          68 LOAD_FAST                3 (node)
+             70 LOAD_ATTR                8 (moves)
+             72 LOAD_GLOBAL              9 (len)
+             74 LOAD_FAST                1 (closed)
+             76 CALL_FUNCTION            1
+             78 BUILD_TUPLE              2
+             80 RETURN_VALUE
+
+304     >>   82 LOAD_FAST                3 (node)
+             84 LOAD_ATTR                5 (state)
+             86 LOAD_FAST                1 (closed)
+             88 CONTAINS_OP              1
+             90 POP_JUMP_IF_FALSE       48
+
+305          92 LOAD_FAST                1 (closed)
+             94 LOAD_METHOD              3 (append)
+             96 LOAD_FAST                3 (node)
+             98 LOAD_ATTR                5 (state)
+            100 CALL_METHOD              1
+            102 POP_TOP
+
+306         104 LOAD_FAST                3 (node)
+            106 LOAD_METHOD             10 (getAvailableActions)
+            108 CALL_METHOD              0
+            110 GET_ITER
+        >>  112 FOR_ITER                20 (to 134)
+            114 STORE_FAST               4 (action)
+
+307         116 LOAD_FAST                2 (q)
+            118 LOAD_METHOD              3 (append)
+            120 LOAD_FAST                3 (node)
+            122 LOAD_METHOD             11 (getResultFromAction)
+            124 LOAD_FAST                4 (action)
+            126 CALL_METHOD              1
+            128 CALL_METHOD              1
+            130 POP_TOP
+            132 JUMP_ABSOLUTE          112
+        >>  134 JUMP_ABSOLUTE           48
+
+309     >>  136 LOAD_CONST               2 ((None, None))
+            138 RETURN_VALUE
+
+Disassembly of <code object depth_first_search at 0x1033d5df0, file "./eight.py", line 311>:
+316           0 LOAD_FAST                0 (self)
+              2 LOAD_METHOD              0 (isSolvable)
+              4 CALL_METHOD              0
+              6 LOAD_CONST               1 (False)
+              8 COMPARE_OP               2 (==)
+             10 POP_JUMP_IF_FALSE       16
+
+317          12 LOAD_CONST               2 ((None, None))
+             14 RETURN_VALUE
+
+318     >>   16 LOAD_GLOBAL              1 (list)
+             18 CALL_FUNCTION            0
+             20 STORE_FAST               1 (closed)
+
+319          22 LOAD_GLOBAL              1 (list)
+             24 CALL_FUNCTION            0
+             26 STORE_FAST               2 (q)
+
+320          28 LOAD_FAST                2 (q)
+             30 LOAD_METHOD              2 (append)
+             32 LOAD_GLOBAL              3 (Node)
+             34 LOAD_FAST                0 (self)
+             36 LOAD_ATTR                4 (state)
+             38 LOAD_CONST               3 (0)
+             40 LOAD_CONST               4 (('state', 'depth'))
+             42 CALL_FUNCTION_KW         2
+             44 CALL_METHOD              1
+             46 POP_TOP
+
+321     >>   48 LOAD_FAST                2 (q)
+             50 POP_JUMP_IF_FALSE      136
+
+322          52 LOAD_FAST                2 (q)
+             54 LOAD_METHOD              5 (pop)
+             56 CALL_METHOD              0
+             58 STORE_FAST               3 (node)
+
+323          60 LOAD_FAST                3 (node)
+             62 LOAD_METHOD              6 (isGoalState)
+             64 CALL_METHOD              0
+             66 POP_JUMP_IF_FALSE       82
+
+324          68 LOAD_FAST                3 (node)
+             70 LOAD_ATTR                7 (moves)
+             72 LOAD_GLOBAL              8 (len)
+             74 LOAD_FAST                1 (closed)
+             76 CALL_FUNCTION            1
+             78 BUILD_TUPLE              2
+             80 RETURN_VALUE
+
+325     >>   82 LOAD_FAST                3 (node)
+             84 LOAD_ATTR                4 (state)
+             86 LOAD_FAST                1 (closed)
+             88 CONTAINS_OP              1
+             90 POP_JUMP_IF_FALSE       48
+
+326          92 LOAD_FAST                1 (closed)
+             94 LOAD_METHOD              2 (append)
+             96 LOAD_FAST                3 (node)
+             98 LOAD_ATTR                4 (state)
+            100 CALL_METHOD              1
+            102 POP_TOP
+
+327         104 LOAD_FAST                3 (node)
+            106 LOAD_METHOD              9 (getAvailableActions)
+            108 CALL_METHOD              0
+            110 GET_ITER
+        >>  112 FOR_ITER                20 (to 134)
+            114 STORE_FAST               4 (action)
+
+328         116 LOAD_FAST                2 (q)
+            118 LOAD_METHOD              2 (append)
+            120 LOAD_FAST                3 (node)
+            122 LOAD_METHOD             10 (getResultFromAction)
+            124 LOAD_FAST                4 (action)
+            126 CALL_METHOD              1
+            128 CALL_METHOD              1
+            130 POP_TOP
+            132 JUMP_ABSOLUTE          112
+        >>  134 JUMP_ABSOLUTE           48
+
+330     >>  136 LOAD_CONST               2 ((None, None))
+            138 RETURN_VALUE
+
+Disassembly of <code object uniform_cost_search at 0x1033d5f50, file "./eight.py", line 332>:
+337           0 LOAD_FAST                0 (self)
+              2 LOAD_METHOD              0 (isSolvable)
+              4 CALL_METHOD              0
+              6 LOAD_CONST               1 (False)
+              8 COMPARE_OP               2 (==)
+             10 POP_JUMP_IF_FALSE       16
+
+338          12 LOAD_CONST               2 ((None, None))
+             14 RETURN_VALUE
+
+339     >>   16 LOAD_GLOBAL              1 (list)
+             18 CALL_FUNCTION            0
+             20 STORE_FAST               2 (closed)
+
+340          22 LOAD_GLOBAL              2 (PriorityQueue)
+             24 CALL_FUNCTION            0
+             26 STORE_FAST               3 (q)
+
+341          28 LOAD_FAST                3 (q)
+             30 LOAD_METHOD              3 (put)
+             32 LOAD_GLOBAL              4 (Node)
+             34 LOAD_FAST                0 (self)
+             36 LOAD_ATTR                5 (state)
+             38 LOAD_CONST               3 (0)
+             40 LOAD_FAST                1 (optimizer)
+             42 LOAD_CONST               4 (('state', 'depth', 'optimizer'))
+             44 CALL_FUNCTION_KW         3
+             46 CALL_METHOD              1
+             48 POP_TOP
+
+342     >>   50 LOAD_FAST                3 (q)
+             52 POP_JUMP_IF_FALSE      138
+
+343          54 LOAD_FAST                3 (q)
+             56 LOAD_METHOD              6 (get)
+             58 CALL_METHOD              0
+             60 STORE_FAST               4 (node)
+
+344          62 LOAD_FAST                4 (node)
+             64 LOAD_METHOD              7 (isGoalState)
+             66 CALL_METHOD              0
+             68 POP_JUMP_IF_FALSE       84
+
+345          70 LOAD_FAST                4 (node)
+             72 LOAD_ATTR                8 (moves)
+             74 LOAD_GLOBAL              9 (len)
+             76 LOAD_FAST                2 (closed)
+             78 CALL_FUNCTION            1
+             80 BUILD_TUPLE              2
+             82 RETURN_VALUE
+
+346     >>   84 LOAD_FAST                4 (node)
+             86 LOAD_ATTR                5 (state)
+             88 LOAD_FAST                2 (closed)
+             90 CONTAINS_OP              1
+             92 POP_JUMP_IF_FALSE       50
+
+347          94 LOAD_FAST                2 (closed)
+             96 LOAD_METHOD             10 (append)
+             98 LOAD_FAST                4 (node)
+            100 LOAD_ATTR                5 (state)
+            102 CALL_METHOD              1
+            104 POP_TOP
+
+348         106 LOAD_FAST                4 (node)
+            108 LOAD_METHOD             11 (getAvailableActions)
+            110 CALL_METHOD              0
+            112 GET_ITER
+        >>  114 FOR_ITER                20 (to 136)
+            116 STORE_FAST               5 (action)
+
+349         118 LOAD_FAST                3 (q)
+            120 LOAD_METHOD              3 (put)
+            122 LOAD_FAST                4 (node)
+            124 LOAD_METHOD             12 (getResultFromAction)
+            126 LOAD_FAST                5 (action)
+            128 CALL_METHOD              1
+            130 CALL_METHOD              1
+            132 POP_TOP
+            134 JUMP_ABSOLUTE          114
+        >>  136 JUMP_ABSOLUTE           50
+
+351     >>  138 LOAD_CONST               2 ((None, None))
+            140 RETURN_VALUE
+
+Disassembly of <code object a_star at 0x1033d5a80, file "./eight.py", line 353>:
+358           0 LOAD_FAST                0 (self)
+              2 LOAD_METHOD              0 (isSolvable)
+              4 CALL_METHOD              0
+              6 LOAD_CONST               1 (False)
+              8 COMPARE_OP               2 (==)
+             10 POP_JUMP_IF_FALSE       16
+
+359          12 LOAD_CONST               2 ((None, None))
+             14 RETURN_VALUE
+
+360     >>   16 LOAD_GLOBAL              1 (dict)
+             18 CALL_FUNCTION            0
+             20 STORE_FAST               1 (closed)
+
+361          22 LOAD_GLOBAL              2 (PriorityQueue)
+             24 CALL_FUNCTION            0
+             26 STORE_FAST               2 (q)
+
+362          28 LOAD_GLOBAL              3 (Node)
+             30 LOAD_FAST                0 (self)
+             32 LOAD_ATTR                4 (state)
+             34 LOAD_CONST               3 (0)
+             36 LOAD_CONST               4 (('state', 'depth'))
+             38 CALL_FUNCTION_KW         2
+             40 STORE_FAST               3 (node)
+
+363          42 LOAD_FAST                2 (q)
+             44 LOAD_METHOD              5 (put)
+             46 LOAD_FAST                3 (node)
+             48 LOAD_METHOD              6 (getManhattanDistance)
+             50 CALL_METHOD              0
+             52 LOAD_FAST                3 (node)
+             54 BUILD_TUPLE              2
+             56 CALL_METHOD              1
+             58 POP_TOP
+
+364     >>   60 LOAD_FAST                2 (q)
+             62 POP_JUMP_IF_FALSE      186
+
+365          64 LOAD_FAST                2 (q)
+             66 LOAD_METHOD              7 (get)
+             68 CALL_METHOD              0
+             70 UNPACK_SEQUENCE          2
+             72 STORE_FAST               4 (dist)
+             74 STORE_FAST               3 (node)
+
+366          76 LOAD_FAST                4 (dist)
+             78 LOAD_FAST                1 (closed)
+             80 LOAD_FAST                3 (node)
+             82 STORE_SUBSCR
+
+367          84 LOAD_FAST                3 (node)
+             86 LOAD_METHOD              8 (isGoalState)
+             88 CALL_METHOD              0
+             90 POP_JUMP_IF_FALSE      106
+
+368          92 LOAD_FAST                3 (node)
+             94 LOAD_ATTR                9 (moves)
+             96 LOAD_GLOBAL             10 (len)
+             98 LOAD_FAST                1 (closed)
+            100 CALL_FUNCTION            1
+            102 BUILD_TUPLE              2
+            104 RETURN_VALUE
+
+369     >>  106 LOAD_FAST                3 (node)
+            108 LOAD_METHOD             11 (getAvailableActions)
+            110 CALL_METHOD              0
+            112 GET_ITER
+        >>  114 FOR_ITER                68 (to 184)
+            116 STORE_FAST               5 (action)
+
+370         118 LOAD_FAST                3 (node)
+            120 LOAD_METHOD             12 (getResultFromAction)
+            122 LOAD_FAST                5 (action)
+            124 CALL_METHOD              1
+            126 STORE_FAST               6 (nextNode)
+
+371         128 LOAD_FAST                6 (nextNode)
+            130 LOAD_METHOD              6 (getManhattanDistance)
+            132 CALL_METHOD              0
+            134 STORE_FAST               7 (nextDist)
+
+373         136 LOAD_FAST                6 (nextNode)
+            138 LOAD_FAST                1 (closed)
+            140 CONTAINS_OP              1
+
+372         142 POP_JUMP_IF_TRUE       162
+
+374         144 LOAD_FAST                6 (nextNode)
+            146 LOAD_ATTR               13 (depth)
+            148 LOAD_FAST                7 (nextDist)
+            150 BINARY_ADD
+            152 LOAD_FAST                1 (closed)
+            154 LOAD_FAST                6 (nextNode)
+            156 BINARY_SUBSCR
+            158 COMPARE_OP               0 (<)
+
+372         160 POP_JUMP_IF_FALSE      114
+
+376     >>  162 LOAD_FAST                2 (q)
+            164 LOAD_METHOD              5 (put)
+            166 LOAD_FAST                6 (nextNode)
+            168 LOAD_ATTR               13 (depth)
+            170 LOAD_FAST                7 (nextDist)
+            172 BINARY_ADD
+            174 LOAD_FAST                6 (nextNode)
+            176 BUILD_TUPLE              2
+            178 CALL_METHOD              1
+            180 POP_TOP
+            182 JUMP_ABSOLUTE          114
+        >>  184 JUMP_ABSOLUTE           60
+
+377     >>  186 LOAD_CONST               2 ((None, None))
+            188 RETURN_VALUE
+
+Disassembly of <code object toWord at 0x1033d10e0, file "./eight.py", line 380>:
+385           0 LOAD_FAST                0 (action)
+              2 LOAD_CONST               1 (0)
+              4 COMPARE_OP               2 (==)
+              6 POP_JUMP_IF_FALSE       12
+
+386           8 LOAD_CONST               2 ('Left')
+             10 RETURN_VALUE
+
+387     >>   12 LOAD_FAST                0 (action)
+             14 LOAD_CONST               3 (1)
+             16 COMPARE_OP               2 (==)
+             18 POP_JUMP_IF_FALSE       24
+
+388          20 LOAD_CONST               4 ('Right')
+             22 RETURN_VALUE
+
+389     >>   24 LOAD_FAST                0 (action)
+             26 LOAD_CONST               5 (2)
+             28 COMPARE_OP               2 (==)
+             30 POP_JUMP_IF_FALSE       36
+
+390          32 LOAD_CONST               6 ('Top')
+             34 RETURN_VALUE
+
+391     >>   36 LOAD_FAST                0 (action)
+             38 LOAD_CONST               7 (3)
+             40 COMPARE_OP               2 (==)
+             42 POP_JUMP_IF_FALSE       48
+
+392          44 LOAD_CONST               8 ('Bottom')
+             46 RETURN_VALUE
+        >>   48 LOAD_CONST               9 (None)
+             50 RETURN_VALUE
