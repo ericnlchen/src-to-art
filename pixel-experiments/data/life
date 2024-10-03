@@ -1,0 +1,431 @@
+  1           0 LOAD_CONST               0 ("Conway's Game Of Life, Author Anurag Kumar(mailto:anuragkumarak95@gmail.com) \n\nRequirements:\n  - numpy\n  - random\n  - time\n  - matplotlib\n\nPython:\n  - 3.5\n\nUsage:\n  - $python3 game_o_life <canvas_size:int>\n\nGame-Of-Life Rules:\n \n 1.\n Any live cell with fewer than two live neighbours\n dies, as if caused by under-population.\n 2.\n Any live cell with two or three live neighbours lives\n on to the next generation.\n 3.\n Any live cell with more than three live neighbours\n dies, as if by over-population.\n 4.\n Any dead cell with exactly three live neighbours be-\n comes a live cell, as if by reproduction.\n ")
+              2 STORE_NAME               0 (__doc__)
+
+ 30           4 LOAD_CONST               1 (0)
+              6 LOAD_CONST               2 (None)
+              8 IMPORT_NAME              1 (random)
+             10 STORE_NAME               1 (random)
+
+ 31          12 LOAD_CONST               1 (0)
+             14 LOAD_CONST               2 (None)
+             16 IMPORT_NAME              2 (sys)
+             18 STORE_NAME               2 (sys)
+
+ 33          20 LOAD_CONST               1 (0)
+             22 LOAD_CONST               2 (None)
+             24 IMPORT_NAME              3 (numpy)
+             26 STORE_NAME               4 (np)
+
+ 35          28 LOAD_CONST               1 (0)
+             30 LOAD_CONST               3 (('use',))
+             32 IMPORT_NAME              5 (matplotlib)
+             34 IMPORT_FROM              6 (use)
+             36 STORE_NAME               7 (mpluse)
+             38 POP_TOP
+
+ 37          40 LOAD_NAME                7 (mpluse)
+             42 LOAD_CONST               4 ('TkAgg')
+             44 CALL_FUNCTION            1
+             46 POP_TOP
+
+ 38          48 LOAD_CONST               1 (0)
+             50 LOAD_CONST               5 (('pyplot',))
+             52 IMPORT_NAME              5 (matplotlib)
+             54 IMPORT_FROM              8 (pyplot)
+             56 STORE_NAME               9 (plt)
+             58 POP_TOP
+
+ 39          60 LOAD_CONST               1 (0)
+             62 LOAD_CONST               6 (('ListedColormap',))
+             64 IMPORT_NAME             10 (matplotlib.colors)
+             66 IMPORT_FROM             11 (ListedColormap)
+             68 STORE_NAME              11 (ListedColormap)
+             70 POP_TOP
+
+ 41          72 LOAD_CONST               7 ('Usage of script: script_nama <size_of_canvas:int>')
+             74 STORE_NAME              12 (usage_doc)
+
+ 43          76 LOAD_CONST               1 (0)
+             78 BUILD_LIST               1
+             80 LOAD_CONST               8 (100)
+             82 BINARY_MULTIPLY
+             84 LOAD_CONST               9 (1)
+             86 BUILD_LIST               1
+             88 LOAD_CONST              10 (10)
+             90 BINARY_MULTIPLY
+             92 BINARY_ADD
+             94 STORE_NAME              13 (choice)
+
+ 44          96 LOAD_NAME                1 (random)
+             98 LOAD_METHOD             14 (shuffle)
+            100 LOAD_NAME               13 (choice)
+            102 CALL_METHOD              1
+            104 POP_TOP
+
+ 47         106 LOAD_CONST              11 (<code object create_canvas at 0x1056d47c0, file "./life.py", line 47>)
+            108 LOAD_CONST              12 ('create_canvas')
+            110 MAKE_FUNCTION            0
+            112 STORE_NAME              15 (create_canvas)
+
+ 52         114 LOAD_CONST              13 (<code object seed at 0x1056d4870, file "./life.py", line 52>)
+            116 LOAD_CONST              14 ('seed')
+            118 MAKE_FUNCTION            0
+            120 STORE_NAME              16 (seed)
+
+ 58         122 LOAD_CONST              15 (<code object run at 0x1056d4a80, file "./life.py", line 58>)
+            124 LOAD_CONST              16 ('run')
+            126 MAKE_FUNCTION            0
+            128 STORE_NAME              17 (run)
+
+ 82         130 LOAD_CONST              17 (<code object __judge_point at 0x1056d4920, file "./life.py", line 82>)
+            132 LOAD_CONST              18 ('__judge_point')
+            134 MAKE_FUNCTION            0
+            136 STORE_NAME              18 (__judge_point)
+
+115         138 LOAD_NAME               19 (__name__)
+            140 LOAD_CONST              19 ('__main__')
+            142 COMPARE_OP               2 (==)
+            144 EXTENDED_ARG             1
+            146 POP_JUMP_IF_FALSE      300
+
+116         148 LOAD_NAME               20 (len)
+            150 LOAD_NAME                2 (sys)
+            152 LOAD_ATTR               21 (argv)
+            154 CALL_FUNCTION            1
+            156 LOAD_CONST              20 (2)
+            158 COMPARE_OP               3 (!=)
+            160 POP_JUMP_IF_FALSE      170
+
+117         162 LOAD_NAME               22 (Exception)
+            164 LOAD_NAME               12 (usage_doc)
+            166 CALL_FUNCTION            1
+            168 RAISE_VARARGS            1
+
+119     >>  170 LOAD_NAME               23 (int)
+            172 LOAD_NAME                2 (sys)
+            174 LOAD_ATTR               21 (argv)
+            176 LOAD_CONST               9 (1)
+            178 BINARY_SUBSCR
+            180 CALL_FUNCTION            1
+            182 STORE_NAME              24 (canvas_size)
+
+121         184 LOAD_NAME               15 (create_canvas)
+            186 LOAD_NAME               24 (canvas_size)
+            188 CALL_FUNCTION            1
+            190 STORE_NAME              25 (c)
+
+122         192 LOAD_NAME               16 (seed)
+            194 LOAD_NAME               25 (c)
+            196 CALL_FUNCTION            1
+            198 POP_TOP
+
+123         200 LOAD_NAME                9 (plt)
+            202 LOAD_METHOD             26 (subplots)
+            204 CALL_METHOD              0
+            206 UNPACK_SEQUENCE          2
+            208 STORE_NAME              27 (fig)
+            210 STORE_NAME              28 (ax)
+
+124         212 LOAD_NAME               27 (fig)
+            214 LOAD_METHOD             29 (show)
+            216 CALL_METHOD              0
+            218 POP_TOP
+
+125         220 LOAD_NAME               11 (ListedColormap)
+            222 LOAD_CONST              21 ('w')
+            224 LOAD_CONST              22 ('k')
+            226 BUILD_LIST               2
+            228 CALL_FUNCTION            1
+            230 STORE_NAME              30 (cmap)
+
+126         232 SETUP_FINALLY           46 (to 280)
+
+128     >>  234 LOAD_NAME               17 (run)
+            236 LOAD_NAME               25 (c)
+            238 CALL_FUNCTION            1
+            240 STORE_NAME              25 (c)
+
+129         242 LOAD_NAME               28 (ax)
+            244 LOAD_ATTR               31 (matshow)
+            246 LOAD_NAME               25 (c)
+            248 LOAD_NAME               30 (cmap)
+            250 LOAD_CONST              23 (('cmap',))
+            252 CALL_FUNCTION_KW         2
+            254 POP_TOP
+
+130         256 LOAD_NAME               27 (fig)
+            258 LOAD_ATTR               32 (canvas)
+            260 LOAD_METHOD             33 (draw)
+            262 CALL_METHOD              0
+            264 POP_TOP
+
+131         266 LOAD_NAME               28 (ax)
+            268 LOAD_METHOD             34 (cla)
+            270 CALL_METHOD              0
+            272 POP_TOP
+            274 JUMP_ABSOLUTE          234
+            276 POP_BLOCK
+            278 JUMP_FORWARD            20 (to 300)
+
+132     >>  280 DUP_TOP
+            282 LOAD_NAME               35 (KeyboardInterrupt)
+            284 EXTENDED_ARG             1
+            286 JUMP_IF_NOT_EXC_MATCH   298
+            288 POP_TOP
+            290 POP_TOP
+            292 POP_TOP
+
+134         294 POP_EXCEPT
+            296 JUMP_FORWARD             2 (to 300)
+        >>  298 RERAISE
+        >>  300 LOAD_CONST               2 (None)
+            302 RETURN_VALUE
+
+Disassembly of <code object create_canvas at 0x1056d47c0, file "./life.py", line 47>:
+ 48           0 LOAD_CLOSURE             0 (size)
+              2 BUILD_TUPLE              1
+              4 LOAD_CONST               1 (<code object <listcomp> at 0x1056d4710, file "./life.py", line 48>)
+              6 LOAD_CONST               2 ('create_canvas.<locals>.<listcomp>')
+              8 MAKE_FUNCTION            8 (closure)
+             10 LOAD_GLOBAL              0 (range)
+             12 LOAD_DEREF               0 (size)
+             14 CALL_FUNCTION            1
+             16 GET_ITER
+             18 CALL_FUNCTION            1
+             20 STORE_FAST               1 (canvas)
+
+ 49          22 LOAD_FAST                1 (canvas)
+             24 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x1056d4710, file "./life.py", line 48>:
+ 48           0 BUILD_LIST               0
+              2 LOAD_FAST                0 (.0)
+        >>    4 FOR_ITER                22 (to 28)
+              6 STORE_FAST               1 (j)
+              8 LOAD_CONST               0 (<code object <listcomp> at 0x1056d4660, file "./life.py", line 48>)
+             10 LOAD_CONST               1 ('create_canvas.<locals>.<listcomp>.<listcomp>')
+             12 MAKE_FUNCTION            0
+             14 LOAD_GLOBAL              0 (range)
+             16 LOAD_DEREF               0 (size)
+             18 CALL_FUNCTION            1
+             20 GET_ITER
+             22 CALL_FUNCTION            1
+             24 LIST_APPEND              2
+             26 JUMP_ABSOLUTE            4
+        >>   28 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x1056d4660, file "./life.py", line 48>:
+ 48           0 BUILD_LIST               0
+              2 LOAD_FAST                0 (.0)
+        >>    4 FOR_ITER                 8 (to 14)
+              6 STORE_FAST               1 (i)
+              8 LOAD_CONST               0 (False)
+             10 LIST_APPEND              2
+             12 JUMP_ABSOLUTE            4
+        >>   14 RETURN_VALUE
+
+Disassembly of <code object seed at 0x1056d4870, file "./life.py", line 52>:
+ 53           0 LOAD_GLOBAL              0 (enumerate)
+              2 LOAD_FAST                0 (canvas)
+              4 CALL_FUNCTION            1
+              6 GET_ITER
+        >>    8 FOR_ITER                48 (to 58)
+             10 UNPACK_SEQUENCE          2
+             12 STORE_FAST               1 (i)
+             14 STORE_FAST               2 (row)
+
+ 54          16 LOAD_GLOBAL              0 (enumerate)
+             18 LOAD_FAST                2 (row)
+             20 CALL_FUNCTION            1
+             22 GET_ITER
+        >>   24 FOR_ITER                30 (to 56)
+             26 UNPACK_SEQUENCE          2
+             28 STORE_FAST               3 (j)
+             30 STORE_FAST               4 (_)
+
+ 55          32 LOAD_GLOBAL              1 (bool)
+             34 LOAD_GLOBAL              2 (random)
+             36 LOAD_METHOD              3 (getrandbits)
+             38 LOAD_CONST               1 (1)
+             40 CALL_METHOD              1
+             42 CALL_FUNCTION            1
+             44 LOAD_FAST                0 (canvas)
+             46 LOAD_FAST                1 (i)
+             48 BINARY_SUBSCR
+             50 LOAD_FAST                3 (j)
+             52 STORE_SUBSCR
+             54 JUMP_ABSOLUTE           24
+        >>   56 JUMP_ABSOLUTE            8
+        >>   58 LOAD_CONST               0 (None)
+             60 RETURN_VALUE
+
+Disassembly of <code object run at 0x1056d4a80, file "./life.py", line 58>:
+ 68           0 LOAD_GLOBAL              0 (np)
+              2 LOAD_METHOD              1 (array)
+              4 LOAD_FAST                0 (canvas)
+              6 CALL_METHOD              1
+              8 STORE_FAST               0 (canvas)
+
+ 69          10 LOAD_GLOBAL              0 (np)
+             12 LOAD_METHOD              1 (array)
+             14 LOAD_GLOBAL              2 (create_canvas)
+             16 LOAD_FAST                0 (canvas)
+             18 LOAD_ATTR                3 (shape)
+             20 LOAD_CONST               1 (0)
+             22 BINARY_SUBSCR
+             24 CALL_FUNCTION            1
+             26 CALL_METHOD              1
+             28 STORE_FAST               1 (next_gen_canvas)
+
+ 70          30 LOAD_GLOBAL              4 (enumerate)
+             32 LOAD_FAST                0 (canvas)
+             34 CALL_FUNCTION            1
+             36 GET_ITER
+        >>   38 FOR_ITER                76 (to 116)
+             40 UNPACK_SEQUENCE          2
+             42 STORE_FAST               2 (r)
+             44 STORE_FAST               3 (row)
+
+ 71          46 LOAD_GLOBAL              4 (enumerate)
+             48 LOAD_FAST                3 (row)
+             50 CALL_FUNCTION            1
+             52 GET_ITER
+        >>   54 FOR_ITER                58 (to 114)
+             56 UNPACK_SEQUENCE          2
+             58 STORE_FAST               4 (c)
+             60 STORE_FAST               5 (pt)
+
+ 73          62 LOAD_GLOBAL              5 (__judge_point)
+
+ 74          64 LOAD_FAST                5 (pt)
+             66 LOAD_FAST                0 (canvas)
+             68 LOAD_FAST                2 (r)
+             70 LOAD_CONST               2 (1)
+             72 BINARY_SUBTRACT
+             74 LOAD_FAST                2 (r)
+             76 LOAD_CONST               3 (2)
+             78 BINARY_ADD
+             80 BUILD_SLICE              2
+             82 LOAD_FAST                4 (c)
+             84 LOAD_CONST               2 (1)
+             86 BINARY_SUBTRACT
+             88 LOAD_FAST                4 (c)
+             90 LOAD_CONST               3 (2)
+             92 BINARY_ADD
+             94 BUILD_SLICE              2
+             96 BUILD_TUPLE              2
+             98 BINARY_SUBSCR
+
+ 73         100 CALL_FUNCTION            2
+            102 LOAD_FAST                1 (next_gen_canvas)
+            104 LOAD_FAST                2 (r)
+            106 BINARY_SUBSCR
+            108 LOAD_FAST                4 (c)
+            110 STORE_SUBSCR
+            112 JUMP_ABSOLUTE           54
+        >>  114 JUMP_ABSOLUTE           38
+
+ 77     >>  116 LOAD_FAST                1 (next_gen_canvas)
+            118 STORE_FAST               0 (canvas)
+
+ 78         120 DELETE_FAST              1 (next_gen_canvas)
+
+ 79         122 LOAD_FAST                0 (canvas)
+            124 LOAD_METHOD              6 (tolist)
+            126 CALL_METHOD              0
+            128 RETURN_VALUE
+
+Disassembly of <code object __judge_point at 0x1056d4920, file "./life.py", line 82>:
+ 83           0 LOAD_CONST               1 (0)
+              2 STORE_FAST               2 (dead)
+
+ 84           4 LOAD_CONST               1 (0)
+              6 STORE_FAST               3 (alive)
+
+ 86           8 LOAD_FAST                1 (neighbours)
+             10 GET_ITER
+        >>   12 FOR_ITER                36 (to 50)
+             14 STORE_FAST               4 (i)
+
+ 87          16 LOAD_FAST                4 (i)
+             18 GET_ITER
+        >>   20 FOR_ITER                26 (to 48)
+             22 STORE_FAST               5 (status)
+
+ 88          24 LOAD_FAST                5 (status)
+             26 POP_JUMP_IF_FALSE       38
+
+ 89          28 LOAD_FAST                3 (alive)
+             30 LOAD_CONST               2 (1)
+             32 INPLACE_ADD
+             34 STORE_FAST               3 (alive)
+             36 JUMP_ABSOLUTE           20
+
+ 91     >>   38 LOAD_FAST                2 (dead)
+             40 LOAD_CONST               2 (1)
+             42 INPLACE_ADD
+             44 STORE_FAST               2 (dead)
+             46 JUMP_ABSOLUTE           20
+        >>   48 JUMP_ABSOLUTE           12
+
+ 94     >>   50 LOAD_FAST                0 (pt)
+             52 POP_JUMP_IF_FALSE       64
+
+ 95          54 LOAD_FAST                3 (alive)
+             56 LOAD_CONST               2 (1)
+             58 INPLACE_SUBTRACT
+             60 STORE_FAST               3 (alive)
+             62 JUMP_FORWARD             8 (to 72)
+
+ 97     >>   64 LOAD_FAST                2 (dead)
+             66 LOAD_CONST               2 (1)
+             68 INPLACE_SUBTRACT
+             70 STORE_FAST               2 (dead)
+
+100     >>   72 LOAD_FAST                0 (pt)
+             74 STORE_FAST               6 (state)
+
+101          76 LOAD_FAST                0 (pt)
+             78 POP_JUMP_IF_FALSE      130
+
+102          80 LOAD_FAST                3 (alive)
+             82 LOAD_CONST               3 (2)
+             84 COMPARE_OP               0 (<)
+             86 POP_JUMP_IF_FALSE       94
+
+103          88 LOAD_CONST               4 (False)
+             90 STORE_FAST               6 (state)
+             92 JUMP_ABSOLUTE          142
+
+104     >>   94 LOAD_FAST                3 (alive)
+             96 LOAD_CONST               3 (2)
+             98 COMPARE_OP               2 (==)
+            100 POP_JUMP_IF_TRUE       110
+            102 LOAD_FAST                3 (alive)
+            104 LOAD_CONST               5 (3)
+            106 COMPARE_OP               2 (==)
+            108 POP_JUMP_IF_FALSE      116
+
+105     >>  110 LOAD_CONST               6 (True)
+            112 STORE_FAST               6 (state)
+            114 JUMP_ABSOLUTE          142
+
+106     >>  116 LOAD_FAST                3 (alive)
+            118 LOAD_CONST               5 (3)
+            120 COMPARE_OP               4 (>)
+            122 POP_JUMP_IF_FALSE      142
+
+107         124 LOAD_CONST               4 (False)
+            126 STORE_FAST               6 (state)
+            128 JUMP_FORWARD            12 (to 142)
+
+109     >>  130 LOAD_FAST                3 (alive)
+            132 LOAD_CONST               5 (3)
+            134 COMPARE_OP               2 (==)
+            136 POP_JUMP_IF_FALSE      142
+
+110         138 LOAD_CONST               6 (True)
+            140 STORE_FAST               6 (state)
+
+112     >>  142 LOAD_FAST                6 (state)
+            144 RETURN_VALUE

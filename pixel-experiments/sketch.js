@@ -1,15 +1,26 @@
 
 function preload() {
-  src = loadStrings('data/eight')
+  src = loadStrings('data/brick')
 }
 
 function setup() {
-  createCanvas(1000, 1000);
+  createCanvas(900, 1000);
+  background(31, 31, 31);
+  speed = 100;
+
+  // speedSlider = createSlider(1, 1000, 100);
 }
 
 function draw() {
-  background(0, 0, 0);
+  // speed = speedSlider.value();
+  if (frameCount % 600 === 0) {
+    fill(31, 31, 31, 5);
+    rect(0, 0, width, height)
+    filter(BLUR, 1);
+  }
   noStroke();
+
+  let frameFactor = (speed / 1500) * frameCount;
 
   translate(width/2, height/2);
   let col = [50, 50, 50, 255];
@@ -35,6 +46,9 @@ function draw() {
       if (col[i] > 255 || col[i] < 0)
         col[i] = 100;
     }
+    if (colStep > 200) {
+      colStep = 10;
+    }
 
     if (line.split(' ')[0] === 'Disassembly' || line === '')
       continue;
@@ -45,21 +59,26 @@ function draw() {
     const instr = line.slice(15, 39).trim();
     const register = line.slice(39, 43).trim();
     const literal = line.slice(43).trim();
+
+    let effectiveFrameFactor = frameFactor;
+    // Make different parts of the image 'reset' at different times
+    // Seven different groups reset at different times
+    // We will get a full reset at some point related to GCF
+    // effectiveFrameFactor = frameFactor % (((byteNum / 2) % 7) + 1);
+
     if (instrSet[instr]) instrSet[instr]+=1; else instrSet[instr]=1;
-    console.log(frameCount / 1500);
+
     switch(instr) {
       case 'LOAD_CONST': // lots
         // Move vertically and draw a pixel
         let dy;
         if (literal.length % 2 === 0) {
-          // dy = h * (1 + (frameCount / 400));
-          dy = h * (0.2 + (frameCount / 1500));
-          // dy = h;
+          // dy = h * effectiveFrameFactor;
+          dy = h;
         }
         else {
-          // dy = -h * (1 + (frameCount / 400));
-          dy = -h * (0.2 + (frameCount / 1500));
-          // dy = -h;
+          // dy = -h * effectiveFrameFactor;
+          dy = -h;
         }
         translate(0, dy);
         rect(0, 0, w, h);
@@ -68,20 +87,17 @@ function draw() {
         // Move horizontally and draw a pixel
         let dx;
         if (literal.length % 2 === 0) {
-          // dx = w * (1 + (frameCount / 400));
-          dx = w * (0.2 + (frameCount / 1500));
-          // dx = w;
+          // dx = w * effectiveFrameFactor;
+          dx = w;
         }
         else {
-          // dx = -w * (1 + (frameCount / 400));
-          dx = -w * (0.2 + (frameCount / 1500));
-          // dx = -w;
+          // dx = -w * effectiveFrameFactor;
+          dx = -w;
         }
         translate(dx, 0);
         rect(0, 0, w, h);
         break;
       case 'CALL_FUNCTION': // lots
-      case 'CALL_METHO':
       case 'CALL_FUNCTION_KW':
         // push location
         push();
@@ -117,9 +133,9 @@ function draw() {
         break;
       case 'LOAD_NAME':
         // increase the size of the pixels and make them slighly less opaque
-        w += 1;
-        h += 1;
-        col[3] -= 5;
+        w += effectiveFrameFactor;
+        h += effectiveFrameFactor;
+        col[3] -= 10;
         break;
       case 'STORE_NAME':
         colStep += 0.0005 * frameCount;
