@@ -1,0 +1,50 @@
+<!--Initially created from chatGPT with prompt:
+Create a lookalike clone of the visual studio code editor interface using HTML and CSS.
+It should have the ability to switch between fake source code tabs which actually just
+display images instead of source code.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Code Lookalike</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="vscode">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-icon active"></div>
+            <div class="sidebar-icon"></div>
+            <div class="sidebar-icon"></div>
+        </div>
+
+        <!-- Main Area -->
+        <div class="main">
+            <!-- Top Tabs -->
+            <div class="tab-bar">
+                <div class="tab active" data-target="file1">word_art.py</div>
+                <div class="tab" data-target="file2">Image 2</div>
+                <div class="tab" data-target="file3">Image 3</div>
+            </div>
+
+            <!-- Fake Editor Area -->
+            <div class="editor">
+                <div class="content active" id="file1">
+                    <img src="textual-experiments/results/long-result-numbered.png" alt="Image 1">
+                </div>
+                <div class="content" id="file2">
+                    <img src="https://via.placeholder.com/800x400.png?text=Image+2" alt="Image 2">
+                </div>
+                <div class="content" id="file3">
+                    <img src="https://via.placeholder.com/800x400.png?text=Image+3" alt="Image 3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

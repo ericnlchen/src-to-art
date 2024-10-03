@@ -1,0 +1,90 @@
+/*
+Initially created from chatGPT with prompt:
+Create a lookalike clone of the visual studio code editor interface using HTML and CSS.
+It should have the ability to switch between fake source code tabs which actually just
+display images instead of source code.
+*/
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Monaco', monospace;
+}
+
+#vscode {
+    display: flex;
+    height: 100vh;
+    background-color: #1e1e1e;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 50px;
+    background-color: #252526;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.sidebar-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #3c3c3c;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.sidebar-icon.active {
+    background-color: #007acc;
+}
+
+/* Main Area */
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tab Bar */
+.tab-bar {
+    display: flex;
+    background-color: #2d2d2d;
+    border-bottom: 1px solid #000;
+}
+
+.tab {
+    padding: 10px 20px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+/* Editor */
+.editor {
+    flex: 1;
+    position: relative;
+}
+
+.content {
+    display: none;
+    padding: 20px;
+    max-height: 90vh;
+    overflow: scroll;
+}
+
+.content.active {
+    display: block;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}

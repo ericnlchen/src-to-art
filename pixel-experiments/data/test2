@@ -1,0 +1,386 @@
+  1           0 LOAD_CONST               0 (0)
+              2 LOAD_CONST               1 (None)
+              4 IMPORT_NAME              0 (random)
+              6 STORE_NAME               0 (random)
+
+  2           8 LOAD_CONST               0 (0)
+             10 LOAD_CONST               1 (None)
+             12 IMPORT_NAME              1 (time)
+             14 STORE_NAME               1 (time)
+
+  4          16 LOAD_BUILD_CLASS
+             18 LOAD_CONST               2 (<code object Character at 0x1032879d0, file "./test2.py", line 4>)
+             20 LOAD_CONST               3 ('Character')
+             22 MAKE_FUNCTION            0
+             24 LOAD_CONST               3 ('Character')
+             26 CALL_FUNCTION            2
+             28 STORE_NAME               2 (Character)
+
+ 22          30 LOAD_CONST               4 (<code object create_character at 0x103287a80, file "./test2.py", line 22>)
+             32 LOAD_CONST               5 ('create_character')
+             34 MAKE_FUNCTION            0
+             36 STORE_NAME               3 (create_character)
+
+ 29          38 LOAD_CONST               6 (<code object battle at 0x103287b30, file "./test2.py", line 29>)
+             40 LOAD_CONST               7 ('battle')
+             42 MAKE_FUNCTION            0
+             44 STORE_NAME               4 (battle)
+
+ 55          46 LOAD_NAME                5 (__name__)
+             48 LOAD_CONST               8 ('__main__')
+             50 COMPARE_OP               2 (==)
+             52 POP_JUMP_IF_FALSE      174
+
+ 56          54 LOAD_NAME                6 (print)
+             56 LOAD_CONST               9 ('Welcome to the Adventure Game!')
+             58 CALL_FUNCTION            1
+             60 POP_TOP
+
+ 58          62 LOAD_NAME                3 (create_character)
+             64 CALL_FUNCTION            0
+             66 STORE_NAME               7 (player)
+
+ 60          68 LOAD_NAME                2 (Character)
+             70 LOAD_CONST              10 ('Goblin')
+             72 LOAD_CONST              11 (50)
+             74 LOAD_CONST              12 (10)
+             76 LOAD_CONST              13 (5)
+             78 CALL_FUNCTION            4
+
+ 61          80 LOAD_NAME                2 (Character)
+             82 LOAD_CONST              14 ('Orc')
+             84 LOAD_CONST              15 (70)
+             86 LOAD_CONST              16 (15)
+             88 LOAD_CONST              17 (8)
+             90 CALL_FUNCTION            4
+
+ 62          92 LOAD_NAME                2 (Character)
+             94 LOAD_CONST              18 ('Dragon')
+             96 LOAD_CONST              19 (100)
+             98 LOAD_CONST              20 (20)
+            100 LOAD_CONST              12 (10)
+            102 CALL_FUNCTION            4
+
+ 59         104 BUILD_LIST               3
+            106 STORE_NAME               8 (enemies)
+
+ 65         108 LOAD_NAME                8 (enemies)
+            110 GET_ITER
+        >>  112 FOR_ITER                44 (to 158)
+            114 STORE_NAME               9 (enemy)
+
+ 66         116 LOAD_NAME                6 (print)
+            118 LOAD_CONST              21 ('\nYou encounter a ')
+            120 LOAD_NAME                9 (enemy)
+            122 LOAD_ATTR               10 (name)
+            124 FORMAT_VALUE             0
+            126 LOAD_CONST              22 ('!')
+            128 BUILD_STRING             3
+            130 CALL_FUNCTION            1
+            132 POP_TOP
+
+ 67         134 LOAD_NAME                4 (battle)
+            136 LOAD_NAME                7 (player)
+            138 LOAD_NAME                9 (enemy)
+            140 CALL_FUNCTION            2
+            142 POP_TOP
+
+ 68         144 LOAD_NAME                7 (player)
+            146 LOAD_METHOD             11 (is_alive)
+            148 CALL_METHOD              0
+            150 POP_JUMP_IF_TRUE       112
+
+ 69         152 POP_TOP
+            154 JUMP_ABSOLUTE          158
+            156 JUMP_ABSOLUTE          112
+
+ 71     >>  158 LOAD_NAME                7 (player)
+            160 LOAD_METHOD             11 (is_alive)
+            162 CALL_METHOD              0
+            164 POP_JUMP_IF_FALSE      174
+
+ 72         166 LOAD_NAME                6 (print)
+            168 LOAD_CONST              23 ('\nCongratulations, you have completed the adventure!')
+            170 CALL_FUNCTION            1
+            172 POP_TOP
+        >>  174 LOAD_CONST               1 (None)
+            176 RETURN_VALUE
+
+Disassembly of <code object Character at 0x1032879d0, file "./test2.py", line 4>:
+  4           0 LOAD_NAME                0 (__name__)
+              2 STORE_NAME               1 (__module__)
+              4 LOAD_CONST               0 ('Character')
+              6 STORE_NAME               2 (__qualname__)
+
+  5           8 LOAD_CONST               1 (<code object __init__ at 0x103287710, file "./test2.py", line 5>)
+             10 LOAD_CONST               2 ('Character.__init__')
+             12 MAKE_FUNCTION            0
+             14 STORE_NAME               3 (__init__)
+
+ 11          16 LOAD_CONST               3 (<code object take_damage at 0x1032877c0, file "./test2.py", line 11>)
+             18 LOAD_CONST               4 ('Character.take_damage')
+             20 MAKE_FUNCTION            0
+             22 STORE_NAME               4 (take_damage)
+
+ 14          24 LOAD_CONST               5 (<code object is_alive at 0x103287870, file "./test2.py", line 14>)
+             26 LOAD_CONST               6 ('Character.is_alive')
+             28 MAKE_FUNCTION            0
+             30 STORE_NAME               5 (is_alive)
+
+ 17          32 LOAD_CONST               7 (<code object attack_target at 0x103287920, file "./test2.py", line 17>)
+             34 LOAD_CONST               8 ('Character.attack_target')
+             36 MAKE_FUNCTION            0
+             38 STORE_NAME               6 (attack_target)
+             40 LOAD_CONST               9 (None)
+             42 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x103287710, file "./test2.py", line 5>:
+  6           0 LOAD_FAST                1 (name)
+              2 LOAD_FAST                0 (self)
+              4 STORE_ATTR               0 (name)
+
+  7           6 LOAD_FAST                2 (health)
+              8 LOAD_FAST                0 (self)
+             10 STORE_ATTR               1 (health)
+
+  8          12 LOAD_FAST                3 (attack)
+             14 LOAD_FAST                0 (self)
+             16 STORE_ATTR               2 (attack)
+
+  9          18 LOAD_FAST                4 (defense)
+             20 LOAD_FAST                0 (self)
+             22 STORE_ATTR               3 (defense)
+             24 LOAD_CONST               0 (None)
+             26 RETURN_VALUE
+
+Disassembly of <code object take_damage at 0x1032877c0, file "./test2.py", line 11>:
+ 12           0 LOAD_FAST                0 (self)
+              2 DUP_TOP
+              4 LOAD_ATTR                0 (health)
+              6 LOAD_GLOBAL              1 (max)
+              8 LOAD_CONST               1 (0)
+             10 LOAD_FAST                1 (damage)
+             12 LOAD_FAST                0 (self)
+             14 LOAD_ATTR                2 (defense)
+             16 BINARY_SUBTRACT
+             18 CALL_FUNCTION            2
+             20 INPLACE_SUBTRACT
+             22 ROT_TWO
+             24 STORE_ATTR               0 (health)
+             26 LOAD_CONST               0 (None)
+             28 RETURN_VALUE
+
+Disassembly of <code object is_alive at 0x103287870, file "./test2.py", line 14>:
+ 15           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (health)
+              4 LOAD_CONST               1 (0)
+              6 COMPARE_OP               4 (>)
+              8 RETURN_VALUE
+
+Disassembly of <code object attack_target at 0x103287920, file "./test2.py", line 17>:
+ 18           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (attack)
+              4 STORE_FAST               2 (damage)
+
+ 19           6 LOAD_FAST                1 (target)
+              8 LOAD_METHOD              1 (take_damage)
+             10 LOAD_FAST                2 (damage)
+             12 CALL_METHOD              1
+             14 POP_TOP
+
+ 20          16 LOAD_GLOBAL              2 (print)
+             18 LOAD_FAST                0 (self)
+             20 LOAD_ATTR                3 (name)
+             22 FORMAT_VALUE             0
+             24 LOAD_CONST               1 (' attacks ')
+             26 LOAD_FAST                1 (target)
+             28 LOAD_ATTR                3 (name)
+             30 FORMAT_VALUE             0
+             32 LOAD_CONST               2 (' for ')
+             34 LOAD_FAST                2 (damage)
+             36 FORMAT_VALUE             0
+             38 LOAD_CONST               3 (' damage!')
+             40 BUILD_STRING             6
+             42 CALL_FUNCTION            1
+             44 POP_TOP
+             46 LOAD_CONST               0 (None)
+             48 RETURN_VALUE
+
+Disassembly of <code object create_character at 0x103287a80, file "./test2.py", line 22>:
+ 23           0 LOAD_GLOBAL              0 (input)
+              2 LOAD_CONST               1 ("Enter your character's name: ")
+              4 CALL_FUNCTION            1
+              6 STORE_FAST               0 (name)
+
+ 24           8 LOAD_GLOBAL              1 (int)
+             10 LOAD_GLOBAL              0 (input)
+             12 LOAD_CONST               2 ("Enter your character's health: ")
+             14 CALL_FUNCTION            1
+             16 CALL_FUNCTION            1
+             18 STORE_FAST               1 (health)
+
+ 25          20 LOAD_GLOBAL              1 (int)
+             22 LOAD_GLOBAL              0 (input)
+             24 LOAD_CONST               3 ("Enter your character's attack: ")
+             26 CALL_FUNCTION            1
+             28 CALL_FUNCTION            1
+             30 STORE_FAST               2 (attack)
+
+ 26          32 LOAD_GLOBAL              1 (int)
+             34 LOAD_GLOBAL              0 (input)
+             36 LOAD_CONST               4 ("Enter your character's defense: ")
+             38 CALL_FUNCTION            1
+             40 CALL_FUNCTION            1
+             42 STORE_FAST               3 (defense)
+
+ 27          44 LOAD_GLOBAL              2 (Character)
+             46 LOAD_FAST                0 (name)
+             48 LOAD_FAST                1 (health)
+             50 LOAD_FAST                2 (attack)
+             52 LOAD_FAST                3 (defense)
+             54 CALL_FUNCTION            4
+             56 RETURN_VALUE
+
+Disassembly of <code object battle at 0x103287b30, file "./test2.py", line 29>:
+ 30     >>    0 LOAD_FAST                0 (player)
+              2 LOAD_METHOD              0 (is_alive)
+              4 CALL_METHOD              0
+              6 POP_JUMP_IF_FALSE      200
+              8 LOAD_FAST                1 (enemy)
+             10 LOAD_METHOD              0 (is_alive)
+             12 CALL_METHOD              0
+             14 POP_JUMP_IF_FALSE      200
+
+ 31          16 LOAD_GLOBAL              1 (print)
+             18 LOAD_CONST               1 ('\n')
+             20 LOAD_FAST                0 (player)
+             22 LOAD_ATTR                2 (name)
+             24 FORMAT_VALUE             0
+             26 LOAD_CONST               2 ("'s health: ")
+             28 LOAD_FAST                0 (player)
+             30 LOAD_ATTR                3 (health)
+             32 FORMAT_VALUE             0
+             34 BUILD_STRING             4
+             36 CALL_FUNCTION            1
+             38 POP_TOP
+
+ 32          40 LOAD_GLOBAL              1 (print)
+             42 LOAD_FAST                1 (enemy)
+             44 LOAD_ATTR                2 (name)
+             46 FORMAT_VALUE             0
+             48 LOAD_CONST               2 ("'s health: ")
+             50 LOAD_FAST                1 (enemy)
+             52 LOAD_ATTR                3 (health)
+             54 FORMAT_VALUE             0
+             56 BUILD_STRING             3
+             58 CALL_FUNCTION            1
+             60 POP_TOP
+
+ 34          62 LOAD_GLOBAL              4 (input)
+             64 LOAD_CONST               3 ('Attack or defend? (a/d): ')
+             66 CALL_FUNCTION            1
+             68 STORE_FAST               2 (choice)
+
+ 35          70 LOAD_FAST                2 (choice)
+             72 LOAD_METHOD              5 (lower)
+             74 CALL_METHOD              0
+             76 LOAD_CONST               4 ('a')
+             78 COMPARE_OP               2 (==)
+             80 POP_JUMP_IF_FALSE       94
+
+ 36          82 LOAD_FAST                0 (player)
+             84 LOAD_METHOD              6 (attack_target)
+             86 LOAD_FAST                1 (enemy)
+             88 CALL_METHOD              1
+             90 POP_TOP
+             92 JUMP_FORWARD            52 (to 146)
+
+ 37     >>   94 LOAD_FAST                2 (choice)
+             96 LOAD_METHOD              5 (lower)
+             98 CALL_METHOD              0
+            100 LOAD_CONST               5 ('d')
+            102 COMPARE_OP               2 (==)
+            104 POP_JUMP_IF_FALSE      138
+
+ 38         106 LOAD_FAST                0 (player)
+            108 DUP_TOP
+            110 LOAD_ATTR                7 (defense)
+            112 LOAD_CONST               6 (2)
+            114 INPLACE_MULTIPLY
+            116 ROT_TWO
+            118 STORE_ATTR               7 (defense)
+
+ 39         120 LOAD_GLOBAL              1 (print)
+            122 LOAD_FAST                0 (player)
+            124 LOAD_ATTR                2 (name)
+            126 FORMAT_VALUE             0
+            128 LOAD_CONST               7 (' defends!')
+            130 BUILD_STRING             2
+            132 CALL_FUNCTION            1
+            134 POP_TOP
+            136 JUMP_FORWARD             8 (to 146)
+
+ 41     >>  138 LOAD_GLOBAL              1 (print)
+            140 LOAD_CONST               8 ('Invalid choice!')
+            142 CALL_FUNCTION            1
+            144 POP_TOP
+
+ 43     >>  146 LOAD_GLOBAL              8 (time)
+            148 LOAD_METHOD              9 (sleep)
+            150 LOAD_CONST               9 (1)
+            152 CALL_METHOD              1
+            154 POP_TOP
+
+ 45         156 LOAD_FAST                1 (enemy)
+            158 LOAD_METHOD              0 (is_alive)
+            160 CALL_METHOD              0
+            162 POP_JUMP_IF_FALSE        0
+
+ 46         164 LOAD_FAST                1 (enemy)
+            166 LOAD_METHOD              6 (attack_target)
+            168 LOAD_FAST                0 (player)
+            170 CALL_METHOD              1
+            172 POP_TOP
+
+ 47         174 LOAD_FAST                0 (player)
+            176 DUP_TOP
+            178 LOAD_ATTR                7 (defense)
+            180 LOAD_CONST               6 (2)
+            182 INPLACE_TRUE_DIVIDE
+            184 ROT_TWO
+            186 STORE_ATTR               7 (defense)
+
+ 48         188 LOAD_GLOBAL              8 (time)
+            190 LOAD_METHOD              9 (sleep)
+            192 LOAD_CONST               9 (1)
+            194 CALL_METHOD              1
+            196 POP_TOP
+            198 JUMP_ABSOLUTE            0
+
+ 50     >>  200 LOAD_FAST                0 (player)
+            202 LOAD_METHOD              0 (is_alive)
+            204 CALL_METHOD              0
+            206 POP_JUMP_IF_FALSE      228
+
+ 51         208 LOAD_GLOBAL              1 (print)
+            210 LOAD_CONST              10 ('\nYou defeated ')
+            212 LOAD_FAST                1 (enemy)
+            214 LOAD_ATTR                2 (name)
+            216 FORMAT_VALUE             0
+            218 LOAD_CONST              11 ('!')
+            220 BUILD_STRING             3
+            222 CALL_FUNCTION            1
+            224 POP_TOP
+            226 JUMP_FORWARD            18 (to 246)
+
+ 53     >>  228 LOAD_GLOBAL              1 (print)
+            230 LOAD_CONST              12 ('\nYou were defeated by ')
+            232 LOAD_FAST                1 (enemy)
+            234 LOAD_ATTR                2 (name)
+            236 FORMAT_VALUE             0
+            238 LOAD_CONST              11 ('!')
+            240 BUILD_STRING             3
+            242 CALL_FUNCTION            1
+            244 POP_TOP
+        >>  246 LOAD_CONST               0 (None)
+            248 RETURN_VALUE
