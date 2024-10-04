@@ -1,0 +1,1253 @@
+  1           0 LOAD_CONST               0 ('\n Pygame base template for opening a window\n \n Sample Python/Pygame Programs\n Simpson College Computer Science\n http://programarcadegames.com/\n http://simpson.edu/computer-science/\n \n Explanation video: http://youtu.be/vRB_983kUMc\n\n-------------------------------------------------\n\nAuthor for the Brickout game is Christian Bender\nThat includes the classes Ball, Paddle, Brick, and BrickWall.\n\n')
+              2 STORE_NAME               0 (__doc__)
+
+ 18           4 LOAD_CONST               1 (0)
+              6 LOAD_CONST               2 (None)
+              8 IMPORT_NAME              1 (random)
+             10 STORE_NAME               1 (random)
+
+ 21          12 LOAD_CONST               1 (0)
+             14 LOAD_CONST               2 (None)
+             16 IMPORT_NAME              2 (pygame)
+             18 STORE_NAME               2 (pygame)
+
+ 24          20 LOAD_CONST               3 ((0, 0, 0))
+             22 STORE_NAME               3 (BLACK)
+
+ 25          24 LOAD_CONST               4 ((255, 255, 255))
+             26 STORE_NAME               4 (WHITE)
+
+ 26          28 LOAD_CONST               5 ((0, 255, 0))
+             30 STORE_NAME               5 (GREEN)
+
+ 27          32 LOAD_CONST               6 ((255, 0, 0))
+             34 STORE_NAME               6 (RED)
+
+ 29          36 LOAD_NAME                2 (pygame)
+             38 LOAD_METHOD              7 (init)
+             40 CALL_METHOD              0
+             42 POP_TOP
+
+ 32          44 LOAD_CONST               7 ((700, 500))
+             46 STORE_NAME               8 (size)
+
+ 33          48 LOAD_NAME                2 (pygame)
+             50 LOAD_ATTR                9 (display)
+             52 LOAD_METHOD             10 (set_mode)
+             54 LOAD_NAME                8 (size)
+             56 CALL_METHOD              1
+             58 STORE_NAME              11 (screen)
+
+ 41          60 LOAD_BUILD_CLASS
+             62 LOAD_CONST               8 (<code object Ball at 0x102b03030, file "./brick.py", line 41>)
+             64 LOAD_CONST               9 ('Ball')
+             66 MAKE_FUNCTION            0
+             68 LOAD_CONST               9 ('Ball')
+             70 LOAD_NAME               12 (object)
+             72 CALL_FUNCTION            3
+             74 STORE_NAME              13 (Ball)
+
+110          76 LOAD_BUILD_CLASS
+             78 LOAD_CONST              10 (<code object Paddle at 0x102b032f0, file "./brick.py", line 110>)
+             80 LOAD_CONST              11 ('Paddle')
+             82 MAKE_FUNCTION            0
+             84 LOAD_CONST              11 ('Paddle')
+             86 LOAD_NAME               12 (object)
+             88 CALL_FUNCTION            3
+             90 STORE_NAME              14 (Paddle)
+
+144          92 LOAD_BUILD_CLASS
+             94 LOAD_CONST              12 (<code object Brick at 0x102b03710, file "./brick.py", line 144>)
+             96 LOAD_CONST              13 ('Brick')
+             98 MAKE_FUNCTION            0
+            100 LOAD_CONST              13 ('Brick')
+            102 LOAD_NAME                2 (pygame)
+            104 LOAD_ATTR               15 (sprite)
+            106 LOAD_ATTR               16 (Sprite)
+            108 CALL_FUNCTION            3
+            110 STORE_NAME              17 (Brick)
+
+220         112 LOAD_BUILD_CLASS
+            114 LOAD_CONST              14 (<code object BrickWall at 0x102b03ea0, file "./brick.py", line 220>)
+            116 LOAD_CONST              15 ('BrickWall')
+            118 MAKE_FUNCTION            0
+            120 LOAD_CONST              15 ('BrickWall')
+            122 LOAD_NAME                2 (pygame)
+            124 LOAD_ATTR               15 (sprite)
+            126 LOAD_ATTR               18 (Group)
+            128 CALL_FUNCTION            3
+            130 STORE_NAME              19 (BrickWall)
+
+289         132 LOAD_NAME               13 (Ball)
+            134 LOAD_NAME               11 (screen)
+            136 LOAD_CONST              16 (25)
+            138 LOAD_NAME                1 (random)
+            140 LOAD_METHOD             20 (randint)
+            142 LOAD_CONST              17 (1)
+            144 LOAD_CONST              18 (700)
+            146 CALL_METHOD              2
+            148 LOAD_CONST              19 (250)
+            150 CALL_FUNCTION            4
+            152 STORE_NAME              21 (ball)
+
+290         154 LOAD_NAME               14 (Paddle)
+            156 LOAD_NAME               11 (screen)
+            158 LOAD_CONST              20 (100)
+            160 LOAD_CONST              21 (20)
+            162 LOAD_CONST              19 (250)
+            164 LOAD_CONST              22 (450)
+            166 CALL_FUNCTION            5
+            168 STORE_NAME              22 (paddle)
+
+291         170 LOAD_NAME               19 (BrickWall)
+            172 LOAD_NAME               11 (screen)
+            174 LOAD_CONST              16 (25)
+            176 LOAD_CONST              16 (25)
+            178 LOAD_CONST              23 (150)
+            180 LOAD_CONST              24 (50)
+            182 CALL_FUNCTION            5
+            184 STORE_NAME              23 (brickWall)
+
+293         186 LOAD_CONST              25 (False)
+            188 STORE_NAME              24 (isGameOver)
+
+294         190 LOAD_CONST              26 (True)
+            192 STORE_NAME              25 (gameStatus)
+
+296         194 LOAD_CONST               1 (0)
+            196 STORE_NAME              26 (score)
+
+298         198 LOAD_NAME                2 (pygame)
+            200 LOAD_ATTR                9 (display)
+            202 LOAD_METHOD             27 (set_caption)
+            204 LOAD_CONST              27 ('Brickout-game')
+            206 CALL_METHOD              1
+            208 POP_TOP
+
+301         210 LOAD_CONST              25 (False)
+            212 STORE_NAME              28 (done)
+
+304         214 LOAD_NAME                2 (pygame)
+            216 LOAD_ATTR               29 (time)
+            218 LOAD_METHOD             30 (Clock)
+            220 CALL_METHOD              0
+            222 STORE_NAME              31 (clock)
+
+307         224 LOAD_NAME                2 (pygame)
+            226 LOAD_ATTR               32 (font)
+            228 LOAD_METHOD              7 (init)
+            230 CALL_METHOD              0
+            232 POP_TOP
+
+311         234 LOAD_NAME                2 (pygame)
+            236 LOAD_ATTR               32 (font)
+            238 LOAD_METHOD             33 (SysFont)
+            240 LOAD_CONST              28 ('Comic Sans MS')
+            242 LOAD_CONST              29 (40)
+            244 CALL_METHOD              2
+            246 STORE_NAME              34 (mgGameOver)
+
+314         248 LOAD_NAME                2 (pygame)
+            250 LOAD_ATTR               32 (font)
+            252 LOAD_METHOD             33 (SysFont)
+            254 LOAD_CONST              28 ('Comic Sans MS')
+            256 LOAD_CONST              29 (40)
+            258 CALL_METHOD              2
+            260 STORE_NAME              35 (mgWin)
+
+317         262 LOAD_NAME                2 (pygame)
+            264 LOAD_ATTR               32 (font)
+            266 LOAD_METHOD             33 (SysFont)
+            268 LOAD_CONST              28 ('Comic Sans MS')
+            270 LOAD_CONST              29 (40)
+            272 CALL_METHOD              2
+            274 STORE_NAME              36 (mgScore)
+
+319         276 LOAD_NAME               34 (mgGameOver)
+            278 LOAD_METHOD             37 (render)
+            280 LOAD_CONST              30 ('Game Over!')
+            282 LOAD_CONST              25 (False)
+            284 LOAD_CONST               3 ((0, 0, 0))
+            286 CALL_METHOD              3
+            288 STORE_NAME              38 (textsurfaceGameOver)
+
+320         290 LOAD_NAME               35 (mgWin)
+            292 LOAD_METHOD             37 (render)
+            294 LOAD_CONST              31 ('You win!')
+            296 LOAD_CONST              25 (False)
+            298 LOAD_CONST               3 ((0, 0, 0))
+            300 CALL_METHOD              3
+            302 STORE_NAME              39 (textsurfaceWin)
+
+321         304 LOAD_NAME               36 (mgScore)
+            306 LOAD_METHOD             37 (render)
+            308 LOAD_CONST              32 ('score: ')
+            310 LOAD_NAME               40 (str)
+            312 LOAD_NAME               26 (score)
+            314 CALL_FUNCTION            1
+            316 BINARY_ADD
+            318 LOAD_CONST              25 (False)
+            320 LOAD_CONST               3 ((0, 0, 0))
+            322 CALL_METHOD              3
+            324 STORE_NAME              41 (textsurfaceScore)
+
+324     >>  326 LOAD_NAME               28 (done)
+            328 EXTENDED_ARG             2
+            330 POP_JUMP_IF_TRUE       652
+
+326         332 LOAD_NAME                2 (pygame)
+            334 LOAD_ATTR               42 (event)
+            336 LOAD_METHOD             43 (get)
+            338 CALL_METHOD              0
+            340 GET_ITER
+        >>  342 FOR_ITER                24 (to 368)
+            344 STORE_NAME              42 (event)
+
+327         346 LOAD_NAME               42 (event)
+            348 LOAD_ATTR               44 (type)
+            350 LOAD_NAME                2 (pygame)
+            352 LOAD_ATTR               45 (QUIT)
+            354 COMPARE_OP               2 (==)
+            356 EXTENDED_ARG             1
+            358 POP_JUMP_IF_FALSE      342
+
+328         360 LOAD_CONST              26 (True)
+            362 STORE_NAME              28 (done)
+            364 EXTENDED_ARG             1
+            366 JUMP_ABSOLUTE          342
+
+339     >>  368 LOAD_NAME               11 (screen)
+            370 LOAD_METHOD             46 (fill)
+            372 LOAD_NAME                4 (WHITE)
+            374 CALL_METHOD              1
+            376 POP_TOP
+
+347         378 LOAD_NAME               25 (gameStatus)
+            380 EXTENDED_ARG             2
+            382 POP_JUMP_IF_FALSE      518
+
+350         384 LOAD_NAME               23 (brickWall)
+            386 LOAD_METHOD             47 (draw)
+            388 CALL_METHOD              0
+            390 POP_TOP
+
+353         392 LOAD_NAME               23 (brickWall)
+            394 LOAD_METHOD             48 (collide)
+            396 LOAD_NAME               21 (ball)
+            398 CALL_METHOD              1
+            400 EXTENDED_ARG             1
+            402 POP_JUMP_IF_FALSE      412
+
+354         404 LOAD_NAME               26 (score)
+            406 LOAD_CONST              33 (10)
+            408 INPLACE_ADD
+            410 STORE_NAME              26 (score)
+
+355     >>  412 LOAD_NAME               36 (mgScore)
+            414 LOAD_METHOD             37 (render)
+            416 LOAD_CONST              32 ('score: ')
+            418 LOAD_NAME               40 (str)
+            420 LOAD_NAME               26 (score)
+            422 CALL_FUNCTION            1
+            424 BINARY_ADD
+            426 LOAD_CONST              25 (False)
+            428 LOAD_CONST               3 ((0, 0, 0))
+            430 CALL_METHOD              3
+            432 STORE_NAME              41 (textsurfaceScore)
+
+356         434 LOAD_NAME               11 (screen)
+            436 LOAD_METHOD             49 (blit)
+            438 LOAD_NAME               41 (textsurfaceScore)
+            440 LOAD_CONST              34 ((300, 0))
+            442 CALL_METHOD              2
+            444 POP_TOP
+
+359         446 LOAD_NAME               23 (brickWall)
+            448 LOAD_METHOD             50 (update)
+            450 LOAD_NAME               21 (ball)
+            452 CALL_METHOD              1
+            454 POP_TOP
+
+361         456 LOAD_NAME               22 (paddle)
+            458 LOAD_METHOD             47 (draw)
+            460 CALL_METHOD              0
+            462 POP_TOP
+
+362         464 LOAD_NAME               22 (paddle)
+            466 LOAD_METHOD             50 (update)
+            468 CALL_METHOD              0
+            470 POP_TOP
+
+364         472 LOAD_NAME               21 (ball)
+            474 LOAD_METHOD             50 (update)
+            476 LOAD_NAME               22 (paddle)
+            478 LOAD_NAME               23 (brickWall)
+            480 CALL_METHOD              2
+            482 EXTENDED_ARG             1
+            484 POP_JUMP_IF_FALSE      494
+
+365         486 LOAD_CONST              26 (True)
+            488 STORE_NAME              24 (isGameOver)
+
+366         490 LOAD_CONST              25 (False)
+            492 STORE_NAME              25 (gameStatus)
+
+368     >>  494 LOAD_NAME               23 (brickWall)
+            496 LOAD_METHOD             51 (hasWin)
+            498 CALL_METHOD              0
+            500 EXTENDED_ARG             1
+            502 POP_JUMP_IF_FALSE      508
+
+369         504 LOAD_CONST              25 (False)
+            506 STORE_NAME              25 (gameStatus)
+
+371     >>  508 LOAD_NAME               21 (ball)
+            510 LOAD_METHOD             47 (draw)
+            512 CALL_METHOD              0
+            514 POP_TOP
+            516 JUMP_FORWARD           110 (to 628)
+
+374     >>  518 LOAD_NAME               24 (isGameOver)
+            520 EXTENDED_ARG             2
+            522 POP_JUMP_IF_FALSE      572
+
+375         524 LOAD_NAME               11 (screen)
+            526 LOAD_METHOD             49 (blit)
+            528 LOAD_NAME               38 (textsurfaceGameOver)
+            530 LOAD_CONST              35 ((0, 0))
+            532 CALL_METHOD              2
+            534 POP_TOP
+
+376         536 LOAD_NAME               36 (mgScore)
+            538 LOAD_METHOD             37 (render)
+            540 LOAD_CONST              32 ('score: ')
+            542 LOAD_NAME               40 (str)
+            544 LOAD_NAME               26 (score)
+            546 CALL_FUNCTION            1
+            548 BINARY_ADD
+            550 LOAD_CONST              25 (False)
+            552 LOAD_CONST               3 ((0, 0, 0))
+            554 CALL_METHOD              3
+            556 STORE_NAME              41 (textsurfaceScore)
+
+377         558 LOAD_NAME               11 (screen)
+            560 LOAD_METHOD             49 (blit)
+            562 LOAD_NAME               41 (textsurfaceScore)
+            564 LOAD_CONST              34 ((300, 0))
+            566 CALL_METHOD              2
+            568 POP_TOP
+            570 JUMP_FORWARD            56 (to 628)
+
+378     >>  572 LOAD_NAME               23 (brickWall)
+            574 LOAD_METHOD             51 (hasWin)
+            576 CALL_METHOD              0
+            578 EXTENDED_ARG             2
+            580 POP_JUMP_IF_FALSE      628
+
+379         582 LOAD_NAME               11 (screen)
+            584 LOAD_METHOD             49 (blit)
+            586 LOAD_NAME               39 (textsurfaceWin)
+            588 LOAD_CONST              35 ((0, 0))
+            590 CALL_METHOD              2
+            592 POP_TOP
+
+380         594 LOAD_NAME               36 (mgScore)
+            596 LOAD_METHOD             37 (render)
+            598 LOAD_CONST              32 ('score: ')
+            600 LOAD_NAME               40 (str)
+            602 LOAD_NAME               26 (score)
+            604 CALL_FUNCTION            1
+            606 BINARY_ADD
+            608 LOAD_CONST              25 (False)
+            610 LOAD_CONST               3 ((0, 0, 0))
+            612 CALL_METHOD              3
+            614 STORE_NAME              41 (textsurfaceScore)
+
+381         616 LOAD_NAME               11 (screen)
+            618 LOAD_METHOD             49 (blit)
+            620 LOAD_NAME               41 (textsurfaceScore)
+            622 LOAD_CONST              34 ((300, 0))
+            624 CALL_METHOD              2
+            626 POP_TOP
+
+384     >>  628 LOAD_NAME                2 (pygame)
+            630 LOAD_ATTR                9 (display)
+            632 LOAD_METHOD             52 (flip)
+            634 CALL_METHOD              0
+            636 POP_TOP
+
+387         638 LOAD_NAME               31 (clock)
+            640 LOAD_METHOD             53 (tick)
+            642 LOAD_CONST              36 (60)
+            644 CALL_METHOD              1
+            646 POP_TOP
+            648 EXTENDED_ARG             1
+            650 JUMP_ABSOLUTE          326
+
+390     >>  652 LOAD_NAME                2 (pygame)
+            654 LOAD_METHOD             54 (quit)
+            656 CALL_METHOD              0
+            658 POP_TOP
+            660 LOAD_CONST               2 (None)
+            662 RETURN_VALUE
+
+Disassembly of <code object Ball at 0x102b03030, file "./brick.py", line 41>:
+ 41           0 LOAD_NAME                0 (__name__)
+              2 STORE_NAME               1 (__module__)
+              4 LOAD_CONST               0 ('Ball')
+              6 STORE_NAME               2 (__qualname__)
+
+ 42           8 LOAD_CONST               1 (<code object __init__ at 0x102aecc90, file "./brick.py", line 42>)
+             10 LOAD_CONST               2 ('Ball.__init__')
+             12 MAKE_FUNCTION            0
+             14 STORE_NAME               3 (__init__)
+
+ 53          16 LOAD_CONST               3 (<code object getXVel at 0x102aecd40, file "./brick.py", line 53>)
+             18 LOAD_CONST               4 ('Ball.getXVel')
+             20 MAKE_FUNCTION            0
+             22 STORE_NAME               4 (getXVel)
+
+ 56          24 LOAD_CONST               5 (<code object getYVel at 0x102aecdf0, file "./brick.py", line 56>)
+             26 LOAD_CONST               6 ('Ball.getYVel')
+             28 MAKE_FUNCTION            0
+             30 STORE_NAME               5 (getYVel)
+
+ 59          32 LOAD_CONST               7 (<code object draw at 0x102aecea0, file "./brick.py", line 59>)
+             34 LOAD_CONST               8 ('Ball.draw')
+             36 MAKE_FUNCTION            0
+             38 STORE_NAME               6 (draw)
+
+ 65          40 LOAD_CONST               9 (<code object update at 0x102aecf50, file "./brick.py", line 65>)
+             42 LOAD_CONST              10 ('Ball.update')
+             44 MAKE_FUNCTION            0
+             46 STORE_NAME               7 (update)
+             48 LOAD_CONST              11 (None)
+             50 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x102aecc90, file "./brick.py", line 42>:
+ 43           0 LOAD_FAST                1 (screen)
+              2 LOAD_FAST                0 (self)
+              4 STORE_ATTR               0 (_Ball__screen)
+
+ 44           6 LOAD_FAST                2 (radius)
+              8 LOAD_FAST                0 (self)
+             10 STORE_ATTR               1 (_radius)
+
+ 45          12 LOAD_FAST                3 (x)
+             14 LOAD_FAST                0 (self)
+             16 STORE_ATTR               2 (_xLoc)
+
+ 46          18 LOAD_FAST                4 (y)
+             20 LOAD_FAST                0 (self)
+             22 STORE_ATTR               3 (_yLoc)
+
+ 47          24 LOAD_CONST               1 (7)
+             26 LOAD_FAST                0 (self)
+             28 STORE_ATTR               4 (_Ball__xVel)
+
+ 48          30 LOAD_CONST               2 (2)
+             32 LOAD_FAST                0 (self)
+             34 STORE_ATTR               5 (_Ball__yVel)
+
+ 49          36 LOAD_GLOBAL              6 (pygame)
+             38 LOAD_ATTR                7 (display)
+             40 LOAD_METHOD              8 (get_surface)
+             42 CALL_METHOD              0
+             44 LOAD_METHOD              9 (get_size)
+             46 CALL_METHOD              0
+             48 UNPACK_SEQUENCE          2
+             50 STORE_FAST               5 (w)
+             52 STORE_FAST               6 (h)
+
+ 50          54 LOAD_FAST                5 (w)
+             56 LOAD_FAST                0 (self)
+             58 STORE_ATTR              10 (_Ball__width)
+
+ 51          60 LOAD_FAST                6 (h)
+             62 LOAD_FAST                0 (self)
+             64 STORE_ATTR              11 (_Ball__height)
+             66 LOAD_CONST               0 (None)
+             68 RETURN_VALUE
+
+Disassembly of <code object getXVel at 0x102aecd40, file "./brick.py", line 53>:
+ 54           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (_Ball__xVel)
+              4 RETURN_VALUE
+
+Disassembly of <code object getYVel at 0x102aecdf0, file "./brick.py", line 56>:
+ 57           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (_Ball__yVel)
+              4 RETURN_VALUE
+
+Disassembly of <code object draw at 0x102aecea0, file "./brick.py", line 59>:
+ 63           0 LOAD_GLOBAL              0 (pygame)
+              2 LOAD_ATTR                1 (draw)
+              4 LOAD_METHOD              2 (circle)
+              6 LOAD_GLOBAL              3 (screen)
+              8 LOAD_CONST               1 ((255, 0, 0))
+             10 LOAD_FAST                0 (self)
+             12 LOAD_ATTR                4 (_xLoc)
+             14 LOAD_FAST                0 (self)
+             16 LOAD_ATTR                5 (_yLoc)
+             18 BUILD_TUPLE              2
+             20 LOAD_FAST                0 (self)
+             22 LOAD_ATTR                6 (_radius)
+             24 CALL_METHOD              4
+             26 POP_TOP
+             28 LOAD_CONST               2 (None)
+             30 RETURN_VALUE
+
+Disassembly of <code object update at 0x102aecf50, file "./brick.py", line 65>:
+ 70           0 LOAD_FAST                0 (self)
+              2 DUP_TOP
+              4 LOAD_ATTR                0 (_xLoc)
+              6 LOAD_FAST                0 (self)
+              8 LOAD_ATTR                1 (_Ball__xVel)
+             10 INPLACE_ADD
+             12 ROT_TWO
+             14 STORE_ATTR               0 (_xLoc)
+
+ 71          16 LOAD_FAST                0 (self)
+             18 DUP_TOP
+             20 LOAD_ATTR                2 (_yLoc)
+             22 LOAD_FAST                0 (self)
+             24 LOAD_ATTR                3 (_Ball__yVel)
+             26 INPLACE_ADD
+             28 ROT_TWO
+             30 STORE_ATTR               2 (_yLoc)
+
+ 73          32 LOAD_FAST                0 (self)
+             34 LOAD_ATTR                0 (_xLoc)
+             36 LOAD_FAST                0 (self)
+             38 LOAD_ATTR                4 (_radius)
+             40 COMPARE_OP               1 (<=)
+             42 POP_JUMP_IF_FALSE       60
+
+ 74          44 LOAD_FAST                0 (self)
+             46 DUP_TOP
+             48 LOAD_ATTR                1 (_Ball__xVel)
+             50 LOAD_CONST               1 (-1)
+             52 INPLACE_MULTIPLY
+             54 ROT_TWO
+             56 STORE_ATTR               1 (_Ball__xVel)
+             58 JUMP_FORWARD            32 (to 92)
+
+ 76     >>   60 LOAD_FAST                0 (self)
+             62 LOAD_ATTR                0 (_xLoc)
+             64 LOAD_FAST                0 (self)
+             66 LOAD_ATTR                5 (_Ball__width)
+             68 LOAD_FAST                0 (self)
+             70 LOAD_ATTR                4 (_radius)
+             72 BINARY_SUBTRACT
+             74 COMPARE_OP               5 (>=)
+             76 POP_JUMP_IF_FALSE       92
+
+ 77          78 LOAD_FAST                0 (self)
+             80 DUP_TOP
+             82 LOAD_ATTR                1 (_Ball__xVel)
+             84 LOAD_CONST               1 (-1)
+             86 INPLACE_MULTIPLY
+             88 ROT_TWO
+             90 STORE_ATTR               1 (_Ball__xVel)
+
+ 79     >>   92 LOAD_FAST                0 (self)
+             94 LOAD_ATTR                2 (_yLoc)
+             96 LOAD_FAST                0 (self)
+             98 LOAD_ATTR                4 (_radius)
+            100 COMPARE_OP               1 (<=)
+            102 POP_JUMP_IF_FALSE      120
+
+ 80         104 LOAD_FAST                0 (self)
+            106 DUP_TOP
+            108 LOAD_ATTR                3 (_Ball__yVel)
+            110 LOAD_CONST               1 (-1)
+            112 INPLACE_MULTIPLY
+            114 ROT_TWO
+            116 STORE_ATTR               3 (_Ball__yVel)
+            118 JUMP_FORWARD            22 (to 142)
+
+ 82     >>  120 LOAD_FAST                0 (self)
+            122 LOAD_ATTR                2 (_yLoc)
+            124 LOAD_FAST                0 (self)
+            126 LOAD_ATTR                5 (_Ball__width)
+            128 LOAD_FAST                0 (self)
+            130 LOAD_ATTR                4 (_radius)
+            132 BINARY_SUBTRACT
+            134 COMPARE_OP               5 (>=)
+            136 POP_JUMP_IF_FALSE      142
+
+ 83         138 LOAD_CONST               2 (True)
+            140 RETURN_VALUE
+
+ 86     >>  142 LOAD_FAST                2 (brickwall)
+            144 LOAD_METHOD              6 (collide)
+            146 LOAD_FAST                0 (self)
+            148 CALL_METHOD              1
+            150 POP_JUMP_IF_FALSE      166
+
+ 87         152 LOAD_FAST                0 (self)
+            154 DUP_TOP
+            156 LOAD_ATTR                3 (_Ball__yVel)
+            158 LOAD_CONST               1 (-1)
+            160 INPLACE_MULTIPLY
+            162 ROT_TWO
+            164 STORE_ATTR               3 (_Ball__yVel)
+
+ 90     >>  166 LOAD_FAST                1 (paddle)
+            168 LOAD_ATTR                2 (_yLoc)
+            170 STORE_FAST               3 (paddleY)
+
+ 91         172 LOAD_FAST                1 (paddle)
+            174 LOAD_ATTR                7 (_width)
+            176 STORE_FAST               4 (paddleW)
+
+ 92         178 LOAD_FAST                1 (paddle)
+            180 LOAD_ATTR                8 (_height)
+            182 STORE_FAST               5 (paddleH)
+
+ 93         184 LOAD_FAST                1 (paddle)
+            186 LOAD_ATTR                0 (_xLoc)
+            188 STORE_FAST               6 (paddleX)
+
+ 94         190 LOAD_FAST                0 (self)
+            192 LOAD_ATTR                0 (_xLoc)
+            194 STORE_FAST               7 (ballX)
+
+ 95         196 LOAD_FAST                0 (self)
+            198 LOAD_ATTR                2 (_yLoc)
+            200 STORE_FAST               8 (ballY)
+
+ 97         202 LOAD_FAST                7 (ballX)
+            204 LOAD_FAST                0 (self)
+            206 LOAD_ATTR                4 (_radius)
+            208 BINARY_ADD
+            210 LOAD_FAST                6 (paddleX)
+            212 COMPARE_OP               5 (>=)
+            214 EXTENDED_ARG             1
+            216 POP_JUMP_IF_FALSE      276
+            218 LOAD_FAST                7 (ballX)
+            220 LOAD_FAST                6 (paddleX)
+            222 LOAD_FAST                4 (paddleW)
+            224 BINARY_ADD
+            226 COMPARE_OP               1 (<=)
+            228 EXTENDED_ARG             1
+            230 POP_JUMP_IF_FALSE      276
+
+ 98         232 LOAD_FAST                8 (ballY)
+            234 LOAD_FAST                0 (self)
+            236 LOAD_ATTR                4 (_radius)
+            238 BINARY_ADD
+            240 LOAD_FAST                3 (paddleY)
+            242 COMPARE_OP               5 (>=)
+
+ 97         244 EXTENDED_ARG             1
+            246 POP_JUMP_IF_FALSE      276
+
+ 98         248 LOAD_FAST                8 (ballY)
+            250 LOAD_FAST                3 (paddleY)
+            252 LOAD_FAST                5 (paddleH)
+            254 BINARY_ADD
+            256 COMPARE_OP               1 (<=)
+
+ 97         258 EXTENDED_ARG             1
+            260 POP_JUMP_IF_FALSE      276
+
+100         262 LOAD_FAST                0 (self)
+            264 DUP_TOP
+            266 LOAD_ATTR                3 (_Ball__yVel)
+            268 LOAD_CONST               1 (-1)
+            270 INPLACE_MULTIPLY
+            272 ROT_TWO
+            274 STORE_ATTR               3 (_Ball__yVel)
+
+102     >>  276 LOAD_CONST               3 (False)
+            278 RETURN_VALUE
+
+Disassembly of <code object Paddle at 0x102b032f0, file "./brick.py", line 110>:
+110           0 LOAD_NAME                0 (__name__)
+              2 STORE_NAME               1 (__module__)
+              4 LOAD_CONST               0 ('Paddle')
+              6 STORE_NAME               2 (__qualname__)
+
+111           8 LOAD_CONST               1 (<code object __init__ at 0x102b030e0, file "./brick.py", line 111>)
+             10 LOAD_CONST               2 ('Paddle.__init__')
+             12 MAKE_FUNCTION            0
+             14 STORE_NAME               3 (__init__)
+
+121          16 LOAD_CONST               3 (<code object draw at 0x102b03190, file "./brick.py", line 121>)
+             18 LOAD_CONST               4 ('Paddle.draw')
+             20 MAKE_FUNCTION            0
+             22 STORE_NAME               4 (draw)
+
+129          24 LOAD_CONST               5 (<code object update at 0x102b03240, file "./brick.py", line 129>)
+             26 LOAD_CONST               6 ('Paddle.update')
+             28 MAKE_FUNCTION            0
+             30 STORE_NAME               5 (update)
+             32 LOAD_CONST               7 (None)
+             34 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x102b030e0, file "./brick.py", line 111>:
+112           0 LOAD_FAST                1 (screen)
+              2 LOAD_FAST                0 (self)
+              4 STORE_ATTR               0 (_Paddle__screen)
+
+113           6 LOAD_FAST                2 (width)
+              8 LOAD_FAST                0 (self)
+             10 STORE_ATTR               1 (_width)
+
+114          12 LOAD_FAST                3 (height)
+             14 LOAD_FAST                0 (self)
+             16 STORE_ATTR               2 (_height)
+
+115          18 LOAD_FAST                4 (x)
+             20 LOAD_FAST                0 (self)
+             22 STORE_ATTR               3 (_xLoc)
+
+116          24 LOAD_FAST                5 (y)
+             26 LOAD_FAST                0 (self)
+             28 STORE_ATTR               4 (_yLoc)
+
+117          30 LOAD_GLOBAL              5 (pygame)
+             32 LOAD_ATTR                6 (display)
+             34 LOAD_METHOD              7 (get_surface)
+             36 CALL_METHOD              0
+             38 LOAD_METHOD              8 (get_size)
+             40 CALL_METHOD              0
+             42 UNPACK_SEQUENCE          2
+             44 STORE_FAST               6 (w)
+             46 STORE_FAST               7 (h)
+
+118          48 LOAD_FAST                6 (w)
+             50 LOAD_FAST                0 (self)
+             52 STORE_ATTR               9 (_Paddle__W)
+
+119          54 LOAD_FAST                7 (h)
+             56 LOAD_FAST                0 (self)
+             58 STORE_ATTR              10 (_Paddle__H)
+             60 LOAD_CONST               0 (None)
+             62 RETURN_VALUE
+
+Disassembly of <code object draw at 0x102b03190, file "./brick.py", line 121>:
+125           0 LOAD_GLOBAL              0 (pygame)
+              2 LOAD_ATTR                1 (draw)
+              4 LOAD_METHOD              2 (rect)
+
+126           6 LOAD_GLOBAL              3 (screen)
+              8 LOAD_CONST               1 ((0, 0, 0))
+             10 LOAD_FAST                0 (self)
+             12 LOAD_ATTR                4 (_xLoc)
+             14 LOAD_FAST                0 (self)
+             16 LOAD_ATTR                5 (_yLoc)
+             18 LOAD_FAST                0 (self)
+             20 LOAD_ATTR                6 (_width)
+             22 LOAD_FAST                0 (self)
+             24 LOAD_ATTR                7 (_height)
+             26 BUILD_TUPLE              4
+             28 LOAD_CONST               2 (0)
+
+125          30 CALL_METHOD              4
+             32 POP_TOP
+             34 LOAD_CONST               3 (None)
+             36 RETURN_VALUE
+
+Disassembly of <code object update at 0x102b03240, file "./brick.py", line 129>:
+133           0 LOAD_GLOBAL              0 (pygame)
+              2 LOAD_ATTR                1 (mouse)
+              4 LOAD_METHOD              2 (get_pos)
+              6 CALL_METHOD              0
+              8 UNPACK_SEQUENCE          2
+             10 STORE_FAST               1 (x)
+             12 STORE_FAST               2 (y)
+
+134          14 LOAD_FAST                1 (x)
+             16 LOAD_CONST               1 (0)
+             18 COMPARE_OP               5 (>=)
+             20 POP_JUMP_IF_FALSE       44
+             22 LOAD_FAST                1 (x)
+             24 LOAD_FAST                0 (self)
+             26 LOAD_ATTR                3 (_Paddle__W)
+             28 LOAD_FAST                0 (self)
+             30 LOAD_ATTR                4 (_width)
+             32 BINARY_SUBTRACT
+             34 COMPARE_OP               1 (<=)
+             36 POP_JUMP_IF_FALSE       44
+
+135          38 LOAD_FAST                1 (x)
+             40 LOAD_FAST                0 (self)
+             42 STORE_ATTR               5 (_xLoc)
+        >>   44 LOAD_CONST               2 (None)
+             46 RETURN_VALUE
+
+Disassembly of <code object Brick at 0x102b03710, file "./brick.py", line 144>:
+144           0 LOAD_NAME                0 (__name__)
+              2 STORE_NAME               1 (__module__)
+              4 LOAD_CONST               0 ('Brick')
+              6 STORE_NAME               2 (__qualname__)
+
+145           8 LOAD_CONST               1 (<code object __init__ at 0x102b033a0, file "./brick.py", line 145>)
+             10 LOAD_CONST               2 ('Brick.__init__')
+             12 MAKE_FUNCTION            0
+             14 STORE_NAME               3 (__init__)
+
+156          16 LOAD_CONST               3 (<code object draw at 0x102b03450, file "./brick.py", line 156>)
+             18 LOAD_CONST               4 ('Brick.draw')
+             20 MAKE_FUNCTION            0
+             22 STORE_NAME               4 (draw)
+
+168          24 LOAD_CONST               5 (<code object add at 0x102b03500, file "./brick.py", line 168>)
+             26 LOAD_CONST               6 ('Brick.add')
+             28 MAKE_FUNCTION            0
+             30 STORE_NAME               5 (add)
+
+175          32 LOAD_CONST               7 (<code object remove at 0x102b035b0, file "./brick.py", line 175>)
+             34 LOAD_CONST               8 ('Brick.remove')
+             36 MAKE_FUNCTION            0
+             38 STORE_NAME               6 (remove)
+
+182          40 LOAD_CONST               9 (<code object alive at 0x102b03660, file "./brick.py", line 182>)
+             42 LOAD_CONST              10 ('Brick.alive')
+             44 MAKE_FUNCTION            0
+             46 STORE_NAME               7 (alive)
+
+189          48 LOAD_CONST              11 (<code object collide at 0x102b03870, file "./brick.py", line 189>)
+             50 LOAD_CONST              12 ('Brick.collide')
+             52 MAKE_FUNCTION            0
+             54 STORE_NAME               8 (collide)
+             56 LOAD_CONST              13 (None)
+             58 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x102b033a0, file "./brick.py", line 145>:
+146           0 LOAD_FAST                1 (screen)
+              2 LOAD_FAST                0 (self)
+              4 STORE_ATTR               0 (_Brick__screen)
+
+147           6 LOAD_FAST                2 (width)
+              8 LOAD_FAST                0 (self)
+             10 STORE_ATTR               1 (_width)
+
+148          12 LOAD_FAST                3 (height)
+             14 LOAD_FAST                0 (self)
+             16 STORE_ATTR               2 (_height)
+
+149          18 LOAD_FAST                4 (x)
+             20 LOAD_FAST                0 (self)
+             22 STORE_ATTR               3 (_xLoc)
+
+150          24 LOAD_FAST                5 (y)
+             26 LOAD_FAST                0 (self)
+             28 STORE_ATTR               4 (_yLoc)
+
+151          30 LOAD_GLOBAL              5 (pygame)
+             32 LOAD_ATTR                6 (display)
+             34 LOAD_METHOD              7 (get_surface)
+             36 CALL_METHOD              0
+             38 LOAD_METHOD              8 (get_size)
+             40 CALL_METHOD              0
+             42 UNPACK_SEQUENCE          2
+             44 STORE_FAST               6 (w)
+             46 STORE_FAST               7 (h)
+
+152          48 LOAD_FAST                6 (w)
+             50 LOAD_FAST                0 (self)
+             52 STORE_ATTR               9 (_Brick__W)
+
+153          54 LOAD_FAST                7 (h)
+             56 LOAD_FAST                0 (self)
+             58 STORE_ATTR              10 (_Brick__H)
+
+154          60 LOAD_CONST               1 (False)
+             62 LOAD_FAST                0 (self)
+             64 STORE_ATTR              11 (_Brick__isInGroup)
+             66 LOAD_CONST               0 (None)
+             68 RETURN_VALUE
+
+Disassembly of <code object draw at 0x102b03450, file "./brick.py", line 156>:
+161           0 LOAD_GLOBAL              0 (pygame)
+              2 LOAD_ATTR                1 (draw)
+              4 LOAD_METHOD              2 (rect)
+
+162           6 LOAD_GLOBAL              3 (screen)
+
+163           8 LOAD_CONST               1 ((56, 177, 237))
+
+164          10 LOAD_FAST                0 (self)
+             12 LOAD_ATTR                4 (_xLoc)
+             14 LOAD_FAST                0 (self)
+             16 LOAD_ATTR                5 (_yLoc)
+             18 LOAD_FAST                0 (self)
+             20 LOAD_ATTR                6 (_width)
+             22 LOAD_FAST                0 (self)
+             24 LOAD_ATTR                7 (_height)
+             26 BUILD_TUPLE              4
+
+165          28 LOAD_CONST               2 (0)
+
+161          30 CALL_METHOD              4
+             32 POP_TOP
+             34 LOAD_CONST               3 (None)
+             36 RETURN_VALUE
+
+Disassembly of <code object add at 0x102b03500, file "./brick.py", line 168>:
+172           0 LOAD_FAST                1 (group)
+              2 LOAD_METHOD              0 (add)
+              4 LOAD_FAST                0 (self)
+              6 CALL_METHOD              1
+              8 POP_TOP
+
+173          10 LOAD_CONST               1 (True)
+             12 LOAD_FAST                0 (self)
+             14 STORE_ATTR               1 (_Brick__isInGroup)
+             16 LOAD_CONST               2 (None)
+             18 RETURN_VALUE
+
+Disassembly of <code object remove at 0x102b035b0, file "./brick.py", line 175>:
+179           0 LOAD_FAST                1 (group)
+              2 LOAD_METHOD              0 (remove)
+              4 LOAD_FAST                0 (self)
+              6 CALL_METHOD              1
+              8 POP_TOP
+
+180          10 LOAD_CONST               1 (False)
+             12 LOAD_FAST                0 (self)
+             14 STORE_ATTR               1 (_Brick__isInGroup)
+             16 LOAD_CONST               2 (None)
+             18 RETURN_VALUE
+
+Disassembly of <code object alive at 0x102b03660, file "./brick.py", line 182>:
+187           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (_Brick__isInGroup)
+              4 RETURN_VALUE
+
+Disassembly of <code object collide at 0x102b03870, file "./brick.py", line 189>:
+193           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (_xLoc)
+              4 STORE_FAST               2 (brickX)
+
+194           6 LOAD_FAST                0 (self)
+              8 LOAD_ATTR                1 (_yLoc)
+             10 STORE_FAST               3 (brickY)
+
+195          12 LOAD_FAST                0 (self)
+             14 LOAD_ATTR                2 (_width)
+             16 STORE_FAST               4 (brickW)
+
+196          18 LOAD_FAST                0 (self)
+             20 LOAD_ATTR                3 (_height)
+             22 STORE_FAST               5 (brickH)
+
+197          24 LOAD_FAST                1 (ball)
+             26 LOAD_ATTR                0 (_xLoc)
+             28 STORE_FAST               6 (ballX)
+
+198          30 LOAD_FAST                1 (ball)
+             32 LOAD_ATTR                1 (_yLoc)
+             34 STORE_FAST               7 (ballY)
+
+199          36 LOAD_FAST                1 (ball)
+             38 LOAD_METHOD              4 (getXVel)
+             40 CALL_METHOD              0
+             42 STORE_FAST               8 (ballXVel)
+
+200          44 LOAD_FAST                1 (ball)
+             46 LOAD_METHOD              5 (getYVel)
+             48 CALL_METHOD              0
+             50 STORE_FAST               9 (ballYVel)
+
+203          52 LOAD_FAST                6 (ballX)
+             54 LOAD_FAST                1 (ball)
+             56 LOAD_ATTR                6 (_radius)
+             58 BINARY_ADD
+             60 LOAD_FAST                2 (brickX)
+             62 COMPARE_OP               5 (>=)
+
+202          64 POP_JUMP_IF_FALSE      120
+
+204          66 LOAD_FAST                6 (ballX)
+             68 LOAD_FAST                1 (ball)
+             70 LOAD_ATTR                6 (_radius)
+             72 BINARY_ADD
+             74 LOAD_FAST                2 (brickX)
+             76 LOAD_FAST                4 (brickW)
+             78 BINARY_ADD
+             80 COMPARE_OP               1 (<=)
+
+202          82 POP_JUMP_IF_FALSE      120
+
+206          84 LOAD_FAST                7 (ballY)
+             86 LOAD_FAST                1 (ball)
+             88 LOAD_ATTR                6 (_radius)
+             90 BINARY_SUBTRACT
+             92 LOAD_FAST                3 (brickY)
+             94 COMPARE_OP               5 (>=)
+
+202          96 POP_JUMP_IF_FALSE      120
+
+207          98 LOAD_FAST                7 (ballY)
+            100 LOAD_FAST                1 (ball)
+            102 LOAD_ATTR                6 (_radius)
+            104 BINARY_SUBTRACT
+            106 LOAD_FAST                3 (brickY)
+            108 LOAD_FAST                5 (brickH)
+            110 BINARY_ADD
+            112 COMPARE_OP               1 (<=)
+
+202         114 POP_JUMP_IF_FALSE      120
+
+209         116 LOAD_CONST               1 (True)
+            118 RETURN_VALUE
+
+211     >>  120 LOAD_CONST               2 (False)
+            122 RETURN_VALUE
+            124 LOAD_CONST               3 (None)
+            126 RETURN_VALUE
+
+Disassembly of <code object BrickWall at 0x102b03ea0, file "./brick.py", line 220>:
+220           0 LOAD_NAME                0 (__name__)
+              2 STORE_NAME               1 (__module__)
+              4 LOAD_CONST               0 ('BrickWall')
+              6 STORE_NAME               2 (__qualname__)
+
+221           8 LOAD_CONST               1 (<code object __init__ at 0x102b03a80, file "./brick.py", line 221>)
+             10 LOAD_CONST               2 ('BrickWall.__init__')
+             12 MAKE_FUNCTION            0
+             14 STORE_NAME               3 (__init__)
+
+238          16 LOAD_CONST               3 (<code object add at 0x102b03920, file "./brick.py", line 238>)
+             18 LOAD_CONST               4 ('BrickWall.add')
+             20 MAKE_FUNCTION            0
+             22 STORE_NAME               4 (add)
+
+244          24 LOAD_CONST               5 (<code object remove at 0x102b03b30, file "./brick.py", line 244>)
+             26 LOAD_CONST               6 ('BrickWall.remove')
+             28 MAKE_FUNCTION            0
+             30 STORE_NAME               5 (remove)
+
+250          32 LOAD_CONST               7 (<code object draw at 0x102b03be0, file "./brick.py", line 250>)
+             34 LOAD_CONST               8 ('BrickWall.draw')
+             36 MAKE_FUNCTION            0
+             38 STORE_NAME               6 (draw)
+
+258          40 LOAD_CONST               9 (<code object update at 0x102b03c90, file "./brick.py", line 258>)
+             42 LOAD_CONST              10 ('BrickWall.update')
+             44 MAKE_FUNCTION            0
+             46 STORE_NAME               7 (update)
+
+271          48 LOAD_CONST              11 (<code object hasWin at 0x102b03d40, file "./brick.py", line 271>)
+             50 LOAD_CONST              12 ('BrickWall.hasWin')
+             52 MAKE_FUNCTION            0
+             54 STORE_NAME               8 (hasWin)
+
+277          56 LOAD_CONST              13 (<code object collide at 0x102b03df0, file "./brick.py", line 277>)
+             58 LOAD_CONST              14 ('BrickWall.collide')
+             60 MAKE_FUNCTION            0
+             62 STORE_NAME               9 (collide)
+             64 LOAD_CONST              15 (None)
+             66 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x102b03a80, file "./brick.py", line 221>:
+222           0 LOAD_FAST                1 (screen)
+              2 LOAD_FAST                0 (self)
+              4 STORE_ATTR               0 (_BrickWall__screen)
+
+223           6 LOAD_FAST                2 (x)
+              8 LOAD_FAST                0 (self)
+             10 STORE_ATTR               1 (_x)
+
+224          12 LOAD_FAST                3 (y)
+             14 LOAD_FAST                0 (self)
+             16 STORE_ATTR               2 (_y)
+
+225          18 LOAD_FAST                4 (width)
+             20 LOAD_FAST                0 (self)
+             22 STORE_ATTR               3 (_width)
+
+226          24 LOAD_FAST                5 (height)
+             26 LOAD_FAST                0 (self)
+             28 STORE_ATTR               4 (_height)
+
+227          30 BUILD_LIST               0
+             32 LOAD_FAST                0 (self)
+             34 STORE_ATTR               5 (_bricks)
+
+229          36 LOAD_FAST                2 (x)
+             38 STORE_FAST               6 (X)
+
+230          40 LOAD_FAST                3 (y)
+             42 STORE_FAST               7 (Y)
+
+231          44 LOAD_GLOBAL              6 (range)
+             46 LOAD_CONST               1 (3)
+             48 CALL_FUNCTION            1
+             50 GET_ITER
+        >>   52 FOR_ITER                78 (to 132)
+             54 STORE_FAST               8 (i)
+
+232          56 LOAD_GLOBAL              6 (range)
+             58 LOAD_CONST               2 (4)
+             60 CALL_FUNCTION            1
+             62 GET_ITER
+        >>   64 FOR_ITER                44 (to 110)
+             66 STORE_FAST               9 (j)
+
+233          68 LOAD_FAST                0 (self)
+             70 LOAD_ATTR                5 (_bricks)
+             72 LOAD_METHOD              7 (append)
+             74 LOAD_GLOBAL              8 (Brick)
+             76 LOAD_FAST                1 (screen)
+             78 LOAD_FAST                4 (width)
+             80 LOAD_FAST                5 (height)
+             82 LOAD_FAST                6 (X)
+             84 LOAD_FAST                7 (Y)
+             86 CALL_FUNCTION            5
+             88 CALL_METHOD              1
+             90 POP_TOP
+
+234          92 LOAD_FAST                6 (X)
+             94 LOAD_FAST                4 (width)
+             96 LOAD_FAST                4 (width)
+             98 LOAD_CONST               3 (7.0)
+            100 BINARY_TRUE_DIVIDE
+            102 BINARY_ADD
+            104 INPLACE_ADD
+            106 STORE_FAST               6 (X)
+            108 JUMP_ABSOLUTE           64
+
+235     >>  110 LOAD_FAST                7 (Y)
+            112 LOAD_FAST                5 (height)
+            114 LOAD_FAST                5 (height)
+            116 LOAD_CONST               3 (7.0)
+            118 BINARY_TRUE_DIVIDE
+            120 BINARY_ADD
+            122 INPLACE_ADD
+            124 STORE_FAST               7 (Y)
+
+236         126 LOAD_FAST                2 (x)
+            128 STORE_FAST               6 (X)
+            130 JUMP_ABSOLUTE           52
+        >>  132 LOAD_CONST               0 (None)
+            134 RETURN_VALUE
+
+Disassembly of <code object add at 0x102b03920, file "./brick.py", line 238>:
+242           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (_bricks)
+              4 LOAD_METHOD              1 (append)
+              6 LOAD_FAST                1 (brick)
+              8 CALL_METHOD              1
+             10 POP_TOP
+             12 LOAD_CONST               1 (None)
+             14 RETURN_VALUE
+
+Disassembly of <code object remove at 0x102b03b30, file "./brick.py", line 244>:
+248           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (_bricks)
+              4 LOAD_METHOD              1 (remove)
+              6 LOAD_FAST                1 (brick)
+              8 CALL_METHOD              1
+             10 POP_TOP
+             12 LOAD_CONST               1 (None)
+             14 RETURN_VALUE
+
+Disassembly of <code object draw at 0x102b03be0, file "./brick.py", line 250>:
+254           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (_bricks)
+              4 GET_ITER
+        >>    6 FOR_ITER                20 (to 28)
+              8 STORE_FAST               1 (brick)
+
+255          10 LOAD_FAST                1 (brick)
+             12 LOAD_CONST               1 (None)
+             14 COMPARE_OP               3 (!=)
+             16 POP_JUMP_IF_FALSE        6
+
+256          18 LOAD_FAST                1 (brick)
+             20 LOAD_METHOD              1 (draw)
+             22 CALL_METHOD              0
+             24 POP_TOP
+             26 JUMP_ABSOLUTE            6
+        >>   28 LOAD_CONST               1 (None)
+             30 RETURN_VALUE
+
+Disassembly of <code object update at 0x102b03c90, file "./brick.py", line 258>:
+262           0 LOAD_GLOBAL              0 (range)
+              2 LOAD_GLOBAL              1 (len)
+              4 LOAD_FAST                0 (self)
+              6 LOAD_ATTR                2 (_bricks)
+              8 CALL_FUNCTION            1
+             10 CALL_FUNCTION            1
+             12 GET_ITER
+        >>   14 FOR_ITER                44 (to 60)
+             16 STORE_FAST               2 (i)
+
+263          18 LOAD_FAST                0 (self)
+             20 LOAD_ATTR                2 (_bricks)
+             22 LOAD_FAST                2 (i)
+             24 BINARY_SUBSCR
+             26 LOAD_CONST               1 (None)
+             28 COMPARE_OP               3 (!=)
+             30 POP_JUMP_IF_FALSE       14
+             32 LOAD_FAST                0 (self)
+             34 LOAD_ATTR                2 (_bricks)
+             36 LOAD_FAST                2 (i)
+             38 BINARY_SUBSCR
+             40 LOAD_METHOD              3 (collide)
+             42 LOAD_FAST                1 (ball)
+             44 CALL_METHOD              1
+             46 POP_JUMP_IF_FALSE       14
+
+264          48 LOAD_CONST               1 (None)
+             50 LOAD_FAST                0 (self)
+             52 LOAD_ATTR                2 (_bricks)
+             54 LOAD_FAST                2 (i)
+             56 STORE_SUBSCR
+             58 JUMP_ABSOLUTE           14
+
+267     >>   60 LOAD_FAST                0 (self)
+             62 LOAD_ATTR                2 (_bricks)
+             64 GET_ITER
+        >>   66 FOR_ITER                24 (to 92)
+             68 STORE_FAST               3 (brick)
+
+268          70 LOAD_FAST                3 (brick)
+             72 LOAD_CONST               1 (None)
+             74 IS_OP                    0
+             76 POP_JUMP_IF_FALSE       66
+
+269          78 LOAD_FAST                0 (self)
+             80 LOAD_ATTR                2 (_bricks)
+             82 LOAD_METHOD              4 (remove)
+             84 LOAD_FAST                3 (brick)
+             86 CALL_METHOD              1
+             88 POP_TOP
+             90 JUMP_ABSOLUTE           66
+        >>   92 LOAD_CONST               1 (None)
+             94 RETURN_VALUE
+
+Disassembly of <code object hasWin at 0x102b03d40, file "./brick.py", line 271>:
+275           0 LOAD_GLOBAL              0 (len)
+              2 LOAD_FAST                0 (self)
+              4 LOAD_ATTR                1 (_bricks)
+              6 CALL_FUNCTION            1
+              8 LOAD_CONST               1 (0)
+             10 COMPARE_OP               2 (==)
+             12 RETURN_VALUE
+
+Disassembly of <code object collide at 0x102b03df0, file "./brick.py", line 277>:
+282           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (_bricks)
+              4 GET_ITER
+        >>    6 FOR_ITER                20 (to 28)
+              8 STORE_FAST               2 (brick)
+
+283          10 LOAD_FAST                2 (brick)
+             12 LOAD_METHOD              1 (collide)
+             14 LOAD_FAST                1 (ball)
+             16 CALL_METHOD              1
+             18 POP_JUMP_IF_FALSE        6
+
+284          20 POP_TOP
+             22 LOAD_CONST               1 (True)
+             24 RETURN_VALUE
+             26 JUMP_ABSOLUTE            6
+
+285     >>   28 LOAD_CONST               2 (False)
+             30 RETURN_VALUE

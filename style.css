@@ -9,19 +9,80 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: 'Arial', monospace;
+    font-size: 0.95rem;
+    overscroll-behavior: none;
+    overflow: hidden;
+}
+
+h1 {
+    color: #cfcece;
+    font-weight: 100;
+    font-size: 2.8rem;
+    letter-spacing: -1px;
+    padding: 0px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #a4a4a4;
+    font-weight: 100;
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+    margin: 0px;
+    margin-bottom: 40px;
+    padding: 0px;
+}
+
+h3 {
+    color: #cfcece;
+    font-weight: 100;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+ul.no-bullet {
+    list-style: none;
+}
+
+ul {
+    padding-left: 25px;
+}
+
+ul.line-num {
+    color: rgb(98, 107, 117);
     font-family: 'Monaco', monospace;
+    font-size: 1.2rem;
+    width: 50px;
+    padding-left:0px;
+    overflow: hidden;
+}
+
+
+ul.line-num>li {
+    display: flex;
+    margin-bottom: 9px;
+    justify-content: right;
+    overflow: hidden;
+
+}
+
+li.blue {
+    color: rgb(101, 166, 242);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
 }
 
 #vscode {
     display: flex;
-    height: 100vh;
-    background-color: #1e1e1e;
+    height: 96.5vh;
+    background-color: rgb(31, 31, 31);
 }
 
 /* Sidebar */
 .sidebar {
     width: 50px;
-    background-color: #252526;
+    background-color: rgb(24, 24, 24);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,19 +112,29 @@ body, html {
 /* Tab Bar */
 .tab-bar {
     display: flex;
-    background-color: #2d2d2d;
-    border-bottom: 1px solid #000;
+    background-color: rgb(24, 24, 24);
+}
+
+.above-bar {
+    background-color: rgb(24, 24, 24);
+    border-bottom: solid #383838;
+    border-width: 0.5px;
+    height: 30px;
 }
 
 .tab {
-    padding: 10px 20px;
+    padding: 9px 30px;
     color: #ccc;
     cursor: pointer;
+    border-style: solid;
+    border-width: 0.1px;
+    border-color: #383838;
 }
 
 .tab.active {
     background-color: #1e1e1e;
     color: white;
+    border-bottom: none;
 }
 
 /* Editor */
@@ -74,9 +145,8 @@ body, html {
 
 .content {
     display: none;
-    padding: 20px;
-    max-height: 90vh;
-    overflow: scroll;
+    overflow: hidden;
+    overscroll-behavior: none;
 }
 
 .content.active {
@@ -87,4 +157,17 @@ img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+}
+
+#welcome-message {
+    margin-top: 100px;
+    margin-left: 90px;
+}
+
+#welcome-tab {
+    font-style: italic;
+}
+
+div.sketch-holder {
+    width: 96.5vw;
 }

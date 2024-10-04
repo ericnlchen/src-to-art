@@ -1,0 +1,3060 @@
+  1           0 LOAD_CONST               0 (0)
+              2 LOAD_CONST               1 (None)
+              4 IMPORT_NAME              0 (os)
+              6 STORE_NAME               0 (os)
+
+  2           8 LOAD_CONST               0 (0)
+             10 LOAD_CONST               1 (None)
+             12 IMPORT_NAME              1 (random)
+             14 STORE_NAME               1 (random)
+
+  3          16 LOAD_CONST               0 (0)
+             18 LOAD_CONST               2 (('namedtuple',))
+             20 IMPORT_NAME              2 (functools)
+             22 IMPORT_FROM              3 (namedtuple)
+             24 STORE_NAME               3 (namedtuple)
+             26 POP_TOP
+
+ 24          28 LOAD_CONST               3 ('Alopex Cheung')
+             30 STORE_NAME               4 (__author__)
+
+ 25          32 LOAD_CONST               4 ('0.2')
+             34 STORE_NAME               5 (__version__)
+
+ 27          36 LOAD_CONST               5 (21)
+             38 STORE_NAME               6 (BLACK_JACK)
+
+ 28          40 LOAD_CONST               6 (17)
+             42 STORE_NAME               7 (BASE_VALUE)
+
+ 31          44 LOAD_CONST               7 ('\x1b[1;35;48m')
+
+ 32          46 LOAD_CONST               8 ('\x1b[1;36;48m')
+
+ 33          48 LOAD_CONST               9 ('\x1b[1;37;48m')
+
+ 34          50 LOAD_CONST              10 ('\x1b[1;34;48m')
+
+ 35          52 LOAD_CONST              11 ('\x1b[1;32;48m')
+
+ 36          54 LOAD_CONST              12 ('\x1b[1;33;48m')
+
+ 37          56 LOAD_CONST              13 ('\x1b[1;31;48m')
+
+ 38          58 LOAD_CONST              14 ('\x1b[1;30;48m')
+
+ 39          60 LOAD_CONST              15 ('\x1b[4;37;48m')
+
+ 40          62 LOAD_CONST              16 ('\x1b[1;37;0m')
+
+ 30          64 LOAD_CONST              17 (('PURPLE', 'CYAN', 'BOLD', 'BLUE', 'GREEN', 'YELLOW', 'RED', 'BLACK', 'UNDERLINE', 'END'))
+             66 BUILD_CONST_KEY_MAP     10
+             68 STORE_NAME               8 (COLOR)
+
+ 44          70 LOAD_BUILD_CLASS
+             72 LOAD_CONST              18 (<code object Card at 0x105882a80, file "./blackjack.py", line 44>)
+             74 LOAD_CONST              19 ('Card')
+             76 MAKE_FUNCTION            0
+             78 LOAD_CONST              19 ('Card')
+             80 CALL_FUNCTION            2
+             82 STORE_NAME               9 (Card)
+
+ 67          84 LOAD_BUILD_CLASS
+             86 LOAD_CONST              20 (<code object Deck at 0x1058742f0, file "./blackjack.py", line 67>)
+             88 LOAD_CONST              21 ('Deck')
+             90 MAKE_FUNCTION            0
+             92 LOAD_CONST              21 ('Deck')
+             94 CALL_FUNCTION            2
+             96 STORE_NAME              10 (Deck)
+
+105          98 LOAD_BUILD_CLASS
+            100 LOAD_CONST              22 (<code object Chips at 0x105874d40, file "./blackjack.py", line 105>)
+            102 LOAD_CONST              23 ('Chips')
+            104 MAKE_FUNCTION            0
+            106 LOAD_CONST              23 ('Chips')
+            108 CALL_FUNCTION            2
+            110 STORE_NAME              11 (Chips)
+
+193         112 LOAD_BUILD_CLASS
+            114 LOAD_CONST              24 (<code object User at 0x1058a6b30, file "./blackjack.py", line 193>)
+            116 LOAD_CONST              25 ('User')
+            118 MAKE_FUNCTION            0
+            120 LOAD_CONST              25 ('User')
+            122 CALL_FUNCTION            2
+            124 STORE_NAME              12 (User)
+
+273         126 LOAD_BUILD_CLASS
+            128 LOAD_CONST              26 (<code object Dealer at 0x1058a6d40, file "./blackjack.py", line 273>)
+            130 LOAD_CONST              27 ('Dealer')
+            132 MAKE_FUNCTION            0
+            134 LOAD_CONST              27 ('Dealer')
+            136 LOAD_NAME               12 (User)
+            138 CALL_FUNCTION            3
+            140 STORE_NAME              13 (Dealer)
+
+295         142 LOAD_BUILD_CLASS
+            144 LOAD_CONST              28 (<code object Player at 0x1058a10e0, file "./blackjack.py", line 295>)
+            146 LOAD_CONST              29 ('Player')
+            148 MAKE_FUNCTION            0
+            150 LOAD_CONST              29 ('Player')
+            152 LOAD_NAME               12 (User)
+            154 CALL_FUNCTION            3
+            156 STORE_NAME              14 (Player)
+
+323         158 LOAD_BUILD_CLASS
+            160 LOAD_CONST              30 (<code object Recorder at 0x1058a15b0, file "./blackjack.py", line 323>)
+            162 LOAD_CONST              31 ('Recorder')
+            164 MAKE_FUNCTION            0
+            166 LOAD_CONST              31 ('Recorder')
+            168 CALL_FUNCTION            2
+            170 STORE_NAME              15 (Recorder)
+
+401         172 LOAD_BUILD_CLASS
+            174 LOAD_CONST              32 (<code object BlackJack at 0x10589a240, file "./blackjack.py", line 401>)
+            176 LOAD_CONST              33 ('BlackJack')
+            178 MAKE_FUNCTION            0
+            180 LOAD_CONST              33 ('BlackJack')
+            182 CALL_FUNCTION            2
+            184 STORE_NAME              16 (BlackJack)
+
+627         186 LOAD_CONST              34 (<code object main at 0x10589a0e0, file "./blackjack.py", line 627>)
+            188 LOAD_CONST              35 ('main')
+            190 MAKE_FUNCTION            0
+            192 STORE_NAME              17 (main)
+
+637         194 LOAD_NAME               18 (__name__)
+            196 LOAD_CONST              36 ('__main__')
+            198 COMPARE_OP               2 (==)
+            200 POP_JUMP_IF_FALSE      208
+
+638         202 LOAD_NAME               17 (main)
+            204 CALL_FUNCTION            0
+            206 POP_TOP
+        >>  208 LOAD_CONST               1 (None)
+            210 RETURN_VALUE
+
+Disassembly of <code object Card at 0x105882a80, file "./blackjack.py", line 44>:
+ 44           0 LOAD_NAME                0 (__name__)
+              2 STORE_NAME               1 (__module__)
+              4 LOAD_CONST               0 ('Card')
+              6 STORE_NAME               2 (__qualname__)
+
+ 45           8 LOAD_CONST               1 (('suit', 'rank', 'is_face'))
+             10 STORE_NAME               3 (__slots__)
+
+ 47          12 LOAD_CONST              10 ((True,))
+             14 LOAD_CONST               3 (<code object __init__ at 0x105882870, file "./blackjack.py", line 47>)
+             16 LOAD_CONST               4 ('Card.__init__')
+             18 MAKE_FUNCTION            1 (defaults)
+             20 STORE_NAME               4 (__init__)
+
+ 57          22 LOAD_CONST               5 (<code object __repr__ at 0x105882920, file "./blackjack.py", line 57>)
+             24 LOAD_CONST               6 ('Card.__repr__')
+             26 MAKE_FUNCTION            0
+             28 STORE_NAME               5 (__repr__)
+
+ 63          30 LOAD_CONST               7 (<code object show at 0x1058829d0, file "./blackjack.py", line 63>)
+             32 LOAD_CONST               8 ('Card.show')
+             34 MAKE_FUNCTION            0
+             36 STORE_NAME               6 (show)
+             38 LOAD_CONST               9 (None)
+             40 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x105882870, file "./blackjack.py", line 47>:
+ 53           0 LOAD_FAST                1 (suit)
+              2 LOAD_FAST                0 (self)
+              4 STORE_ATTR               0 (suit)
+
+ 54           6 LOAD_FAST                2 (rank)
+              8 LOAD_FAST                0 (self)
+             10 STORE_ATTR               1 (rank)
+
+ 55          12 LOAD_FAST                3 (face)
+             14 LOAD_FAST                0 (self)
+             16 STORE_ATTR               2 (is_face)
+             18 LOAD_CONST               1 (None)
+             20 RETURN_VALUE
+
+Disassembly of <code object __repr__ at 0x105882920, file "./blackjack.py", line 57>:
+ 58           0 LOAD_CONST               1 ('\t<rank: {rank:2}, suit: {suit:8}>')
+              2 STORE_FAST               1 (fmt_card)
+
+ 59           4 LOAD_FAST                0 (self)
+              6 LOAD_ATTR                0 (is_face)
+              8 POP_JUMP_IF_FALSE       28
+
+ 60          10 LOAD_FAST                1 (fmt_card)
+             12 LOAD_ATTR                1 (format)
+             14 LOAD_FAST                0 (self)
+             16 LOAD_ATTR                2 (suit)
+             18 LOAD_FAST                0 (self)
+             20 LOAD_ATTR                3 (rank)
+             22 LOAD_CONST               2 (('suit', 'rank'))
+             24 CALL_FUNCTION_KW         2
+             26 RETURN_VALUE
+
+ 61     >>   28 LOAD_FAST                1 (fmt_card)
+             30 LOAD_ATTR                1 (format)
+             32 LOAD_CONST               3 ('*-Back-*')
+             34 LOAD_CONST               3 ('*-Back-*')
+             36 LOAD_CONST               2 (('suit', 'rank'))
+             38 CALL_FUNCTION_KW         2
+             40 RETURN_VALUE
+
+Disassembly of <code object show at 0x1058829d0, file "./blackjack.py", line 63>:
+ 64           0 LOAD_GLOBAL              0 (print)
+              2 LOAD_GLOBAL              1 (str)
+              4 LOAD_FAST                0 (self)
+              6 CALL_FUNCTION            1
+              8 CALL_FUNCTION            1
+             10 POP_TOP
+             12 LOAD_CONST               0 (None)
+             14 RETURN_VALUE
+
+Disassembly of <code object Deck at 0x1058742f0, file "./blackjack.py", line 67>:
+ 67           0 LOAD_NAME                0 (__name__)
+              2 STORE_NAME               1 (__module__)
+              4 LOAD_CONST               0 ('Deck')
+              6 STORE_NAME               2 (__qualname__)
+
+ 68           8 LOAD_CONST              17 ((1,))
+             10 LOAD_CONST               2 (<code object __init__ at 0x105882b30, file "./blackjack.py", line 68>)
+             12 LOAD_CONST               3 ('Deck.__init__')
+             14 MAKE_FUNCTION            1 (defaults)
+             16 STORE_NAME               3 (__init__)
+
+ 76          18 LOAD_CONST               4 (<code object __repr__ at 0x105882df0, file "./blackjack.py", line 76>)
+             20 LOAD_CONST               5 ('Deck.__repr__')
+             22 MAKE_FUNCTION            0
+             24 STORE_NAME               4 (__repr__)
+
+ 79          26 LOAD_CONST               6 (<code object __len__ at 0x105882ea0, file "./blackjack.py", line 79>)
+             28 LOAD_CONST               7 ('Deck.__len__')
+             30 MAKE_FUNCTION            0
+             32 STORE_NAME               5 (__len__)
+
+ 82          34 LOAD_CONST               8 (<code object built at 0x105874030, file "./blackjack.py", line 82>)
+             36 LOAD_CONST               9 ('Deck.built')
+             38 MAKE_FUNCTION            0
+             40 STORE_NAME               6 (built)
+
+ 91          42 LOAD_CONST              10 (<code object shuffle at 0x1058740e0, file "./blackjack.py", line 91>)
+             44 LOAD_CONST              11 ('Deck.shuffle')
+             46 MAKE_FUNCTION            0
+             48 STORE_NAME               7 (shuffle)
+
+ 97          50 LOAD_CONST              12 (<code object rebuilt at 0x105874190, file "./blackjack.py", line 97>)
+             52 LOAD_CONST              13 ('Deck.rebuilt')
+             54 MAKE_FUNCTION            0
+             56 STORE_NAME               8 (rebuilt)
+
+101          58 LOAD_CONST              14 (<code object deliver at 0x105874240, file "./blackjack.py", line 101>)
+             60 LOAD_CONST              15 ('Deck.deliver')
+             62 MAKE_FUNCTION            0
+             64 STORE_NAME               9 (deliver)
+             66 LOAD_CONST              16 (None)
+             68 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x105882b30, file "./blackjack.py", line 68>:
+ 72           0 LOAD_FAST                1 (num)
+              2 LOAD_FAST                0 (self)
+              4 STORE_ATTR               0 (num)
+
+ 73           6 BUILD_LIST               0
+              8 LOAD_FAST                0 (self)
+             10 STORE_ATTR               1 (cards)
+
+ 74          12 LOAD_FAST                0 (self)
+             14 LOAD_METHOD              2 (built)
+             16 CALL_METHOD              0
+             18 POP_TOP
+             20 LOAD_CONST               1 (None)
+             22 RETURN_VALUE
+
+Disassembly of <code object __repr__ at 0x105882df0, file "./blackjack.py", line 76>:
+ 77           0 LOAD_CONST               1 ('\n')
+              2 LOAD_METHOD              0 (join)
+              4 LOAD_CONST               2 (<code object <listcomp> at 0x105882d40, file "./blackjack.py", line 77>)
+              6 LOAD_CONST               3 ('Deck.__repr__.<locals>.<listcomp>')
+              8 MAKE_FUNCTION            0
+             10 LOAD_FAST                0 (self)
+             12 LOAD_ATTR                1 (cards)
+             14 GET_ITER
+             16 CALL_FUNCTION            1
+             18 CALL_METHOD              1
+             20 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x105882d40, file "./blackjack.py", line 77>:
+ 77           0 BUILD_LIST               0
+              2 LOAD_FAST                0 (.0)
+        >>    4 FOR_ITER                12 (to 18)
+              6 STORE_FAST               1 (card)
+              8 LOAD_GLOBAL              0 (str)
+             10 LOAD_FAST                1 (card)
+             12 CALL_FUNCTION            1
+             14 LIST_APPEND              2
+             16 JUMP_ABSOLUTE            4
+        >>   18 RETURN_VALUE
+
+Disassembly of <code object __len__ at 0x105882ea0, file "./blackjack.py", line 79>:
+ 80           0 LOAD_GLOBAL              0 (len)
+              2 LOAD_FAST                0 (self)
+              4 LOAD_ATTR                1 (cards)
+              6 CALL_FUNCTION            1
+              8 RETURN_VALUE
+
+Disassembly of <code object built at 0x105874030, file "./blackjack.py", line 82>:
+ 83           0 LOAD_GLOBAL              0 (range)
+              2 LOAD_FAST                0 (self)
+              4 LOAD_ATTR                1 (num)
+              6 CALL_FUNCTION            1
+              8 GET_ITER
+        >>   10 FOR_ITER                74 (to 86)
+             12 STORE_FAST               1 (_)
+
+ 84          14 LOAD_CONST               1 (<code object <listcomp> at 0x105882f50, file "./blackjack.py", line 84>)
+             16 LOAD_CONST               2 ('Deck.built.<locals>.<listcomp>')
+             18 MAKE_FUNCTION            0
+             20 LOAD_GLOBAL              0 (range)
+             22 LOAD_CONST               3 (1)
+             24 LOAD_CONST               4 (14)
+             26 CALL_FUNCTION            2
+             28 GET_ITER
+             30 CALL_FUNCTION            1
+             32 STORE_FAST               2 (ranks)
+
+ 85          34 LOAD_CONST               5 ('Spades Heart Clubs Diamonds')
+             36 LOAD_METHOD              2 (split)
+             38 CALL_METHOD              0
+             40 STORE_FAST               3 (suits)
+
+ 86          42 LOAD_FAST                3 (suits)
+             44 GET_ITER
+        >>   46 FOR_ITER                36 (to 84)
+             48 STORE_FAST               4 (suit)
+
+ 87          50 LOAD_FAST                2 (ranks)
+             52 GET_ITER
+        >>   54 FOR_ITER                26 (to 82)
+             56 STORE_FAST               5 (rank)
+
+ 88          58 LOAD_GLOBAL              3 (Card)
+             60 LOAD_FAST                4 (suit)
+             62 LOAD_FAST                5 (rank)
+             64 CALL_FUNCTION            2
+             66 STORE_FAST               6 (card)
+
+ 89          68 LOAD_FAST                0 (self)
+             70 LOAD_ATTR                4 (cards)
+             72 LOAD_METHOD              5 (append)
+             74 LOAD_FAST                6 (card)
+             76 CALL_METHOD              1
+             78 POP_TOP
+             80 JUMP_ABSOLUTE           54
+        >>   82 JUMP_ABSOLUTE           46
+        >>   84 JUMP_ABSOLUTE           10
+        >>   86 LOAD_CONST               0 (None)
+             88 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x105882f50, file "./blackjack.py", line 84>:
+ 84           0 BUILD_LIST               0
+              2 LOAD_FAST                0 (.0)
+        >>    4 FOR_ITER                 8 (to 14)
+              6 STORE_FAST               1 (x)
+              8 LOAD_FAST                1 (x)
+             10 LIST_APPEND              2
+             12 JUMP_ABSOLUTE            4
+        >>   14 RETURN_VALUE
+
+Disassembly of <code object shuffle at 0x1058740e0, file "./blackjack.py", line 91>:
+ 92           0 LOAD_GLOBAL              0 (range)
+              2 LOAD_FAST                0 (self)
+              4 LOAD_ATTR                1 (num)
+              6 CALL_FUNCTION            1
+              8 GET_ITER
+        >>   10 FOR_ITER                70 (to 82)
+             12 STORE_FAST               1 (_)
+
+ 93          14 LOAD_GLOBAL              0 (range)
+             16 LOAD_GLOBAL              2 (len)
+             18 LOAD_FAST                0 (self)
+             20 LOAD_ATTR                3 (cards)
+             22 CALL_FUNCTION            1
+             24 CALL_FUNCTION            1
+             26 GET_ITER
+        >>   28 FOR_ITER                50 (to 80)
+             30 STORE_FAST               2 (index)
+
+ 94          32 LOAD_GLOBAL              4 (random)
+             34 LOAD_METHOD              5 (randint)
+             36 LOAD_CONST               1 (0)
+             38 LOAD_CONST               2 (51)
+             40 CALL_METHOD              2
+             42 STORE_FAST               3 (i)
+
+ 95          44 LOAD_FAST                0 (self)
+             46 LOAD_ATTR                3 (cards)
+             48 LOAD_FAST                3 (i)
+             50 BINARY_SUBSCR
+             52 LOAD_FAST                0 (self)
+             54 LOAD_ATTR                3 (cards)
+             56 LOAD_FAST                2 (index)
+             58 BINARY_SUBSCR
+             60 ROT_TWO
+             62 LOAD_FAST                0 (self)
+             64 LOAD_ATTR                3 (cards)
+             66 LOAD_FAST                2 (index)
+             68 STORE_SUBSCR
+             70 LOAD_FAST                0 (self)
+             72 LOAD_ATTR                3 (cards)
+             74 LOAD_FAST                3 (i)
+             76 STORE_SUBSCR
+             78 JUMP_ABSOLUTE           28
+        >>   80 JUMP_ABSOLUTE           10
+        >>   82 LOAD_CONST               0 (None)
+             84 RETURN_VALUE
+
+Disassembly of <code object rebuilt at 0x105874190, file "./blackjack.py", line 97>:
+ 98           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (cards)
+              4 LOAD_METHOD              1 (clear)
+              6 CALL_METHOD              0
+              8 POP_TOP
+
+ 99          10 LOAD_FAST                0 (self)
+             12 LOAD_METHOD              2 (built)
+             14 CALL_METHOD              0
+             16 POP_TOP
+             18 LOAD_CONST               0 (None)
+             20 RETURN_VALUE
+
+Disassembly of <code object deliver at 0x105874240, file "./blackjack.py", line 101>:
+102           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (cards)
+              4 LOAD_METHOD              1 (pop)
+              6 CALL_METHOD              0
+              8 RETURN_VALUE
+
+Disassembly of <code object Chips at 0x105874d40, file "./blackjack.py", line 105>:
+105           0 LOAD_NAME                0 (__name__)
+              2 STORE_NAME               1 (__module__)
+              4 LOAD_CONST               0 ('Chips')
+              6 STORE_NAME               2 (__qualname__)
+
+106           8 LOAD_CONST               1 (<code object __init__ at 0x1058743a0, file "./blackjack.py", line 106>)
+             10 LOAD_CONST               2 ('Chips.__init__')
+             12 MAKE_FUNCTION            0
+             14 STORE_NAME               3 (__init__)
+
+116          16 LOAD_CONST               3 (<code object __bool__ at 0x105874450, file "./blackjack.py", line 116>)
+             18 LOAD_CONST               4 ('Chips.__bool__')
+             20 MAKE_FUNCTION            0
+             22 STORE_NAME               4 (__bool__)
+
+119          24 LOAD_NAME                5 (staticmethod)
+
+120          26 LOAD_CONST               5 (<code object get_tips at 0x105874500, file "./blackjack.py", line 119>)
+             28 LOAD_CONST               6 ('Chips.get_tips')
+             30 MAKE_FUNCTION            0
+             32 CALL_FUNCTION            1
+             34 STORE_NAME               6 (get_tips)
+
+126          36 LOAD_NAME                7 (property)
+
+127          38 LOAD_CONST               7 (<code object amount at 0x1058745b0, file "./blackjack.py", line 126>)
+             40 LOAD_CONST               8 ('Chips.amount')
+             42 MAKE_FUNCTION            0
+             44 CALL_FUNCTION            1
+             46 STORE_NAME               8 (amount)
+
+130          48 LOAD_NAME                8 (amount)
+             50 LOAD_ATTR                9 (setter)
+
+131          52 LOAD_CONST               9 (<code object amount at 0x105874660, file "./blackjack.py", line 130>)
+             54 LOAD_CONST               8 ('Chips.amount')
+             56 MAKE_FUNCTION            0
+             58 CALL_FUNCTION            1
+             60 STORE_NAME               8 (amount)
+
+140          62 LOAD_NAME                7 (property)
+
+141          64 LOAD_CONST              10 (<code object bet_amount at 0x105874710, file "./blackjack.py", line 140>)
+             66 LOAD_CONST              11 ('Chips.bet_amount')
+             68 MAKE_FUNCTION            0
+             70 CALL_FUNCTION            1
+             72 STORE_NAME              10 (bet_amount)
+
+144          74 LOAD_NAME               10 (bet_amount)
+             76 LOAD_ATTR                9 (setter)
+
+145          78 LOAD_CONST              12 (<code object bet_amount at 0x105874920, file "./blackjack.py", line 144>)
+             80 LOAD_CONST              11 ('Chips.bet_amount')
+             82 MAKE_FUNCTION            0
+             84 CALL_FUNCTION            1
+             86 STORE_NAME              10 (bet_amount)
+
+159          88 LOAD_CONST              13 (<code object double_bet at 0x1058747c0, file "./blackjack.py", line 159>)
+             90 LOAD_CONST              14 ('Chips.double_bet')
+             92 MAKE_FUNCTION            0
+             94 STORE_NAME              11 (double_bet)
+
+168          96 LOAD_NAME                7 (property)
+
+169          98 LOAD_CONST              15 (<code object insurance at 0x1058749d0, file "./blackjack.py", line 168>)
+            100 LOAD_CONST              16 ('Chips.insurance')
+            102 MAKE_FUNCTION            0
+            104 CALL_FUNCTION            1
+            106 STORE_NAME              12 (insurance)
+
+172         108 LOAD_NAME               12 (insurance)
+            110 LOAD_ATTR                9 (setter)
+
+173         112 LOAD_CONST              17 (<code object insurance at 0x105874a80, file "./blackjack.py", line 172>)
+            114 LOAD_CONST              16 ('Chips.insurance')
+            116 MAKE_FUNCTION            0
+            118 CALL_FUNCTION            1
+            120 STORE_NAME              12 (insurance)
+
+180         122 LOAD_CONST              18 (<code object current_amount at 0x105874b30, file "./blackjack.py", line 180>)
+            124 LOAD_CONST              19 ('Chips.current_amount')
+            126 MAKE_FUNCTION            0
+            128 STORE_NAME              13 (current_amount)
+
+183         130 LOAD_CONST              20 (<code object reset_chip at 0x105874be0, file "./blackjack.py", line 183>)
+            132 LOAD_CONST              21 ('Chips.reset_chip')
+            134 MAKE_FUNCTION            0
+            136 STORE_NAME              14 (reset_chip)
+
+189         138 LOAD_CONST              22 (<code object can_double at 0x105874c90, file "./blackjack.py", line 189>)
+            140 LOAD_CONST              23 ('Chips.can_double')
+            142 MAKE_FUNCTION            0
+            144 STORE_NAME              15 (can_double)
+            146 LOAD_CONST              24 (None)
+            148 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x1058743a0, file "./blackjack.py", line 106>:
+110           0 LOAD_FAST                1 (amount)
+              2 LOAD_FAST                0 (self)
+              4 STORE_ATTR               0 (_amount)
+
+111           6 LOAD_CONST               1 (0)
+              8 LOAD_FAST                0 (self)
+             10 STORE_ATTR               1 (_bet_amount)
+
+112          12 LOAD_CONST               1 (0)
+             14 LOAD_FAST                0 (self)
+             16 STORE_ATTR               2 (_insurance)
+
+113          18 LOAD_CONST               2 (False)
+             20 LOAD_FAST                0 (self)
+             22 STORE_ATTR               3 (is_insurance)
+
+114          24 LOAD_CONST               2 (False)
+             26 LOAD_FAST                0 (self)
+             28 STORE_ATTR               4 (is_double)
+             30 LOAD_CONST               3 (None)
+             32 RETURN_VALUE
+
+Disassembly of <code object __bool__ at 0x105874450, file "./blackjack.py", line 116>:
+117           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (amount)
+              4 LOAD_CONST               1 (0)
+              6 COMPARE_OP               4 (>)
+              8 RETURN_VALUE
+
+Disassembly of <code object get_tips at 0x105874500, file "./blackjack.py", line 119>:
+121           0 LOAD_CONST               1 ('{color}** TIPS: {content}! **{end}')
+              2 STORE_FAST               1 (fmt_tips)
+
+122           4 LOAD_FAST                1 (fmt_tips)
+              6 LOAD_ATTR                0 (format)
+
+123           8 LOAD_GLOBAL              1 (COLOR)
+             10 LOAD_METHOD              2 (get)
+             12 LOAD_CONST               2 ('YELLOW')
+             14 CALL_METHOD              1
+             16 LOAD_FAST                0 (content)
+             18 LOAD_GLOBAL              1 (COLOR)
+             20 LOAD_METHOD              2 (get)
+             22 LOAD_CONST               3 ('END')
+             24 CALL_METHOD              1
+
+122          26 LOAD_CONST               4 (('color', 'content', 'end'))
+             28 CALL_FUNCTION_KW         3
+             30 RETURN_VALUE
+
+Disassembly of <code object amount at 0x1058745b0, file "./blackjack.py", line 126>:
+128           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (_amount)
+              4 RETURN_VALUE
+
+Disassembly of <code object amount at 0x105874660, file "./blackjack.py", line 130>:
+132           0 LOAD_GLOBAL              0 (isinstance)
+              2 LOAD_FAST                1 (value)
+              4 LOAD_GLOBAL              1 (int)
+              6 CALL_FUNCTION            2
+              8 POP_JUMP_IF_TRUE        28
+
+133          10 LOAD_CONST               1 ('Please give a integer')
+             12 STORE_FAST               2 (type_tips)
+
+134          14 LOAD_GLOBAL              2 (ValueError)
+             16 LOAD_GLOBAL              3 (Chips)
+             18 LOAD_METHOD              4 (get_tips)
+             20 LOAD_FAST                2 (type_tips)
+             22 CALL_METHOD              1
+             24 CALL_FUNCTION            1
+             26 RAISE_VARARGS            1
+
+135     >>   28 LOAD_FAST                1 (value)
+             30 LOAD_CONST               2 (0)
+             32 COMPARE_OP               0 (<)
+             34 POP_JUMP_IF_FALSE       54
+
+136          36 LOAD_CONST               3 ('Your integer should bigger than 0')
+             38 STORE_FAST               3 (amount_tips)
+
+137          40 LOAD_GLOBAL              2 (ValueError)
+             42 LOAD_GLOBAL              3 (Chips)
+             44 LOAD_METHOD              4 (get_tips)
+             46 LOAD_FAST                3 (amount_tips)
+             48 CALL_METHOD              1
+             50 CALL_FUNCTION            1
+             52 RAISE_VARARGS            1
+
+138     >>   54 LOAD_FAST                1 (value)
+             56 LOAD_FAST                0 (self)
+             58 STORE_ATTR               5 (_amount)
+             60 LOAD_CONST               0 (None)
+             62 RETURN_VALUE
+
+Disassembly of <code object bet_amount at 0x105874710, file "./blackjack.py", line 140>:
+142           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (_bet_amount)
+              4 RETURN_VALUE
+
+Disassembly of <code object bet_amount at 0x105874920, file "./blackjack.py", line 144>:
+146           0 LOAD_CONST               1 ('Please give a integer')
+              2 STORE_FAST               2 (type_tips)
+
+147           4 LOAD_CONST               2 ('Your chips should between 1 - ')
+              6 LOAD_GLOBAL              0 (str)
+              8 LOAD_FAST                0 (self)
+             10 LOAD_ATTR                1 (amount)
+             12 CALL_FUNCTION            1
+             14 BINARY_ADD
+             16 LOAD_CONST               3 (' ')
+             18 BINARY_ADD
+             20 STORE_FAST               3 (amount_tips)
+
+148          22 SETUP_FINALLY           12 (to 36)
+
+149          24 LOAD_GLOBAL              2 (int)
+             26 LOAD_FAST                1 (value)
+             28 CALL_FUNCTION            1
+             30 STORE_FAST               1 (value)
+             32 POP_BLOCK
+             34 JUMP_FORWARD            32 (to 68)
+
+150     >>   36 DUP_TOP
+             38 LOAD_GLOBAL              3 (ValueError)
+             40 JUMP_IF_NOT_EXC_MATCH    66
+             42 POP_TOP
+             44 POP_TOP
+             46 POP_TOP
+
+151          48 LOAD_GLOBAL              3 (ValueError)
+             50 LOAD_GLOBAL              4 (Chips)
+             52 LOAD_METHOD              5 (get_tips)
+             54 LOAD_FAST                2 (type_tips)
+             56 CALL_METHOD              1
+             58 CALL_FUNCTION            1
+             60 RAISE_VARARGS            1
+             62 POP_EXCEPT
+             64 JUMP_FORWARD            64 (to 130)
+        >>   66 RERAISE
+
+153     >>   68 LOAD_GLOBAL              6 (isinstance)
+             70 LOAD_FAST                1 (value)
+             72 LOAD_GLOBAL              2 (int)
+             74 CALL_FUNCTION            2
+             76 POP_JUMP_IF_TRUE        92
+
+154          78 LOAD_GLOBAL              3 (ValueError)
+             80 LOAD_GLOBAL              4 (Chips)
+             82 LOAD_METHOD              5 (get_tips)
+             84 LOAD_FAST                2 (type_tips)
+             86 CALL_METHOD              1
+             88 CALL_FUNCTION            1
+             90 RAISE_VARARGS            1
+
+155     >>   92 LOAD_FAST                1 (value)
+             94 LOAD_CONST               4 (0)
+             96 COMPARE_OP               1 (<=)
+             98 POP_JUMP_IF_TRUE       110
+            100 LOAD_FAST                1 (value)
+            102 LOAD_FAST                0 (self)
+            104 LOAD_ATTR                1 (amount)
+            106 COMPARE_OP               4 (>)
+            108 POP_JUMP_IF_FALSE      124
+
+156     >>  110 LOAD_GLOBAL              3 (ValueError)
+            112 LOAD_GLOBAL              4 (Chips)
+            114 LOAD_METHOD              5 (get_tips)
+            116 LOAD_FAST                3 (amount_tips)
+            118 CALL_METHOD              1
+            120 CALL_FUNCTION            1
+            122 RAISE_VARARGS            1
+
+157     >>  124 LOAD_FAST                1 (value)
+            126 LOAD_FAST                0 (self)
+            128 STORE_ATTR               7 (_bet_amount)
+        >>  130 LOAD_CONST               0 (None)
+            132 RETURN_VALUE
+
+Disassembly of <code object double_bet at 0x1058747c0, file "./blackjack.py", line 159>:
+160           0 LOAD_FAST                0 (self)
+              2 LOAD_METHOD              0 (can_double)
+              4 CALL_METHOD              0
+              6 POP_JUMP_IF_FALSE       30
+
+161           8 LOAD_FAST                0 (self)
+             10 DUP_TOP
+             12 LOAD_ATTR                1 (_bet_amount)
+             14 LOAD_CONST               1 (2)
+             16 INPLACE_MULTIPLY
+             18 ROT_TWO
+             20 STORE_ATTR               1 (_bet_amount)
+
+162          22 LOAD_CONST               2 (True)
+             24 LOAD_FAST                0 (self)
+             26 STORE_ATTR               2 (is_double)
+             28 JUMP_FORWARD            26 (to 56)
+
+164     >>   30 LOAD_CONST               3 ('Not enough chips || ')
+             32 STORE_FAST               1 (over_tips)
+
+165          34 LOAD_CONST               4 ("CAN'T DO DOUBLE")
+             36 STORE_FAST               2 (cannot_double)
+
+166          38 LOAD_GLOBAL              3 (ValueError)
+             40 LOAD_GLOBAL              4 (Chips)
+             42 LOAD_METHOD              5 (get_tips)
+             44 LOAD_FAST                1 (over_tips)
+             46 LOAD_FAST                2 (cannot_double)
+             48 BINARY_ADD
+             50 CALL_METHOD              1
+             52 CALL_FUNCTION            1
+             54 RAISE_VARARGS            1
+        >>   56 LOAD_CONST               0 (None)
+             58 RETURN_VALUE
+
+Disassembly of <code object insurance at 0x1058749d0, file "./blackjack.py", line 168>:
+170           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (_insurance)
+              4 RETURN_VALUE
+
+Disassembly of <code object insurance at 0x105874a80, file "./blackjack.py", line 172>:
+174           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (amount)
+              4 LOAD_FAST                1 (value)
+              6 BINARY_SUBTRACT
+              8 LOAD_CONST               1 (0)
+             10 COMPARE_OP               0 (<)
+             12 POP_JUMP_IF_FALSE       32
+
+175          14 LOAD_CONST               2 ('Not enough chips')
+             16 STORE_FAST               2 (over_tips)
+
+176          18 LOAD_GLOBAL              1 (ValueError)
+             20 LOAD_GLOBAL              2 (Chips)
+             22 LOAD_METHOD              3 (get_tips)
+             24 LOAD_FAST                2 (over_tips)
+             26 CALL_METHOD              1
+             28 CALL_FUNCTION            1
+             30 RAISE_VARARGS            1
+
+177     >>   32 LOAD_FAST                1 (value)
+             34 LOAD_FAST                0 (self)
+             36 STORE_ATTR               4 (_insurance)
+
+178          38 LOAD_CONST               3 (True)
+             40 LOAD_FAST                0 (self)
+             42 STORE_ATTR               5 (is_insurance)
+             44 LOAD_CONST               0 (None)
+             46 RETURN_VALUE
+
+Disassembly of <code object current_amount at 0x105874b30, file "./blackjack.py", line 180>:
+181           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (amount)
+              4 LOAD_FAST                0 (self)
+              6 LOAD_ATTR                1 (bet_amount)
+              8 BINARY_SUBTRACT
+             10 LOAD_FAST                0 (self)
+             12 LOAD_ATTR                2 (insurance)
+             14 BINARY_SUBTRACT
+             16 RETURN_VALUE
+
+Disassembly of <code object reset_chip at 0x105874be0, file "./blackjack.py", line 183>:
+184           0 LOAD_CONST               1 (0)
+              2 LOAD_FAST                0 (self)
+              4 STORE_ATTR               0 (_bet_amount)
+
+185           6 LOAD_CONST               1 (0)
+              8 LOAD_FAST                0 (self)
+             10 STORE_ATTR               1 (_insurance)
+
+186          12 LOAD_CONST               2 (False)
+             14 LOAD_FAST                0 (self)
+             16 STORE_ATTR               2 (is_double)
+
+187          18 LOAD_CONST               2 (False)
+             20 LOAD_FAST                0 (self)
+             22 STORE_ATTR               3 (is_insurance)
+             24 LOAD_CONST               0 (None)
+             26 RETURN_VALUE
+
+Disassembly of <code object can_double at 0x105874c90, file "./blackjack.py", line 189>:
+190           0 LOAD_FAST                0 (self)
+              2 LOAD_METHOD              0 (current_amount)
+              4 CALL_METHOD              0
+              6 LOAD_FAST                0 (self)
+              8 LOAD_ATTR                1 (bet_amount)
+             10 BINARY_SUBTRACT
+             12 LOAD_CONST               1 (0)
+             14 COMPARE_OP               5 (>=)
+             16 RETURN_VALUE
+
+Disassembly of <code object User at 0x1058a6b30, file "./blackjack.py", line 193>:
+193           0 LOAD_NAME                0 (__name__)
+              2 STORE_NAME               1 (__module__)
+              4 LOAD_CONST               0 ('User')
+              6 STORE_NAME               2 (__qualname__)
+
+194           8 LOAD_CONST              28 ((None, 'END'))
+             10 LOAD_CONST               3 (<code object __init__ at 0x105874df0, file "./blackjack.py", line 194>)
+             12 LOAD_CONST               4 ('User.__init__')
+             14 MAKE_FUNCTION            1 (defaults)
+             16 STORE_NAME               3 (__init__)
+
+207          18 LOAD_CONST               5 (<code object __repr__ at 0x105874ea0, file "./blackjack.py", line 207>)
+             20 LOAD_CONST               6 ('User.__repr__')
+             22 MAKE_FUNCTION            0
+             24 STORE_NAME               4 (__repr__)
+
+210          26 LOAD_CONST              29 ((True,))
+             28 LOAD_CONST               8 (<code object obtain_card at 0x105874f50, file "./blackjack.py", line 210>)
+             30 LOAD_CONST               9 ('User.obtain_card')
+             32 MAKE_FUNCTION            1 (defaults)
+             34 STORE_NAME               5 (obtain_card)
+
+215          36 LOAD_CONST              10 (<code object drop_card at 0x1058a6030, file "./blackjack.py", line 215>)
+             38 LOAD_CONST              11 ('User.drop_card')
+             40 MAKE_FUNCTION            0
+             42 STORE_NAME               6 (drop_card)
+
+219          44 LOAD_CONST              12 (<code object show_card at 0x1058a60e0, file "./blackjack.py", line 219>)
+             46 LOAD_CONST              13 ('User.show_card')
+             48 MAKE_FUNCTION            0
+             50 STORE_NAME               7 (show_card)
+
+224          52 LOAD_CONST              14 (<code object unveil_card at 0x1058a6190, file "./blackjack.py", line 224>)
+             54 LOAD_CONST              15 ('User.unveil_card')
+             56 MAKE_FUNCTION            0
+             58 STORE_NAME               8 (unveil_card)
+
+229          60 LOAD_CONST              16 (<code object calculate_point at 0x1058a6710, file "./blackjack.py", line 229>)
+             62 LOAD_CONST              17 ('User.calculate_point')
+             64 MAKE_FUNCTION            0
+             66 STORE_NAME               9 (calculate_point)
+
+248          68 LOAD_CONST              18 (<code object is_point at 0x1058a67c0, file "./blackjack.py", line 248>)
+             70 LOAD_CONST              19 ('User.is_point')
+             72 MAKE_FUNCTION            0
+             74 STORE_NAME              10 (is_point)
+
+255          76 LOAD_CONST              30 (('', '\n'))
+             78 LOAD_CONST              22 (<code object speak at 0x1058a6870, file "./blackjack.py", line 255>)
+             80 LOAD_CONST              23 ('User.speak')
+             82 MAKE_FUNCTION            1 (defaults)
+             84 STORE_NAME              11 (speak)
+
+262          86 LOAD_CONST              24 (<code object showing at 0x1058a6920, file "./blackjack.py", line 262>)
+             88 LOAD_CONST              25 ('User.showing')
+             90 MAKE_FUNCTION            0
+             92 STORE_NAME              12 (showing)
+
+266          94 LOAD_CONST              26 (<code object unveiling at 0x1058a69d0, file "./blackjack.py", line 266>)
+             96 LOAD_CONST              27 ('User.unveiling')
+             98 MAKE_FUNCTION            0
+            100 STORE_NAME              13 (unveiling)
+            102 LOAD_CONST               1 (None)
+            104 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x105874df0, file "./blackjack.py", line 194>:
+200           0 LOAD_FAST                1 (name)
+              2 LOAD_FAST                0 (self)
+              4 STORE_ATTR               0 (name)
+
+201           6 LOAD_CONST               1 ('{role} >> ({name}) : ')
+              8 LOAD_ATTR                1 (format)
+             10 LOAD_FAST                2 (role)
+             12 LOAD_FAST                0 (self)
+             14 LOAD_ATTR                0 (name)
+             16 LOAD_CONST               2 (('role', 'name'))
+             18 CALL_FUNCTION_KW         2
+             20 LOAD_FAST                0 (self)
+             22 STORE_ATTR               2 (prompt)
+
+202          24 LOAD_GLOBAL              3 (Chips)
+             26 LOAD_FAST                3 (chips_amount)
+             28 CALL_FUNCTION            1
+             30 LOAD_FAST                0 (self)
+             32 STORE_ATTR               4 (chips)
+
+203          34 LOAD_FAST                4 (color)
+             36 LOAD_FAST                0 (self)
+             38 STORE_ATTR               5 (color)
+
+204          40 BUILD_LIST               0
+             42 LOAD_FAST                0 (self)
+             44 STORE_ATTR               6 (hand)
+
+205          46 LOAD_CONST               3 (0)
+             48 LOAD_FAST                0 (self)
+             50 STORE_ATTR               7 (point)
+             52 LOAD_CONST               4 (None)
+             54 RETURN_VALUE
+
+Disassembly of <code object __repr__ at 0x105874ea0, file "./blackjack.py", line 207>:
+208           0 LOAD_GLOBAL              0 (str)
+              2 LOAD_FAST                0 (self)
+              4 LOAD_ATTR                1 (__dict__)
+              6 CALL_FUNCTION            1
+              8 RETURN_VALUE
+
+Disassembly of <code object obtain_card at 0x105874f50, file "./blackjack.py", line 210>:
+211           0 LOAD_FAST                1 (deck)
+              2 LOAD_METHOD              0 (deliver)
+              4 CALL_METHOD              0
+              6 STORE_FAST               3 (card)
+
+212           8 LOAD_FAST                2 (face)
+             10 LOAD_FAST                3 (card)
+             12 STORE_ATTR               1 (is_face)
+
+213          14 LOAD_FAST                0 (self)
+             16 LOAD_ATTR                2 (hand)
+             18 LOAD_METHOD              3 (append)
+             20 LOAD_FAST                3 (card)
+             22 CALL_METHOD              1
+             24 POP_TOP
+             26 LOAD_CONST               0 (None)
+             28 RETURN_VALUE
+
+Disassembly of <code object drop_card at 0x1058a6030, file "./blackjack.py", line 215>:
+216           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (hand)
+              4 LOAD_METHOD              1 (clear)
+              6 CALL_METHOD              0
+              8 POP_TOP
+
+217          10 LOAD_CONST               1 (0)
+             12 LOAD_FAST                0 (self)
+             14 STORE_ATTR               2 (point)
+             16 LOAD_CONST               0 (None)
+             18 RETURN_VALUE
+
+Disassembly of <code object show_card at 0x1058a60e0, file "./blackjack.py", line 219>:
+220           0 LOAD_GLOBAL              0 (print)
+              2 LOAD_CONST               1 ('\t    ** Here is my card **')
+              4 CALL_FUNCTION            1
+              6 POP_TOP
+
+221           8 LOAD_FAST                0 (self)
+             10 LOAD_ATTR                1 (hand)
+             12 GET_ITER
+        >>   14 FOR_ITER                12 (to 28)
+             16 STORE_FAST               1 (card)
+
+222          18 LOAD_FAST                1 (card)
+             20 LOAD_METHOD              2 (show)
+             22 CALL_METHOD              0
+             24 POP_TOP
+             26 JUMP_ABSOLUTE           14
+        >>   28 LOAD_CONST               0 (None)
+             30 RETURN_VALUE
+
+Disassembly of <code object unveil_card at 0x1058a6190, file "./blackjack.py", line 224>:
+225           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (hand)
+              4 GET_ITER
+        >>    6 FOR_ITER                10 (to 18)
+              8 STORE_FAST               1 (card)
+
+226          10 LOAD_CONST               1 (True)
+             12 LOAD_FAST                1 (card)
+             14 STORE_ATTR               1 (is_face)
+             16 JUMP_ABSOLUTE            6
+
+227     >>   18 LOAD_FAST                0 (self)
+             20 LOAD_METHOD              2 (show_card)
+             22 CALL_METHOD              0
+             24 POP_TOP
+             26 LOAD_CONST               0 (None)
+             28 RETURN_VALUE
+
+Disassembly of <code object calculate_point at 0x1058a6710, file "./blackjack.py", line 229>:
+230           0 LOAD_CLOSURE             0 (self)
+              2 BUILD_TUPLE              1
+              4 LOAD_CONST               1 (<code object _extract_rank at 0x1058a6500, file "./blackjack.py", line 230>)
+              6 LOAD_CONST               2 ('User.calculate_point.<locals>._extract_rank')
+              8 MAKE_FUNCTION            8 (closure)
+             10 STORE_FAST               1 (_extract_rank)
+
+235          12 LOAD_CONST               3 (<code object _sum_up at 0x1058a6660, file "./blackjack.py", line 235>)
+             14 LOAD_CONST               4 ('User.calculate_point.<locals>._sum_up')
+             16 MAKE_FUNCTION            0
+             18 STORE_FAST               2 (_sum_up)
+
+245          20 LOAD_FAST                1 (_extract_rank)
+             22 CALL_FUNCTION            0
+             24 STORE_FAST               3 (points)
+
+246          26 LOAD_FAST                2 (_sum_up)
+             28 LOAD_FAST                3 (points)
+             30 CALL_FUNCTION            1
+             32 LOAD_DEREF               0 (self)
+             34 STORE_ATTR               0 (point)
+             36 LOAD_CONST               0 (None)
+             38 RETURN_VALUE
+
+Disassembly of <code object _extract_rank at 0x1058a6500, file "./blackjack.py", line 230>:
+231           0 LOAD_CONST               1 (<code object <listcomp> at 0x1058a6240, file "./blackjack.py", line 231>)
+              2 LOAD_CONST               2 ('User.calculate_point.<locals>._extract_rank.<locals>.<listcomp>')
+              4 MAKE_FUNCTION            0
+              6 LOAD_DEREF               0 (self)
+              8 LOAD_ATTR                0 (hand)
+             10 GET_ITER
+             12 CALL_FUNCTION            1
+             14 STORE_FAST               0 (raw_ranks)
+
+232          16 LOAD_CONST               3 (<code object <listcomp> at 0x1058a6450, file "./blackjack.py", line 232>)
+             18 LOAD_CONST               2 ('User.calculate_point.<locals>._extract_rank.<locals>.<listcomp>')
+             20 MAKE_FUNCTION            0
+             22 LOAD_FAST                0 (raw_ranks)
+             24 GET_ITER
+             26 CALL_FUNCTION            1
+             28 STORE_FAST               1 (cook_ranks)
+
+233          30 LOAD_FAST                1 (cook_ranks)
+             32 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x1058a6240, file "./blackjack.py", line 231>:
+231           0 BUILD_LIST               0
+              2 LOAD_FAST                0 (.0)
+        >>    4 FOR_ITER                10 (to 16)
+              6 STORE_FAST               1 (card)
+              8 LOAD_FAST                1 (card)
+             10 LOAD_ATTR                0 (rank)
+             12 LIST_APPEND              2
+             14 JUMP_ABSOLUTE            4
+        >>   16 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x1058a6450, file "./blackjack.py", line 232>:
+232           0 BUILD_LIST               0
+              2 LOAD_FAST                0 (.0)
+        >>    4 FOR_ITER                20 (to 26)
+              6 STORE_FAST               1 (rank)
+              8 LOAD_FAST                1 (rank)
+             10 LOAD_CONST               0 (10)
+             12 COMPARE_OP               4 (>)
+             14 POP_JUMP_IF_FALSE       20
+             16 LOAD_CONST               0 (10)
+             18 JUMP_FORWARD             2 (to 22)
+        >>   20 LOAD_FAST                1 (rank)
+        >>   22 LIST_APPEND              2
+             24 JUMP_ABSOLUTE            4
+        >>   26 RETURN_VALUE
+
+Disassembly of <code object _sum_up at 0x1058a6660, file "./blackjack.py", line 235>:
+236           0 LOAD_GLOBAL              0 (sum)
+              2 LOAD_FAST                0 (ranks)
+              4 CALL_FUNCTION            1
+              6 STORE_FAST               1 (rank_one)
+
+237           8 LOAD_GLOBAL              0 (sum)
+             10 LOAD_CONST               1 (<code object <listcomp> at 0x1058a65b0, file "./blackjack.py", line 237>)
+             12 LOAD_CONST               2 ('User.calculate_point.<locals>._sum_up.<locals>.<listcomp>')
+             14 MAKE_FUNCTION            0
+             16 LOAD_FAST                0 (ranks)
+             18 GET_ITER
+             20 CALL_FUNCTION            1
+             22 CALL_FUNCTION            1
+             24 STORE_FAST               2 (rank_eleven)
+
+239          26 LOAD_FAST                0 (ranks)
+             28 LOAD_CONST               0 (None)
+             30 LOAD_CONST               0 (None)
+             32 LOAD_CONST               3 (-1)
+             34 BUILD_SLICE              3
+             36 BINARY_SUBSCR
+             38 LOAD_FAST                0 (ranks)
+             40 COMPARE_OP               2 (==)
+             42 POP_JUMP_IF_FALSE       68
+             44 LOAD_CONST               4 (1)
+             46 LOAD_FAST                0 (ranks)
+             48 CONTAINS_OP              0
+             50 POP_JUMP_IF_FALSE       68
+
+240          52 LOAD_CONST               5 (11)
+             54 LOAD_GLOBAL              1 (len)
+             56 LOAD_FAST                0 (ranks)
+             58 CALL_FUNCTION            1
+             60 BINARY_ADD
+             62 LOAD_CONST               4 (1)
+             64 BINARY_SUBTRACT
+             66 RETURN_VALUE
+
+241     >>   68 LOAD_FAST                2 (rank_eleven)
+             70 LOAD_GLOBAL              2 (BLACK_JACK)
+             72 COMPARE_OP               1 (<=)
+             74 POP_JUMP_IF_FALSE       80
+
+242          76 LOAD_FAST                2 (rank_eleven)
+             78 RETURN_VALUE
+
+243     >>   80 LOAD_FAST                1 (rank_one)
+             82 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x1058a65b0, file "./blackjack.py", line 237>:
+237           0 BUILD_LIST               0
+              2 LOAD_FAST                0 (.0)
+        >>    4 FOR_ITER                20 (to 26)
+              6 STORE_FAST               1 (rank)
+              8 LOAD_FAST                1 (rank)
+             10 LOAD_CONST               0 (1)
+             12 COMPARE_OP               2 (==)
+             14 POP_JUMP_IF_FALSE       20
+             16 LOAD_CONST               1 (11)
+             18 JUMP_FORWARD             2 (to 22)
+        >>   20 LOAD_FAST                1 (rank)
+        >>   22 LIST_APPEND              2
+             24 JUMP_ABSOLUTE            4
+        >>   26 RETURN_VALUE
+
+Disassembly of <code object is_point at 0x1058a67c0, file "./blackjack.py", line 248>:
+249           0 LOAD_FAST                0 (self)
+              2 LOAD_METHOD              0 (calculate_point)
+              4 CALL_METHOD              0
+              6 POP_TOP
+
+250           8 LOAD_CONST               1 ('{user_point} {opt} {point}')
+             10 LOAD_ATTR                1 (format)
+
+251          12 LOAD_FAST                0 (self)
+             14 LOAD_ATTR                2 (point)
+             16 LOAD_FAST                1 (opt)
+             18 LOAD_FAST                2 (point)
+
+250          20 LOAD_CONST               2 (('user_point', 'opt', 'point'))
+             22 CALL_FUNCTION_KW         3
+             24 STORE_FAST               3 (compare_fmt)
+
+253          26 LOAD_GLOBAL              3 (eval)
+             28 LOAD_FAST                3 (compare_fmt)
+             30 CALL_FUNCTION            1
+             32 RETURN_VALUE
+
+Disassembly of <code object speak at 0x1058a6870, file "./blackjack.py", line 255>:
+256           0 LOAD_GLOBAL              0 (print)
+              2 LOAD_CONST               1 ('')
+              4 CALL_FUNCTION            1
+              6 POP_TOP
+
+257           8 LOAD_GLOBAL              0 (print)
+
+258          10 LOAD_GLOBAL              1 (COLOR)
+             12 LOAD_METHOD              2 (get)
+             14 LOAD_FAST                0 (self)
+             16 LOAD_ATTR                3 (color)
+             18 CALL_METHOD              1
+             20 LOAD_FAST                0 (self)
+             22 LOAD_ATTR                4 (prompt)
+             24 BINARY_ADD
+             26 LOAD_GLOBAL              1 (COLOR)
+             28 LOAD_METHOD              2 (get)
+             30 LOAD_CONST               2 ('END')
+             32 CALL_METHOD              1
+             34 BINARY_ADD
+             36 LOAD_FAST                1 (content)
+             38 BINARY_ADD
+
+259          40 LOAD_FAST                2 (end_char)
+
+257          42 LOAD_CONST               3 (('end',))
+             44 CALL_FUNCTION_KW         2
+             46 POP_TOP
+             48 LOAD_CONST               0 (None)
+             50 RETURN_VALUE
+
+Disassembly of <code object showing at 0x1058a6920, file "./blackjack.py", line 262>:
+263           0 LOAD_FAST                0 (self)
+              2 LOAD_METHOD              0 (speak)
+              4 CALL_METHOD              0
+              6 POP_TOP
+
+264           8 LOAD_FAST                0 (self)
+             10 LOAD_METHOD              1 (show_card)
+             12 CALL_METHOD              0
+             14 POP_TOP
+             16 LOAD_CONST               0 (None)
+             18 RETURN_VALUE
+
+Disassembly of <code object unveiling at 0x1058a69d0, file "./blackjack.py", line 266>:
+267           0 LOAD_FAST                0 (self)
+              2 LOAD_METHOD              0 (calculate_point)
+              4 CALL_METHOD              0
+              6 POP_TOP
+
+268           8 LOAD_CONST               1 ('My point is: {}')
+             10 LOAD_METHOD              1 (format)
+             12 LOAD_GLOBAL              2 (str)
+             14 LOAD_FAST                0 (self)
+             16 LOAD_ATTR                3 (point)
+             18 CALL_FUNCTION            1
+             20 CALL_METHOD              1
+             22 STORE_FAST               1 (points_fmt)
+
+269          24 LOAD_FAST                0 (self)
+             26 LOAD_METHOD              4 (speak)
+             28 LOAD_FAST                1 (points_fmt)
+             30 CALL_METHOD              1
+             32 POP_TOP
+
+270          34 LOAD_FAST                0 (self)
+             36 LOAD_METHOD              5 (unveil_card)
+             38 CALL_METHOD              0
+             40 POP_TOP
+             42 LOAD_CONST               0 (None)
+             44 RETURN_VALUE
+
+Disassembly of <code object Dealer at 0x1058a6d40, file "./blackjack.py", line 273>:
+273           0 LOAD_NAME                0 (__name__)
+              2 STORE_NAME               1 (__module__)
+              4 LOAD_CONST               0 ('Dealer')
+              6 STORE_NAME               2 (__qualname__)
+
+274           8 LOAD_CLOSURE             0 (__class__)
+             10 BUILD_TUPLE              1
+             12 LOAD_CONST               1 (<code object __init__ at 0x1058a6a80, file "./blackjack.py", line 274>)
+             14 LOAD_CONST               2 ('Dealer.__init__')
+             16 MAKE_FUNCTION            8 (closure)
+             18 STORE_NAME               3 (__init__)
+
+278          20 LOAD_CONST               3 (<code object ask_insurance at 0x1058a6be0, file "./blackjack.py", line 278>)
+             22 LOAD_CONST               4 ('Dealer.ask_insurance')
+             24 MAKE_FUNCTION            0
+             26 STORE_NAME               4 (ask_insurance)
+
+286          28 LOAD_CONST               5 (<code object strategy_trigger at 0x1058a6c90, file "./blackjack.py", line 286>)
+             30 LOAD_CONST               6 ('Dealer.strategy_trigger')
+             32 MAKE_FUNCTION            0
+             34 STORE_NAME               5 (strategy_trigger)
+             36 LOAD_CLOSURE             0 (__class__)
+             38 DUP_TOP
+             40 STORE_NAME               6 (__classcell__)
+             42 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x1058a6a80, file "./blackjack.py", line 274>:
+275           0 LOAD_GLOBAL              0 (super)
+              2 CALL_FUNCTION            0
+              4 LOAD_ATTR                1 (__init__)
+              6 LOAD_FAST                1 (name)
+              8 LOAD_CONST               1 ('Dealer')
+             10 LOAD_CONST               2 ('PURPLE')
+             12 LOAD_CONST               3 (('name', 'role', 'color'))
+             14 CALL_FUNCTION_KW         3
+             16 POP_TOP
+
+276          18 LOAD_CONST               4 (0)
+             20 LOAD_FAST                0 (self)
+             22 STORE_ATTR               2 (trigger)
+             24 LOAD_CONST               0 (None)
+             26 RETURN_VALUE
+
+Disassembly of <code object ask_insurance at 0x1058a6be0, file "./blackjack.py", line 278>:
+280           0 LOAD_CONST               1 ('(Insurance pay 2 to 1)\n\tMy Face card is an Ace.\n\tWould your like buy a insurance ?')
+
+279           2 STORE_FAST               1 (buy_insurance)
+
+284           4 LOAD_FAST                0 (self)
+              6 LOAD_ATTR                0 (speak)
+              8 LOAD_FAST                1 (buy_insurance)
+             10 LOAD_CONST               2 (('content',))
+             12 CALL_FUNCTION_KW         1
+             14 POP_TOP
+             16 LOAD_CONST               0 (None)
+             18 RETURN_VALUE
+
+Disassembly of <code object strategy_trigger at 0x1058a6c90, file "./blackjack.py", line 286>:
+287           0 LOAD_FAST                0 (self)
+              2 LOAD_METHOD              0 (is_point)
+              4 LOAD_CONST               1 ('<')
+              6 LOAD_GLOBAL              1 (BASE_VALUE)
+              8 CALL_METHOD              2
+             10 POP_JUMP_IF_FALSE       24
+
+288          12 LOAD_FAST                0 (self)
+             14 LOAD_METHOD              2 (obtain_card)
+             16 LOAD_FAST                1 (deck)
+             18 CALL_METHOD              1
+             20 POP_TOP
+             22 JUMP_FORWARD            46 (to 70)
+
+290     >>   24 LOAD_FAST                0 (self)
+             26 DUP_TOP
+             28 LOAD_ATTR                3 (trigger)
+             30 LOAD_GLOBAL              4 (random)
+             32 LOAD_METHOD              5 (randint)
+             34 LOAD_CONST               2 (0)
+             36 LOAD_CONST               3 (5)
+             38 CALL_METHOD              2
+             40 INPLACE_ADD
+             42 ROT_TWO
+             44 STORE_ATTR               3 (trigger)
+
+291          46 LOAD_FAST                0 (self)
+             48 LOAD_ATTR                3 (trigger)
+             50 LOAD_CONST               3 (5)
+             52 BINARY_MODULO
+             54 LOAD_CONST               2 (0)
+             56 COMPARE_OP               2 (==)
+             58 POP_JUMP_IF_FALSE       70
+
+292          60 LOAD_FAST                0 (self)
+             62 LOAD_METHOD              2 (obtain_card)
+             64 LOAD_FAST                1 (deck)
+             66 CALL_METHOD              1
+             68 POP_TOP
+        >>   70 LOAD_CONST               0 (None)
+             72 RETURN_VALUE
+
+Disassembly of <code object Player at 0x1058a10e0, file "./blackjack.py", line 295>:
+295           0 LOAD_NAME                0 (__name__)
+              2 STORE_NAME               1 (__module__)
+              4 LOAD_CONST               0 ('Player')
+              6 STORE_NAME               2 (__qualname__)
+
+296           8 LOAD_CLOSURE             0 (__class__)
+             10 BUILD_TUPLE              1
+             12 LOAD_CONST               1 (<code object __init__ at 0x1058a6df0, file "./blackjack.py", line 296>)
+             14 LOAD_CONST               2 ('Player.__init__')
+             16 MAKE_FUNCTION            8 (closure)
+             18 STORE_NAME               3 (__init__)
+
+300          20 LOAD_CONST               3 (<code object refresh_prompt at 0x1058a6ea0, file "./blackjack.py", line 300>)
+             22 LOAD_CONST               4 ('Player.refresh_prompt')
+             24 MAKE_FUNCTION            0
+             26 STORE_NAME               4 (refresh_prompt)
+
+305          28 LOAD_CONST               5 (<code object select_choice at 0x1058a1190, file "./blackjack.py", line 305>)
+             30 LOAD_CONST               6 ('Player.select_choice')
+             32 MAKE_FUNCTION            0
+             34 STORE_NAME               5 (select_choice)
+             36 LOAD_CLOSURE             0 (__class__)
+             38 DUP_TOP
+             40 STORE_NAME               6 (__classcell__)
+             42 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x1058a6df0, file "./blackjack.py", line 296>:
+297           0 LOAD_GLOBAL              0 (super)
+              2 CALL_FUNCTION            0
+              4 LOAD_ATTR                1 (__init__)
+              6 LOAD_FAST                1 (name)
+              8 LOAD_FAST                2 (amount)
+             10 LOAD_CONST               1 ('Player')
+             12 LOAD_CONST               2 ('CYAN')
+             14 LOAD_CONST               3 (('name', 'chips_amount', 'role', 'color'))
+             16 CALL_FUNCTION_KW         4
+             18 POP_TOP
+
+298          20 LOAD_FAST                0 (self)
+             22 LOAD_METHOD              2 (refresh_prompt)
+             24 CALL_METHOD              0
+             26 POP_TOP
+             28 LOAD_CONST               0 (None)
+             30 RETURN_VALUE
+
+Disassembly of <code object refresh_prompt at 0x1058a6ea0, file "./blackjack.py", line 300>:
+301           0 LOAD_CONST               1 ('{role} [ ${remain} ] >> ({name}) : ')
+              2 LOAD_ATTR                0 (format)
+
+302           4 LOAD_CONST               2 ('Player')
+              6 LOAD_FAST                0 (self)
+              8 LOAD_ATTR                1 (name)
+             10 LOAD_FAST                0 (self)
+             12 LOAD_ATTR                2 (chips)
+             14 LOAD_METHOD              3 (current_amount)
+             16 CALL_METHOD              0
+
+301          18 LOAD_CONST               3 (('role', 'name', 'remain'))
+             20 CALL_FUNCTION_KW         3
+             22 LOAD_FAST                0 (self)
+             24 STORE_ATTR               4 (prompt)
+             26 LOAD_CONST               0 (None)
+             28 RETURN_VALUE
+
+Disassembly of <code object select_choice at 0x1058a1190, file "./blackjack.py", line 305>:
+306           0 LOAD_CONST               1 ('My turn now.')
+              2 STORE_FAST               2 (my_turn)
+
+307           4 LOAD_FAST                0 (self)
+              6 LOAD_ATTR                0 (speak)
+              8 LOAD_FAST                2 (my_turn)
+             10 LOAD_CONST               2 (('content',))
+             12 CALL_FUNCTION_KW         1
+             14 POP_TOP
+
+309          16 LOAD_CONST               3 ('Insurance')
+
+310          18 LOAD_CONST               4 ('Hit')
+
+311          20 LOAD_CONST               5 ('Stand')
+
+312          22 LOAD_CONST               6 ('Double-down')
+
+313          24 LOAD_CONST               7 ('Surrender')
+
+308          26 LOAD_CONST               8 (('I', 'H', 'S', 'D', 'U'))
+             28 BUILD_CONST_KEY_MAP      5
+             30 STORE_DEREF              0 (operation)
+
+315          32 LOAD_GLOBAL              1 (enumerate)
+             34 LOAD_CLOSURE             0 (operation)
+             36 BUILD_TUPLE              1
+             38 LOAD_CONST               9 (<code object <genexpr> at 0x1058a1030, file "./blackjack.py", line 315>)
+             40 LOAD_CONST              10 ('Player.select_choice.<locals>.<genexpr>')
+             42 MAKE_FUNCTION            8 (closure)
+             44 LOAD_FAST                1 (pattern)
+             46 GET_ITER
+             48 CALL_FUNCTION            1
+             50 LOAD_CONST              11 (1)
+             52 CALL_FUNCTION            2
+             54 STORE_FAST               3 (enu_choice)
+
+316          56 LOAD_GLOBAL              2 (dict)
+             58 LOAD_FAST                3 (enu_choice)
+             60 CALL_FUNCTION            1
+             62 STORE_FAST               4 (dict_choice)
+
+317          64 LOAD_FAST                4 (dict_choice)
+             66 LOAD_METHOD              3 (items)
+             68 CALL_METHOD              0
+             70 GET_ITER
+        >>   72 FOR_ITER                30 (to 104)
+             74 UNPACK_SEQUENCE          2
+             76 STORE_FAST               5 (index)
+             78 STORE_FAST               6 (operator)
+
+318          80 LOAD_CONST              12 ('\t[{index}] {operation}')
+             82 STORE_FAST               7 (choice_fmt)
+
+319          84 LOAD_GLOBAL              4 (print)
+             86 LOAD_FAST                7 (choice_fmt)
+             88 LOAD_ATTR                5 (format)
+             90 LOAD_FAST                5 (index)
+             92 LOAD_FAST                6 (operator)
+             94 LOAD_CONST              13 (('index', 'operation'))
+             96 CALL_FUNCTION_KW         2
+             98 CALL_FUNCTION            1
+            100 POP_TOP
+            102 JUMP_ABSOLUTE           72
+
+320     >>  104 LOAD_FAST                4 (dict_choice)
+            106 RETURN_VALUE
+
+Disassembly of <code object <genexpr> at 0x1058a1030, file "./blackjack.py", line 315>:
+315           0 LOAD_FAST                0 (.0)
+        >>    2 FOR_ITER                16 (to 20)
+              4 STORE_FAST               1 (p)
+              6 LOAD_DEREF               0 (operation)
+              8 LOAD_METHOD              0 (get)
+             10 LOAD_FAST                1 (p)
+             12 CALL_METHOD              1
+             14 YIELD_VALUE
+             16 POP_TOP
+             18 JUMP_ABSOLUTE            2
+        >>   20 LOAD_CONST               0 (None)
+             22 RETURN_VALUE
+
+Disassembly of <code object Recorder at 0x1058a15b0, file "./blackjack.py", line 323>:
+323           0 LOAD_NAME                0 (__name__)
+              2 STORE_NAME               1 (__module__)
+              4 LOAD_CONST               0 ('Recorder')
+              6 STORE_NAME               2 (__qualname__)
+
+324           8 LOAD_CONST               1 (<code object __init__ at 0x1058a1240, file "./blackjack.py", line 324>)
+             10 LOAD_CONST               2 ('Recorder.__init__')
+             12 MAKE_FUNCTION            0
+             14 STORE_NAME               3 (__init__)
+
+334          16 LOAD_CONST               3 (<code object update at 0x1058a12f0, file "./blackjack.py", line 334>)
+             18 LOAD_CONST               4 ('Recorder.update')
+             20 MAKE_FUNCTION            0
+             22 STORE_NAME               4 (update)
+
+345          24 LOAD_CONST               5 (<code object record at 0x1058a13a0, file "./blackjack.py", line 345>)
+             26 LOAD_CONST               6 ('Recorder.record')
+             28 MAKE_FUNCTION            0
+             30 STORE_NAME               5 (record)
+
+359          32 LOAD_CONST               7 (<code object draw_diagram at 0x1058a1500, file "./blackjack.py", line 359>)
+             34 LOAD_CONST               8 ('Recorder.draw_diagram')
+             36 MAKE_FUNCTION            0
+             38 STORE_NAME               6 (draw_diagram)
+
+374          40 LOAD_CONST               9 (<code object digram at 0x1058a1450, file "./blackjack.py", line 374>)
+             42 LOAD_CONST              10 ('Recorder.digram')
+             44 MAKE_FUNCTION            0
+             46 STORE_NAME               7 (digram)
+             48 LOAD_CONST              11 (None)
+             50 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x1058a1240, file "./blackjack.py", line 324>:
+325           0 BUILD_LIST               0
+              2 LOAD_FAST                0 (self)
+              4 STORE_ATTR               0 (data)
+
+326           6 LOAD_CONST               0 (None)
+              8 LOAD_FAST                0 (self)
+             10 STORE_ATTR               1 (winner)
+
+327          12 LOAD_CONST               1 (0)
+             14 LOAD_FAST                0 (self)
+             16 STORE_ATTR               2 (remain_chips)
+
+328          18 LOAD_CONST               1 (0)
+             20 LOAD_FAST                0 (self)
+             22 STORE_ATTR               3 (rounds)
+
+329          24 LOAD_CONST               1 (0)
+             26 LOAD_FAST                0 (self)
+             28 STORE_ATTR               4 (player_win_count)
+
+330          30 LOAD_CONST               1 (0)
+             32 LOAD_FAST                0 (self)
+             34 STORE_ATTR               5 (dealer_win_count)
+
+331          36 LOAD_CONST               1 (0)
+             38 LOAD_FAST                0 (self)
+             40 STORE_ATTR               6 (player_point)
+
+332          42 LOAD_CONST               1 (0)
+             44 LOAD_FAST                0 (self)
+             46 STORE_ATTR               7 (dealer_point)
+             48 LOAD_CONST               0 (None)
+             50 RETURN_VALUE
+
+Disassembly of <code object update at 0x1058a12f0, file "./blackjack.py", line 334>:
+335           0 LOAD_FAST                0 (self)
+              2 DUP_TOP
+              4 LOAD_ATTR                0 (rounds)
+              6 LOAD_CONST               1 (1)
+              8 INPLACE_ADD
+             10 ROT_TWO
+             12 STORE_ATTR               0 (rounds)
+
+336          14 LOAD_FAST                2 (chips)
+             16 LOAD_FAST                0 (self)
+             18 STORE_ATTR               1 (remain_chips)
+
+337          20 LOAD_FAST                1 (winner)
+             22 LOAD_FAST                0 (self)
+             24 STORE_ATTR               2 (winner)
+
+338          26 LOAD_FAST                0 (self)
+             28 LOAD_ATTR                2 (winner)
+             30 LOAD_CONST               2 ('Player')
+             32 COMPARE_OP               2 (==)
+             34 POP_JUMP_IF_FALSE       52
+
+339          36 LOAD_FAST                0 (self)
+             38 DUP_TOP
+             40 LOAD_ATTR                3 (player_win_count)
+             42 LOAD_CONST               1 (1)
+             44 INPLACE_ADD
+             46 ROT_TWO
+             48 STORE_ATTR               3 (player_win_count)
+             50 JUMP_FORWARD            24 (to 76)
+
+340     >>   52 LOAD_FAST                0 (self)
+             54 LOAD_ATTR                2 (winner)
+             56 LOAD_CONST               3 ('Dealer')
+             58 COMPARE_OP               2 (==)
+             60 POP_JUMP_IF_FALSE       76
+
+341          62 LOAD_FAST                0 (self)
+             64 DUP_TOP
+             66 LOAD_ATTR                4 (dealer_win_count)
+             68 LOAD_CONST               1 (1)
+             70 INPLACE_ADD
+             72 ROT_TWO
+             74 STORE_ATTR               4 (dealer_win_count)
+
+342     >>   76 LOAD_FAST                3 (player_point)
+             78 LOAD_FAST                0 (self)
+             80 STORE_ATTR               5 (player_point)
+
+343          82 LOAD_FAST                4 (dealer_point)
+             84 LOAD_FAST                0 (self)
+             86 STORE_ATTR               6 (dealer_point)
+             88 LOAD_CONST               0 (None)
+             90 RETURN_VALUE
+
+Disassembly of <code object record at 0x1058a13a0, file "./blackjack.py", line 345>:
+346           0 LOAD_FAST                0 (self)
+              2 LOAD_METHOD              0 (update)
+              4 LOAD_FAST                1 (winner)
+              6 LOAD_FAST                2 (chips)
+              8 LOAD_FAST                3 (player_point)
+             10 LOAD_FAST                4 (dealer_point)
+             12 CALL_METHOD              4
+             14 POP_TOP
+
+347          16 LOAD_GLOBAL              1 (namedtuple)
+
+348          18 LOAD_CONST               1 ('Row')
+             20 BUILD_LIST               0
+             22 LOAD_CONST               2 (('rounds', 'player_point', 'dealer_point', 'winner', 'remain_chips'))
+             24 LIST_EXTEND              1
+
+347          26 CALL_FUNCTION            2
+             28 STORE_FAST               5 (Row)
+
+350          30 LOAD_FAST                5 (Row)
+
+351          32 LOAD_FAST                0 (self)
+             34 LOAD_ATTR                2 (rounds)
+
+352          36 LOAD_FAST                0 (self)
+             38 LOAD_ATTR                3 (player_point)
+
+353          40 LOAD_FAST                0 (self)
+             42 LOAD_ATTR                4 (dealer_point)
+
+354          44 LOAD_FAST                0 (self)
+             46 LOAD_ATTR                5 (winner)
+
+355          48 LOAD_FAST                0 (self)
+             50 LOAD_ATTR                6 (remain_chips)
+
+350          52 CALL_FUNCTION            5
+             54 STORE_FAST               6 (row)
+
+357          56 LOAD_FAST                0 (self)
+             58 LOAD_ATTR                7 (data)
+             60 LOAD_METHOD              8 (append)
+             62 LOAD_FAST                6 (row)
+             64 CALL_METHOD              1
+             66 POP_TOP
+             68 LOAD_CONST               0 (None)
+             70 RETURN_VALUE
+
+Disassembly of <code object draw_diagram at 0x1058a1500, file "./blackjack.py", line 359>:
+360           0 LOAD_CONST               1 ('Record display')
+              2 STORE_FAST               1 (content)
+
+361           4 LOAD_CONST               2 ('----------------------------')
+              6 STORE_FAST               2 (bars)
+
+362           8 LOAD_FAST                2 (bars)
+             10 LOAD_FAST                1 (content)
+             12 BINARY_ADD
+             14 LOAD_FAST                2 (bars)
+             16 BINARY_ADD
+             18 STORE_FAST               3 (content_bar)
+
+363          20 LOAD_FAST                2 (bars)
+             22 LOAD_CONST               3 ('-')
+             24 LOAD_GLOBAL              0 (len)
+             26 LOAD_FAST                1 (content)
+             28 CALL_FUNCTION            1
+             30 BINARY_MULTIPLY
+             32 BINARY_ADD
+             34 LOAD_FAST                2 (bars)
+             36 BINARY_ADD
+             38 STORE_FAST               4 (base_bar)
+
+365          40 LOAD_GLOBAL              1 (os)
+             42 LOAD_METHOD              2 (system)
+             44 LOAD_CONST               4 ('clear')
+             46 CALL_METHOD              1
+             48 POP_TOP
+
+366          50 LOAD_GLOBAL              3 (print)
+             52 LOAD_FAST                4 (base_bar)
+             54 CALL_FUNCTION            1
+             56 POP_TOP
+
+367          58 LOAD_GLOBAL              3 (print)
+             60 LOAD_FAST                3 (content_bar)
+             62 CALL_FUNCTION            1
+             64 POP_TOP
+
+368          66 LOAD_GLOBAL              3 (print)
+             68 LOAD_FAST                4 (base_bar)
+             70 CALL_FUNCTION            1
+             72 POP_TOP
+
+369          74 LOAD_FAST                0 (self)
+             76 LOAD_METHOD              4 (digram)
+             78 CALL_METHOD              0
+             80 POP_TOP
+
+370          82 LOAD_GLOBAL              3 (print)
+             84 LOAD_FAST                4 (base_bar)
+             86 CALL_FUNCTION            1
+             88 POP_TOP
+
+371          90 LOAD_GLOBAL              3 (print)
+             92 LOAD_FAST                3 (content_bar)
+             94 CALL_FUNCTION            1
+             96 POP_TOP
+
+372          98 LOAD_GLOBAL              3 (print)
+            100 LOAD_FAST                4 (base_bar)
+            102 CALL_FUNCTION            1
+            104 POP_TOP
+            106 LOAD_CONST               0 (None)
+            108 RETURN_VALUE
+
+Disassembly of <code object digram at 0x1058a1450, file "./blackjack.py", line 374>:
+375           0 LOAD_CONST               1 ('Round\tPlayer-Point\tDealer-Point\tWinner-is\tRemain-Chips')
+              2 STORE_FAST               1 (title)
+
+376           4 LOAD_CONST               2 ('{}\t{}\t\t{}\t\t{}\t\t{}')
+              6 STORE_FAST               2 (row_fmt)
+
+378           8 LOAD_GLOBAL              0 (print)
+             10 LOAD_FAST                1 (title)
+             12 CALL_FUNCTION            1
+             14 POP_TOP
+
+379          16 LOAD_FAST                0 (self)
+             18 LOAD_ATTR                1 (data)
+             20 GET_ITER
+        >>   22 FOR_ITER                36 (to 60)
+             24 STORE_FAST               3 (row)
+
+380          26 LOAD_GLOBAL              0 (print)
+
+381          28 LOAD_FAST                2 (row_fmt)
+             30 LOAD_METHOD              2 (format)
+
+382          32 LOAD_FAST                3 (row)
+             34 LOAD_ATTR                3 (rounds)
+
+383          36 LOAD_FAST                3 (row)
+             38 LOAD_ATTR                4 (player_point)
+
+384          40 LOAD_FAST                3 (row)
+             42 LOAD_ATTR                5 (dealer_point)
+
+385          44 LOAD_FAST                3 (row)
+             46 LOAD_ATTR                6 (winner)
+
+386          48 LOAD_FAST                3 (row)
+             50 LOAD_ATTR                7 (remain_chips)
+
+381          52 CALL_METHOD              5
+
+380          54 CALL_FUNCTION            1
+             56 POP_TOP
+             58 JUMP_ABSOLUTE           22
+
+390     >>   60 LOAD_GLOBAL              0 (print)
+             62 LOAD_CONST               3 ('')
+             64 CALL_FUNCTION            1
+             66 POP_TOP
+
+391          68 LOAD_CONST               4 ('>> Player win rate: {}%\n>> Dealer win rate: {}%')
+             70 STORE_FAST               4 (win_rate_fmt)
+
+392          72 SETUP_FINALLY           48 (to 122)
+
+393          74 LOAD_GLOBAL              8 (round)
+             76 LOAD_FAST                0 (self)
+             78 LOAD_ATTR                9 (player_win_count)
+             80 LOAD_FAST                0 (self)
+             82 LOAD_ATTR                3 (rounds)
+             84 BINARY_TRUE_DIVIDE
+             86 LOAD_CONST               5 (100)
+             88 BINARY_MULTIPLY
+             90 LOAD_CONST               6 (2)
+             92 CALL_FUNCTION            2
+             94 STORE_FAST               5 (player_rate)
+
+394          96 LOAD_GLOBAL              8 (round)
+             98 LOAD_FAST                0 (self)
+            100 LOAD_ATTR               10 (dealer_win_count)
+            102 LOAD_FAST                0 (self)
+            104 LOAD_ATTR                3 (rounds)
+            106 BINARY_TRUE_DIVIDE
+            108 LOAD_CONST               5 (100)
+            110 BINARY_MULTIPLY
+            112 LOAD_CONST               6 (2)
+            114 CALL_FUNCTION            2
+            116 STORE_FAST               6 (dealer_rate)
+            118 POP_BLOCK
+            120 JUMP_FORWARD            26 (to 148)
+
+395     >>  122 DUP_TOP
+            124 LOAD_GLOBAL             11 (ZeroDivisionError)
+            126 JUMP_IF_NOT_EXC_MATCH   146
+            128 POP_TOP
+            130 POP_TOP
+            132 POP_TOP
+
+396         134 LOAD_CONST               7 (0)
+            136 STORE_FAST               5 (player_rate)
+
+397         138 LOAD_CONST               7 (0)
+            140 STORE_FAST               6 (dealer_rate)
+            142 POP_EXCEPT
+            144 JUMP_FORWARD             2 (to 148)
+        >>  146 RERAISE
+
+398     >>  148 LOAD_GLOBAL              0 (print)
+            150 LOAD_FAST                4 (win_rate_fmt)
+            152 LOAD_METHOD              2 (format)
+            154 LOAD_FAST                5 (player_rate)
+            156 LOAD_FAST                6 (dealer_rate)
+            158 CALL_METHOD              2
+            160 CALL_FUNCTION            1
+            162 POP_TOP
+            164 LOAD_CONST               0 (None)
+            166 RETURN_VALUE
+
+Disassembly of <code object BlackJack at 0x10589a240, file "./blackjack.py", line 401>:
+401           0 LOAD_NAME                0 (__name__)
+              2 STORE_NAME               1 (__module__)
+              4 LOAD_CONST               0 ('BlackJack')
+              6 STORE_NAME               2 (__qualname__)
+
+402           8 LOAD_CONST               1 (<code object __init__ at 0x1058a1660, file "./blackjack.py", line 402>)
+             10 LOAD_CONST               2 ('BlackJack.__init__')
+             12 MAKE_FUNCTION            0
+             14 STORE_NAME               3 (__init__)
+
+414          16 LOAD_CONST               3 (<code object play at 0x1058a1710, file "./blackjack.py", line 414>)
+             18 LOAD_CONST               4 ('BlackJack.play')
+             20 MAKE_FUNCTION            0
+             22 STORE_NAME               4 (play)
+
+450          24 LOAD_CONST               5 (<code object initial_game at 0x1058a1870, file "./blackjack.py", line 450>)
+             26 LOAD_CONST               6 ('BlackJack.initial_game')
+             28 MAKE_FUNCTION            0
+             30 STORE_NAME               5 (initial_game)
+
+464          32 LOAD_CONST               7 (<code object in_bet at 0x1058a17c0, file "./blackjack.py", line 464>)
+             34 LOAD_CONST               8 ('BlackJack.in_bet')
+             36 MAKE_FUNCTION            0
+             38 STORE_NAME               6 (in_bet)
+
+484          40 LOAD_CONST               9 (<code object deal_card at 0x1058a1920, file "./blackjack.py", line 484>)
+             42 LOAD_CONST              10 ('BlackJack.deal_card')
+             44 MAKE_FUNCTION            0
+             46 STORE_NAME               7 (deal_card)
+
+496          48 LOAD_CONST              11 (<code object menu at 0x1058a19d0, file "./blackjack.py", line 496>)
+             50 LOAD_CONST              12 ('BlackJack.menu')
+             52 MAKE_FUNCTION            0
+             54 STORE_NAME               8 (menu)
+
+510          56 LOAD_NAME                9 (staticmethod)
+
+511          58 LOAD_CONST              30 (('>> ', ''))
+             60 LOAD_CONST              15 (<code object get_select at 0x1058a1b30, file "./blackjack.py", line 510>)
+             62 LOAD_CONST              16 ('BlackJack.get_select')
+             64 MAKE_FUNCTION            1 (defaults)
+             66 CALL_FUNCTION            1
+             68 STORE_NAME              10 (get_select)
+
+527          70 LOAD_CONST              17 (<code object chips_manage at 0x1058a1a80, file "./blackjack.py", line 527>)
+             72 LOAD_CONST              18 ('BlackJack.chips_manage')
+             74 MAKE_FUNCTION            0
+             76 STORE_NAME              11 (chips_manage)
+
+546          78 LOAD_CONST              19 (<code object card_manage at 0x1058a1be0, file "./blackjack.py", line 546>)
+             80 LOAD_CONST              20 ('BlackJack.card_manage')
+             82 MAKE_FUNCTION            0
+             84 STORE_NAME              12 (card_manage)
+
+566          86 LOAD_CONST              21 (<code object is_surrender at 0x1058a1c90, file "./blackjack.py", line 566>)
+             88 LOAD_CONST              22 ('BlackJack.is_surrender')
+             90 MAKE_FUNCTION            0
+             92 STORE_NAME              13 (is_surrender)
+
+570          94 LOAD_CONST              23 (<code object get_winner at 0x1058a1ea0, file "./blackjack.py", line 570>)
+             96 LOAD_CONST              24 ('BlackJack.get_winner')
+             98 MAKE_FUNCTION            0
+            100 STORE_NAME              14 (get_winner)
+
+590         102 LOAD_CONST              25 (<code object calculate_chips at 0x1058a1d40, file "./blackjack.py", line 590>)
+            104 LOAD_CONST              26 ('BlackJack.calculate_chips')
+            106 MAKE_FUNCTION            0
+            108 STORE_NAME              15 (calculate_chips)
+
+609         110 LOAD_CONST              27 (<code object result_exhibit at 0x10589a030, file "./blackjack.py", line 609>)
+            112 LOAD_CONST              28 ('BlackJack.result_exhibit')
+            114 MAKE_FUNCTION            0
+            116 STORE_NAME              16 (result_exhibit)
+            118 LOAD_CONST              29 (None)
+            120 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x1058a1660, file "./blackjack.py", line 402>:
+403           0 LOAD_GLOBAL              0 (Deck)
+              2 CALL_FUNCTION            0
+              4 LOAD_FAST                0 (self)
+              6 STORE_ATTR               1 (deck)
+
+404           8 LOAD_GLOBAL              2 (Dealer)
+             10 LOAD_CONST               1 ('Bob')
+             12 CALL_FUNCTION            1
+             14 LOAD_FAST                0 (self)
+             16 STORE_ATTR               3 (dealer)
+
+405          18 LOAD_GLOBAL              4 (Player)
+             20 LOAD_FAST                1 (username)
+             22 LOAD_METHOD              5 (title)
+             24 CALL_METHOD              0
+             26 LOAD_CONST               2 (1000)
+             28 CALL_FUNCTION            2
+             30 LOAD_FAST                0 (self)
+             32 STORE_ATTR               6 (player)
+
+406          34 LOAD_GLOBAL              7 (Recorder)
+             36 CALL_FUNCTION            0
+             38 LOAD_FAST                0 (self)
+             40 STORE_ATTR               8 (recorder)
+
+407          42 LOAD_CONST               3 (True)
+             44 LOAD_FAST                0 (self)
+             46 STORE_ATTR               9 (go_on)
+
+408          48 LOAD_CONST               3 (True)
+             50 LOAD_FAST                0 (self)
+             52 STORE_ATTR              10 (first_hand)
+
+409          54 LOAD_CONST               0 (None)
+             56 LOAD_FAST                0 (self)
+             58 STORE_ATTR              11 (choice)
+
+410          60 LOAD_CONST               0 (None)
+             62 LOAD_FAST                0 (self)
+             64 STORE_ATTR              12 (winner)
+
+411          66 LOAD_CONST               4 (False)
+             68 LOAD_FAST                0 (self)
+             70 STORE_ATTR              13 (bust)
+
+412          72 LOAD_CONST               0 (None)
+             74 LOAD_FAST                0 (self)
+             76 STORE_ATTR              14 (res)
+             78 LOAD_CONST               0 (None)
+             80 RETURN_VALUE
+
+Disassembly of <code object play at 0x1058a1710, file "./blackjack.py", line 414>:
+415     >>    0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (player)
+              4 LOAD_ATTR                1 (chips)
+              6 POP_JUMP_IF_FALSE      244
+
+416           8 LOAD_FAST                0 (self)
+             10 LOAD_METHOD              2 (initial_game)
+             12 CALL_METHOD              0
+             14 POP_TOP
+
+417          16 LOAD_FAST                0 (self)
+             18 LOAD_METHOD              3 (in_bet)
+             20 CALL_METHOD              0
+             22 POP_TOP
+
+418          24 LOAD_FAST                0 (self)
+             26 LOAD_METHOD              4 (deal_card)
+             28 CALL_METHOD              0
+             30 POP_TOP
+
+419     >>   32 LOAD_FAST                0 (self)
+             34 LOAD_ATTR                5 (go_on)
+             36 POP_JUMP_IF_FALSE      126
+
+420          38 LOAD_FAST                0 (self)
+             40 LOAD_METHOD              6 (menu)
+             42 CALL_METHOD              0
+             44 LOAD_FAST                0 (self)
+             46 STORE_ATTR               7 (choice)
+
+422          48 LOAD_FAST                0 (self)
+             50 LOAD_METHOD              8 (chips_manage)
+             52 CALL_METHOD              0
+             54 POP_TOP
+
+423          56 SETUP_FINALLY           12 (to 70)
+
+424          58 LOAD_FAST                0 (self)
+             60 LOAD_METHOD              9 (card_manage)
+             62 CALL_METHOD              0
+             64 POP_TOP
+             66 POP_BLOCK
+             68 JUMP_ABSOLUTE           32
+
+425     >>   70 DUP_TOP
+             72 LOAD_GLOBAL             10 (ValueError)
+             74 JUMP_IF_NOT_EXC_MATCH   122
+             76 POP_TOP
+             78 STORE_FAST               1 (res)
+             80 POP_TOP
+             82 SETUP_FINALLY           30 (to 114)
+
+426          84 LOAD_CONST               1 (True)
+             86 LOAD_FAST                0 (self)
+             88 STORE_ATTR              11 (bust)
+
+427          90 LOAD_CONST               2 (False)
+             92 LOAD_FAST                0 (self)
+             94 STORE_ATTR               5 (go_on)
+
+428          96 LOAD_FAST                1 (res)
+             98 LOAD_FAST                0 (self)
+            100 STORE_ATTR              12 (res)
+            102 POP_BLOCK
+            104 POP_EXCEPT
+            106 LOAD_CONST               0 (None)
+            108 STORE_FAST               1 (res)
+            110 DELETE_FAST              1 (res)
+            112 JUMP_ABSOLUTE           32
+        >>  114 LOAD_CONST               0 (None)
+            116 STORE_FAST               1 (res)
+            118 DELETE_FAST              1 (res)
+            120 RERAISE
+        >>  122 RERAISE
+            124 JUMP_ABSOLUTE           32
+
+429     >>  126 LOAD_FAST                0 (self)
+            128 LOAD_ATTR               11 (bust)
+            130 POP_JUMP_IF_TRUE       140
+
+430         132 LOAD_FAST                0 (self)
+            134 LOAD_METHOD             13 (is_surrender)
+            136 CALL_METHOD              0
+            138 POP_TOP
+
+431     >>  140 LOAD_FAST                0 (self)
+            142 LOAD_METHOD             14 (get_winner)
+            144 CALL_METHOD              0
+            146 LOAD_FAST                0 (self)
+            148 STORE_ATTR              15 (winner)
+
+432         150 LOAD_CONST               3 ('Winner is ')
+            152 LOAD_FAST                0 (self)
+            154 LOAD_ATTR               15 (winner)
+            156 BINARY_ADD
+            158 LOAD_FAST                0 (self)
+            160 STORE_ATTR              12 (res)
+
+433         162 LOAD_GLOBAL             16 (os)
+            164 LOAD_METHOD             17 (system)
+            166 LOAD_CONST               4 ('clear')
+            168 CALL_METHOD              1
+            170 POP_TOP
+
+434         172 LOAD_FAST                0 (self)
+            174 LOAD_METHOD             18 (calculate_chips)
+            176 CALL_METHOD              0
+            178 POP_TOP
+
+435         180 LOAD_FAST                0 (self)
+            182 LOAD_METHOD             19 (result_exhibit)
+            184 CALL_METHOD              0
+            186 POP_TOP
+
+436         188 LOAD_FAST                0 (self)
+            190 LOAD_ATTR               20 (dealer)
+            192 LOAD_METHOD             21 (unveiling)
+            194 CALL_METHOD              0
+            196 POP_TOP
+
+437         198 LOAD_FAST                0 (self)
+            200 LOAD_ATTR                0 (player)
+            202 LOAD_METHOD             21 (unveiling)
+            204 CALL_METHOD              0
+            206 POP_TOP
+
+438         208 LOAD_FAST                0 (self)
+            210 LOAD_ATTR               22 (recorder)
+            212 LOAD_METHOD             23 (record)
+
+439         214 LOAD_FAST                0 (self)
+            216 LOAD_ATTR               15 (winner)
+
+440         218 LOAD_FAST                0 (self)
+            220 LOAD_ATTR                0 (player)
+            222 LOAD_ATTR                1 (chips)
+            224 LOAD_ATTR               24 (amount)
+
+441         226 LOAD_FAST                0 (self)
+            228 LOAD_ATTR                0 (player)
+            230 LOAD_ATTR               25 (point)
+
+442         232 LOAD_FAST                0 (self)
+            234 LOAD_ATTR               20 (dealer)
+            236 LOAD_ATTR               25 (point)
+
+438         238 CALL_METHOD              4
+            240 POP_TOP
+            242 JUMP_ABSOLUTE            0
+
+445     >>  244 LOAD_FAST                0 (self)
+            246 LOAD_ATTR               22 (recorder)
+            248 LOAD_METHOD             26 (draw_diagram)
+            250 CALL_METHOD              0
+            252 POP_TOP
+
+446         254 LOAD_CONST               5 ('\n\tSorry I lost all chips!\n\tTime to say goodbye.')
+            256 STORE_FAST               2 (ending)
+
+447         258 LOAD_FAST                0 (self)
+            260 LOAD_ATTR                0 (player)
+            262 LOAD_METHOD             27 (speak)
+            264 LOAD_FAST                2 (ending)
+            266 CALL_METHOD              1
+            268 POP_TOP
+
+448         270 LOAD_GLOBAL             28 (print)
+            272 LOAD_CONST               6 ('\n-------------------- End Game --------------------')
+            274 CALL_FUNCTION            1
+            276 POP_TOP
+            278 LOAD_CONST               0 (None)
+            280 RETURN_VALUE
+
+Disassembly of <code object initial_game at 0x1058a1870, file "./blackjack.py", line 450>:
+451           0 LOAD_CONST               1 (True)
+              2 LOAD_FAST                0 (self)
+              4 STORE_ATTR               0 (go_on)
+
+452           6 LOAD_CONST               1 (True)
+              8 LOAD_FAST                0 (self)
+             10 STORE_ATTR               1 (first_hand)
+
+453          12 LOAD_CONST               0 (None)
+             14 LOAD_FAST                0 (self)
+             16 STORE_ATTR               2 (choice)
+
+454          18 LOAD_CONST               0 (None)
+             20 LOAD_FAST                0 (self)
+             22 STORE_ATTR               3 (winner)
+
+455          24 LOAD_CONST               2 (False)
+             26 LOAD_FAST                0 (self)
+             28 STORE_ATTR               4 (bust)
+
+456          30 LOAD_FAST                0 (self)
+             32 LOAD_ATTR                5 (deck)
+             34 LOAD_METHOD              6 (rebuilt)
+             36 CALL_METHOD              0
+             38 POP_TOP
+
+457          40 LOAD_FAST                0 (self)
+             42 LOAD_ATTR                5 (deck)
+             44 LOAD_METHOD              7 (shuffle)
+             46 CALL_METHOD              0
+             48 POP_TOP
+
+458          50 LOAD_FAST                0 (self)
+             52 LOAD_ATTR                8 (player)
+             54 LOAD_ATTR                9 (chips)
+             56 LOAD_METHOD             10 (reset_chip)
+             58 CALL_METHOD              0
+             60 POP_TOP
+
+459          62 LOAD_FAST                0 (self)
+             64 LOAD_ATTR                8 (player)
+             66 LOAD_METHOD             11 (drop_card)
+             68 CALL_METHOD              0
+             70 POP_TOP
+
+460          72 LOAD_FAST                0 (self)
+             74 LOAD_ATTR                8 (player)
+             76 LOAD_METHOD             12 (refresh_prompt)
+             78 CALL_METHOD              0
+             80 POP_TOP
+
+461          82 LOAD_FAST                0 (self)
+             84 LOAD_ATTR               13 (dealer)
+             86 LOAD_METHOD             11 (drop_card)
+             88 CALL_METHOD              0
+             90 POP_TOP
+
+462          92 LOAD_GLOBAL             14 (print)
+             94 LOAD_CONST               3 ('\n-------------------- Start Game --------------------')
+             96 CALL_FUNCTION            1
+             98 POP_TOP
+            100 LOAD_CONST               0 (None)
+            102 RETURN_VALUE
+
+Disassembly of <code object in_bet at 0x1058a17c0, file "./blackjack.py", line 464>:
+465           0 LOAD_CONST               1 ('\n\tI want to bet: ')
+              2 STORE_FAST               1 (in_bet)
+
+466           4 LOAD_CONST               2 (True)
+              6 STORE_FAST               2 (not_invalid)
+
+467           8 LOAD_FAST                0 (self)
+             10 LOAD_ATTR                0 (player)
+             12 LOAD_ATTR                1 (speak)
+             14 LOAD_FAST                1 (in_bet)
+             16 LOAD_CONST               3 ('')
+             18 LOAD_CONST               4 (('end_char',))
+             20 CALL_FUNCTION_KW         2
+             22 POP_TOP
+
+468     >>   24 LOAD_FAST                2 (not_invalid)
+             26 POP_JUMP_IF_FALSE      174
+
+469          28 SETUP_FINALLY           16 (to 46)
+
+470          30 LOAD_GLOBAL              2 (input)
+             32 CALL_FUNCTION            0
+             34 LOAD_FAST                0 (self)
+             36 LOAD_ATTR                0 (player)
+             38 LOAD_ATTR                3 (chips)
+             40 STORE_ATTR               4 (bet_amount)
+             42 POP_BLOCK
+             44 JUMP_FORWARD           112 (to 158)
+
+471     >>   46 DUP_TOP
+             48 LOAD_GLOBAL              5 (ValueError)
+             50 JUMP_IF_NOT_EXC_MATCH   116
+             52 POP_TOP
+             54 STORE_FAST               3 (e)
+             56 POP_TOP
+             58 SETUP_FINALLY           48 (to 108)
+
+472          60 LOAD_GLOBAL              6 (print)
+             62 LOAD_FAST                3 (e)
+             64 CALL_FUNCTION            1
+             66 POP_TOP
+
+473          68 LOAD_FAST                0 (self)
+             70 LOAD_ATTR                0 (player)
+             72 LOAD_ATTR                1 (speak)
+             74 LOAD_FAST                1 (in_bet)
+             76 LOAD_CONST               3 ('')
+             78 LOAD_CONST               4 (('end_char',))
+             80 CALL_FUNCTION_KW         2
+             82 POP_TOP
+
+474          84 POP_BLOCK
+             86 POP_EXCEPT
+             88 LOAD_CONST               0 (None)
+             90 STORE_FAST               3 (e)
+             92 DELETE_FAST              3 (e)
+             94 JUMP_ABSOLUTE           24
+             96 POP_BLOCK
+             98 POP_EXCEPT
+            100 LOAD_CONST               0 (None)
+            102 STORE_FAST               3 (e)
+            104 DELETE_FAST              3 (e)
+            106 JUMP_ABSOLUTE           24
+        >>  108 LOAD_CONST               0 (None)
+            110 STORE_FAST               3 (e)
+            112 DELETE_FAST              3 (e)
+            114 RERAISE
+
+475     >>  116 DUP_TOP
+            118 LOAD_GLOBAL              7 (KeyboardInterrupt)
+            120 JUMP_IF_NOT_EXC_MATCH   156
+            122 POP_TOP
+            124 POP_TOP
+            126 POP_TOP
+
+476         128 LOAD_GLOBAL              6 (print)
+            130 LOAD_CONST               3 ('')
+            132 CALL_FUNCTION            1
+            134 POP_TOP
+
+477         136 LOAD_FAST                0 (self)
+            138 LOAD_ATTR                8 (recorder)
+            140 LOAD_METHOD              9 (draw_diagram)
+            142 CALL_METHOD              0
+            144 POP_TOP
+
+478         146 LOAD_GLOBAL             10 (quit)
+            148 CALL_FUNCTION            0
+            150 POP_TOP
+            152 POP_EXCEPT
+            154 JUMP_ABSOLUTE           24
+        >>  156 RERAISE
+
+480     >>  158 LOAD_FAST                0 (self)
+            160 LOAD_ATTR                0 (player)
+            162 LOAD_METHOD             11 (refresh_prompt)
+            164 CALL_METHOD              0
+            166 POP_TOP
+
+482         168 LOAD_CONST               5 (False)
+            170 STORE_FAST               2 (not_invalid)
+            172 JUMP_ABSOLUTE           24
+        >>  174 LOAD_CONST               0 (None)
+            176 RETURN_VALUE
+
+Disassembly of <code object deal_card at 0x1058a1920, file "./blackjack.py", line 484>:
+486           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (dealer)
+              4 LOAD_ATTR                1 (obtain_card)
+              6 LOAD_FAST                0 (self)
+              8 LOAD_ATTR                2 (deck)
+             10 LOAD_CONST               1 (False)
+             12 LOAD_CONST               2 (('face',))
+             14 CALL_FUNCTION_KW         2
+             16 POP_TOP
+
+487          18 LOAD_FAST                0 (self)
+             20 LOAD_ATTR                0 (dealer)
+             22 LOAD_METHOD              1 (obtain_card)
+             24 LOAD_FAST                0 (self)
+             26 LOAD_ATTR                2 (deck)
+             28 CALL_METHOD              1
+             30 POP_TOP
+
+490          32 LOAD_FAST                0 (self)
+             34 LOAD_ATTR                3 (player)
+             36 LOAD_METHOD              1 (obtain_card)
+             38 LOAD_FAST                0 (self)
+             40 LOAD_ATTR                2 (deck)
+             42 CALL_METHOD              1
+             44 POP_TOP
+
+491          46 LOAD_FAST                0 (self)
+             48 LOAD_ATTR                3 (player)
+             50 LOAD_METHOD              1 (obtain_card)
+             52 LOAD_FAST                0 (self)
+             54 LOAD_ATTR                2 (deck)
+             56 CALL_METHOD              1
+             58 POP_TOP
+
+493          60 LOAD_FAST                0 (self)
+             62 LOAD_ATTR                0 (dealer)
+             64 LOAD_METHOD              4 (showing)
+             66 CALL_METHOD              0
+             68 POP_TOP
+
+494          70 LOAD_FAST                0 (self)
+             72 LOAD_ATTR                3 (player)
+             74 LOAD_METHOD              4 (showing)
+             76 CALL_METHOD              0
+             78 POP_TOP
+             80 LOAD_CONST               0 (None)
+             82 RETURN_VALUE
+
+Disassembly of <code object menu at 0x1058a19d0, file "./blackjack.py", line 496>:
+497           0 LOAD_CONST               1 ('HS')
+              2 STORE_FAST               1 (pattern)
+
+498           4 LOAD_FAST                0 (self)
+              6 LOAD_ATTR                0 (first_hand)
+              8 POP_JUMP_IF_FALSE      106
+
+499          10 LOAD_FAST                1 (pattern)
+             12 LOAD_CONST               2 ('U')
+             14 INPLACE_ADD
+             16 STORE_FAST               1 (pattern)
+
+500          18 LOAD_FAST                0 (self)
+             20 LOAD_ATTR                1 (dealer)
+             22 LOAD_ATTR                2 (hand)
+             24 LOAD_CONST               3 (1)
+             26 BINARY_SUBSCR
+             28 LOAD_ATTR                3 (rank)
+             30 LOAD_CONST               3 (1)
+             32 COMPARE_OP               2 (==)
+             34 POP_JUMP_IF_FALSE       66
+             36 LOAD_FAST                0 (self)
+             38 LOAD_ATTR                4 (player)
+             40 LOAD_ATTR                5 (chips)
+             42 LOAD_METHOD              6 (current_amount)
+             44 CALL_METHOD              0
+             46 POP_JUMP_IF_FALSE       66
+
+501          48 LOAD_FAST                1 (pattern)
+             50 LOAD_CONST               4 ('I')
+             52 INPLACE_ADD
+             54 STORE_FAST               1 (pattern)
+
+502          56 LOAD_FAST                0 (self)
+             58 LOAD_ATTR                1 (dealer)
+             60 LOAD_METHOD              7 (ask_insurance)
+             62 CALL_METHOD              0
+             64 POP_TOP
+
+503     >>   66 LOAD_FAST                0 (self)
+             68 LOAD_ATTR                4 (player)
+             70 LOAD_METHOD              8 (is_point)
+             72 LOAD_CONST               5 ('>')
+             74 LOAD_CONST               6 (10)
+             76 CALL_METHOD              2
+             78 POP_JUMP_IF_FALSE      100
+             80 LOAD_FAST                0 (self)
+             82 LOAD_ATTR                4 (player)
+             84 LOAD_ATTR                5 (chips)
+             86 LOAD_METHOD              9 (can_double)
+             88 CALL_METHOD              0
+             90 POP_JUMP_IF_FALSE      100
+
+504          92 LOAD_FAST                1 (pattern)
+             94 LOAD_CONST               7 ('D')
+             96 INPLACE_ADD
+             98 STORE_FAST               1 (pattern)
+
+505     >>  100 LOAD_CONST               8 (False)
+            102 LOAD_FAST                0 (self)
+            104 STORE_ATTR               0 (first_hand)
+
+506     >>  106 LOAD_FAST                0 (self)
+            108 LOAD_ATTR                4 (player)
+            110 LOAD_METHOD             10 (select_choice)
+            112 LOAD_FAST                1 (pattern)
+            114 CALL_METHOD              1
+            116 STORE_FAST               2 (choices)
+
+507         118 LOAD_FAST                0 (self)
+            120 LOAD_ATTR               11 (get_select)
+            122 LOAD_GLOBAL             12 (len)
+            124 LOAD_FAST                2 (choices)
+            126 CALL_FUNCTION            1
+            128 LOAD_CONST               9 ('Select above number.')
+            130 LOAD_CONST              10 (('general_err',))
+            132 CALL_FUNCTION_KW         2
+            134 STORE_FAST               3 (select)
+
+508         136 LOAD_FAST                2 (choices)
+            138 LOAD_FAST                3 (select)
+            140 BINARY_SUBSCR
+            142 RETURN_VALUE
+
+Disassembly of <code object get_select at 0x1058a1b30, file "./blackjack.py", line 510>:
+513     >>    0 SETUP_FINALLY           32 (to 34)
+
+514           2 LOAD_GLOBAL              0 (input)
+              4 LOAD_FAST                1 (prompt)
+              6 CALL_FUNCTION            1
+              8 STORE_FAST               3 (value)
+
+515          10 LOAD_GLOBAL              1 (int)
+             12 LOAD_FAST                3 (value)
+             14 CALL_FUNCTION            1
+             16 STORE_FAST               4 (select)
+
+516          18 LOAD_FAST                4 (select)
+             20 LOAD_FAST                0 (select_max)
+             22 COMPARE_OP               4 (>)
+             24 POP_JUMP_IF_FALSE       30
+
+517          26 LOAD_GLOBAL              2 (ValueError)
+             28 RAISE_VARARGS            1
+        >>   30 POP_BLOCK
+             32 JUMP_FORWARD            60 (to 94)
+
+518     >>   34 DUP_TOP
+             36 LOAD_GLOBAL              2 (ValueError)
+             38 JUMP_IF_NOT_EXC_MATCH    62
+             40 POP_TOP
+             42 POP_TOP
+             44 POP_TOP
+
+519          46 LOAD_GLOBAL              3 (print)
+             48 LOAD_FAST                2 (general_err)
+             50 CALL_FUNCTION            1
+             52 POP_TOP
+
+520          54 POP_EXCEPT
+             56 JUMP_ABSOLUTE            0
+             58 POP_EXCEPT
+             60 JUMP_ABSOLUTE            0
+
+521     >>   62 DUP_TOP
+             64 LOAD_GLOBAL              4 (KeyboardInterrupt)
+             66 JUMP_IF_NOT_EXC_MATCH    92
+             68 POP_TOP
+             70 POP_TOP
+             72 POP_TOP
+
+522          74 LOAD_GLOBAL              3 (print)
+             76 LOAD_CONST               1 ('')
+             78 CALL_FUNCTION            1
+             80 POP_TOP
+
+523          82 LOAD_GLOBAL              5 (quit)
+             84 CALL_FUNCTION            0
+             86 POP_TOP
+             88 POP_EXCEPT
+             90 JUMP_ABSOLUTE            0
+        >>   92 RERAISE
+
+525     >>   94 LOAD_FAST                4 (select)
+             96 RETURN_VALUE
+             98 JUMP_ABSOLUTE            0
+            100 LOAD_CONST               0 (None)
+            102 RETURN_VALUE
+
+Disassembly of <code object chips_manage at 0x1058a1a80, file "./blackjack.py", line 527>:
+528           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (choice)
+              4 LOAD_CONST               1 ('Insurance')
+              6 COMPARE_OP               2 (==)
+              8 POP_JUMP_IF_FALSE       64
+
+529          10 LOAD_CONST               2 ('The amount should under ')
+             12 LOAD_GLOBAL              1 (str)
+             14 LOAD_FAST                0 (self)
+             16 LOAD_ATTR                2 (player)
+             18 LOAD_ATTR                3 (chips)
+             20 LOAD_METHOD              4 (current_amount)
+             22 CALL_METHOD              0
+             24 CALL_FUNCTION            1
+             26 BINARY_ADD
+             28 STORE_FAST               1 (err)
+
+530          30 LOAD_FAST                0 (self)
+             32 LOAD_ATTR                5 (get_select)
+
+531          34 LOAD_FAST                0 (self)
+             36 LOAD_ATTR                2 (player)
+             38 LOAD_ATTR                3 (chips)
+             40 LOAD_METHOD              4 (current_amount)
+             42 CALL_METHOD              0
+
+532          44 LOAD_CONST               3 ('Insurance amount >> ')
+
+533          46 LOAD_FAST                1 (err)
+
+530          48 LOAD_CONST               4 (('prompt', 'general_err'))
+             50 CALL_FUNCTION_KW         3
+             52 STORE_FAST               2 (pay_ins)
+
+535          54 LOAD_FAST                2 (pay_ins)
+             56 LOAD_FAST                0 (self)
+             58 LOAD_ATTR                2 (player)
+             60 LOAD_ATTR                3 (chips)
+             62 STORE_ATTR               6 (insurance)
+
+537     >>   64 LOAD_FAST                0 (self)
+             66 LOAD_ATTR                0 (choice)
+             68 LOAD_CONST               5 ('Double-down')
+             70 COMPARE_OP               2 (==)
+             72 POP_JUMP_IF_FALSE      136
+
+538          74 SETUP_FINALLY           16 (to 92)
+
+539          76 LOAD_FAST                0 (self)
+             78 LOAD_ATTR                2 (player)
+             80 LOAD_ATTR                3 (chips)
+             82 LOAD_METHOD              7 (double_bet)
+             84 CALL_METHOD              0
+             86 POP_TOP
+             88 POP_BLOCK
+             90 JUMP_FORWARD            44 (to 136)
+
+540     >>   92 DUP_TOP
+             94 LOAD_GLOBAL              8 (ValueError)
+             96 JUMP_IF_NOT_EXC_MATCH   134
+             98 POP_TOP
+            100 STORE_FAST               3 (e)
+            102 POP_TOP
+            104 SETUP_FINALLY           20 (to 126)
+
+541         106 LOAD_GLOBAL              9 (print)
+            108 LOAD_FAST                3 (e)
+            110 CALL_FUNCTION            1
+            112 POP_TOP
+            114 POP_BLOCK
+            116 POP_EXCEPT
+            118 LOAD_CONST               0 (None)
+            120 STORE_FAST               3 (e)
+            122 DELETE_FAST              3 (e)
+            124 JUMP_FORWARD            10 (to 136)
+        >>  126 LOAD_CONST               0 (None)
+            128 STORE_FAST               3 (e)
+            130 DELETE_FAST              3 (e)
+            132 RERAISE
+        >>  134 RERAISE
+
+542     >>  136 LOAD_FAST                0 (self)
+            138 LOAD_ATTR                2 (player)
+            140 LOAD_METHOD             10 (refresh_prompt)
+            142 CALL_METHOD              0
+            144 POP_TOP
+
+543         146 LOAD_FAST                0 (self)
+            148 LOAD_ATTR                0 (choice)
+            150 LOAD_CONST               6 (('Insurance', 'Double-down', 'Surrender'))
+            152 CONTAINS_OP              0
+            154 POP_JUMP_IF_FALSE      162
+
+544         156 LOAD_CONST               7 (False)
+            158 LOAD_FAST                0 (self)
+            160 STORE_ATTR              11 (go_on)
+        >>  162 LOAD_CONST               0 (None)
+            164 RETURN_VALUE
+
+Disassembly of <code object card_manage at 0x1058a1be0, file "./blackjack.py", line 546>:
+547           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (choice)
+              4 LOAD_CONST               1 (('Hit', 'Double-down'))
+              6 CONTAINS_OP              0
+              8 POP_JUMP_IF_FALSE       86
+
+548          10 LOAD_FAST                0 (self)
+             12 LOAD_ATTR                1 (player)
+             14 LOAD_METHOD              2 (obtain_card)
+             16 LOAD_FAST                0 (self)
+             18 LOAD_ATTR                3 (deck)
+             20 CALL_METHOD              1
+             22 POP_TOP
+
+549          24 LOAD_FAST                0 (self)
+             26 LOAD_ATTR                1 (player)
+             28 LOAD_METHOD              4 (is_point)
+             30 LOAD_CONST               2 ('>')
+             32 LOAD_GLOBAL              5 (BLACK_JACK)
+             34 CALL_METHOD              2
+             36 POP_JUMP_IF_FALSE       48
+
+550          38 LOAD_GLOBAL              6 (ValueError)
+             40 LOAD_CONST               3 ('Player BUST')
+             42 CALL_FUNCTION            1
+             44 RAISE_VARARGS            1
+             46 JUMP_ABSOLUTE          142
+
+552     >>   48 LOAD_FAST                0 (self)
+             50 LOAD_ATTR                7 (dealer)
+             52 LOAD_METHOD              8 (strategy_trigger)
+             54 LOAD_FAST                0 (self)
+             56 LOAD_ATTR                3 (deck)
+             58 CALL_METHOD              1
+             60 POP_TOP
+
+553          62 LOAD_FAST                0 (self)
+             64 LOAD_ATTR                7 (dealer)
+             66 LOAD_METHOD              4 (is_point)
+             68 LOAD_CONST               2 ('>')
+             70 LOAD_GLOBAL              5 (BLACK_JACK)
+             72 CALL_METHOD              2
+             74 POP_JUMP_IF_FALSE      142
+
+554          76 LOAD_GLOBAL              6 (ValueError)
+             78 LOAD_CONST               4 ('Dealer BUST')
+             80 CALL_FUNCTION            1
+             82 RAISE_VARARGS            1
+             84 JUMP_FORWARD            56 (to 142)
+
+555     >>   86 LOAD_FAST                0 (self)
+             88 LOAD_ATTR                0 (choice)
+             90 LOAD_CONST               5 ('Surrender')
+             92 COMPARE_OP               3 (!=)
+             94 POP_JUMP_IF_FALSE      142
+
+556          96 LOAD_FAST                0 (self)
+             98 LOAD_ATTR                1 (player)
+            100 LOAD_ATTR                9 (chips)
+            102 LOAD_ATTR               10 (is_insurance)
+            104 POP_JUMP_IF_TRUE       142
+
+557         106 LOAD_FAST                0 (self)
+            108 LOAD_ATTR                7 (dealer)
+            110 LOAD_METHOD              8 (strategy_trigger)
+            112 LOAD_FAST                0 (self)
+            114 LOAD_ATTR                3 (deck)
+            116 CALL_METHOD              1
+            118 POP_TOP
+
+558         120 LOAD_FAST                0 (self)
+            122 LOAD_ATTR                7 (dealer)
+            124 LOAD_METHOD              4 (is_point)
+            126 LOAD_CONST               2 ('>')
+            128 LOAD_GLOBAL              5 (BLACK_JACK)
+            130 CALL_METHOD              2
+            132 POP_JUMP_IF_FALSE      142
+
+559         134 LOAD_GLOBAL              6 (ValueError)
+            136 LOAD_CONST               4 ('Dealer BUST')
+            138 CALL_FUNCTION            1
+            140 RAISE_VARARGS            1
+
+561     >>  142 LOAD_FAST                0 (self)
+            144 LOAD_ATTR                7 (dealer)
+            146 LOAD_METHOD             11 (showing)
+            148 CALL_METHOD              0
+            150 POP_TOP
+
+562         152 LOAD_FAST                0 (self)
+            154 LOAD_ATTR                1 (player)
+            156 LOAD_METHOD             11 (showing)
+            158 CALL_METHOD              0
+            160 POP_TOP
+
+563         162 LOAD_FAST                0 (self)
+            164 LOAD_ATTR                0 (choice)
+            166 LOAD_CONST               6 (('Double-down', 'Stand'))
+            168 CONTAINS_OP              0
+            170 POP_JUMP_IF_FALSE      178
+
+564         172 LOAD_CONST               7 (False)
+            174 LOAD_FAST                0 (self)
+            176 STORE_ATTR              12 (go_on)
+        >>  178 LOAD_CONST               0 (None)
+            180 RETURN_VALUE
+
+Disassembly of <code object is_surrender at 0x1058a1c90, file "./blackjack.py", line 566>:
+567           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (choice)
+              4 LOAD_CONST               1 ('Surrender')
+              6 COMPARE_OP               2 (==)
+              8 POP_JUMP_IF_FALSE       22
+
+568          10 LOAD_FAST                0 (self)
+             12 LOAD_ATTR                1 (player)
+             14 LOAD_METHOD              2 (speak)
+             16 LOAD_CONST               2 ('Sorry, I surrender....\n')
+             18 CALL_METHOD              1
+             20 POP_TOP
+        >>   22 LOAD_CONST               0 (None)
+             24 RETURN_VALUE
+
+Disassembly of <code object get_winner at 0x1058a1ea0, file "./blackjack.py", line 570>:
+571           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (bust)
+              4 POP_JUMP_IF_FALSE       28
+
+572           6 LOAD_FAST                0 (self)
+              8 LOAD_ATTR                1 (player)
+             10 LOAD_METHOD              2 (is_point)
+             12 LOAD_CONST               1 ('>')
+             14 LOAD_GLOBAL              3 (BLACK_JACK)
+             16 CALL_METHOD              2
+             18 POP_JUMP_IF_FALSE       24
+             20 LOAD_CONST               2 ('Dealer')
+             22 RETURN_VALUE
+        >>   24 LOAD_CONST               3 ('Player')
+             26 RETURN_VALUE
+
+574     >>   28 LOAD_FAST                0 (self)
+             30 LOAD_ATTR                4 (choice)
+             32 LOAD_CONST               4 ('Surrender')
+             34 COMPARE_OP               2 (==)
+             36 POP_JUMP_IF_FALSE       42
+
+575          38 LOAD_CONST               2 ('Dealer')
+             40 RETURN_VALUE
+
+576     >>   42 LOAD_FAST                0 (self)
+             44 LOAD_ATTR                4 (choice)
+             46 LOAD_CONST               5 ('Insurance')
+             48 COMPARE_OP               2 (==)
+             50 POP_JUMP_IF_FALSE       74
+
+577          52 LOAD_FAST                0 (self)
+             54 LOAD_ATTR                1 (player)
+             56 LOAD_METHOD              2 (is_point)
+             58 LOAD_CONST               6 ('==')
+             60 LOAD_GLOBAL              3 (BLACK_JACK)
+             62 CALL_METHOD              2
+             64 POP_JUMP_IF_FALSE       70
+
+578          66 LOAD_CONST               2 ('Dealer')
+             68 RETURN_VALUE
+
+579     >>   70 LOAD_CONST               3 ('Player')
+             72 RETURN_VALUE
+
+581     >>   74 LOAD_FAST                0 (self)
+             76 LOAD_ATTR                4 (choice)
+             78 LOAD_CONST               7 (('Double-down', 'Stand'))
+             80 CONTAINS_OP              0
+             82 POP_JUMP_IF_FALSE      128
+
+582          84 LOAD_FAST                0 (self)
+             86 LOAD_ATTR                1 (player)
+             88 LOAD_METHOD              5 (calculate_point)
+             90 CALL_METHOD              0
+             92 POP_TOP
+
+583          94 LOAD_FAST                0 (self)
+             96 LOAD_ATTR                6 (dealer)
+             98 LOAD_METHOD              5 (calculate_point)
+            100 CALL_METHOD              0
+            102 POP_TOP
+
+584         104 LOAD_FAST                0 (self)
+            106 LOAD_ATTR                1 (player)
+            108 LOAD_ATTR                7 (point)
+            110 LOAD_FAST                0 (self)
+            112 LOAD_ATTR                6 (dealer)
+            114 LOAD_ATTR                7 (point)
+            116 COMPARE_OP               4 (>)
+            118 POP_JUMP_IF_FALSE      124
+
+585         120 LOAD_CONST               3 ('Player')
+            122 RETURN_VALUE
+
+586     >>  124 LOAD_CONST               2 ('Dealer')
+            126 RETURN_VALUE
+
+588     >>  128 LOAD_CONST               8 ('Both')
+            130 RETURN_VALUE
+
+Disassembly of <code object calculate_chips at 0x1058a1d40, file "./blackjack.py", line 590>:
+591           0 LOAD_FAST                0 (self)
+              2 LOAD_ATTR                0 (choice)
+              4 LOAD_CONST               1 ('Surrender')
+              6 COMPARE_OP               2 (==)
+              8 POP_JUMP_IF_FALSE       86
+
+592          10 LOAD_FAST                0 (self)
+             12 LOAD_ATTR                1 (player)
+             14 LOAD_ATTR                2 (chips)
+             16 LOAD_ATTR                3 (bet_amount)
+             18 LOAD_CONST               2 (1)
+             20 COMPARE_OP               2 (==)
+             22 POP_JUMP_IF_FALSE       52
+
+593          24 LOAD_FAST                0 (self)
+             26 LOAD_ATTR                1 (player)
+             28 LOAD_ATTR                2 (chips)
+             30 LOAD_METHOD              4 (current_amount)
+             32 CALL_METHOD              0
+             34 LOAD_CONST               3 (0)
+             36 COMPARE_OP               2 (==)
+             38 POP_JUMP_IF_FALSE       84
+
+594          40 LOAD_CONST               3 (0)
+             42 LOAD_FAST                0 (self)
+             44 LOAD_ATTR                1 (player)
+             46 LOAD_ATTR                2 (chips)
+             48 STORE_ATTR               5 (amount)
+             50 JUMP_ABSOLUTE          190
+
+596     >>   52 LOAD_FAST                0 (self)
+             54 LOAD_ATTR                1 (player)
+             56 LOAD_ATTR                2 (chips)
+             58 LOAD_ATTR                3 (bet_amount)
+             60 LOAD_CONST               4 (2)
+             62 BINARY_FLOOR_DIVIDE
+             64 STORE_FAST               1 (surrender_amount)
+
+597          66 LOAD_FAST                0 (self)
+             68 LOAD_ATTR                1 (player)
+             70 LOAD_ATTR                2 (chips)
+             72 DUP_TOP
+             74 LOAD_ATTR                5 (amount)
+             76 LOAD_FAST                1 (surrender_amount)
+             78 INPLACE_SUBTRACT
+             80 ROT_TWO
+             82 STORE_ATTR               5 (amount)
+        >>   84 JUMP_FORWARD           104 (to 190)
+
+599     >>   86 LOAD_FAST                0 (self)
+             88 LOAD_ATTR                0 (choice)
+             90 LOAD_CONST               5 (('Double-down', 'Stand', 'Insurance', 'Hit'))
+             92 CONTAINS_OP              0
+             94 POP_JUMP_IF_FALSE      190
+
+600          96 LOAD_FAST                0 (self)
+             98 LOAD_ATTR                6 (winner)
+            100 LOAD_CONST               6 ('Player')
+            102 COMPARE_OP               2 (==)
+            104 POP_JUMP_IF_FALSE      146
+
+601         106 LOAD_FAST                0 (self)
+            108 LOAD_ATTR                1 (player)
+            110 LOAD_ATTR                2 (chips)
+            112 DUP_TOP
+            114 LOAD_ATTR                5 (amount)
+
+602         116 LOAD_FAST                0 (self)
+            118 LOAD_ATTR                1 (player)
+            120 LOAD_ATTR                2 (chips)
+            122 LOAD_ATTR                3 (bet_amount)
+            124 LOAD_FAST                0 (self)
+            126 LOAD_ATTR                1 (player)
+            128 LOAD_ATTR                2 (chips)
+            130 LOAD_ATTR                7 (insurance)
+            132 LOAD_CONST               4 (2)
+            134 BINARY_MULTIPLY
+            136 BINARY_ADD
+
+601         138 INPLACE_ADD
+            140 ROT_TWO
+            142 STORE_ATTR               5 (amount)
+            144 JUMP_FORWARD            44 (to 190)
+
+604     >>  146 LOAD_FAST                0 (self)
+            148 LOAD_ATTR                6 (winner)
+            150 LOAD_CONST               7 ('Dealer')
+            152 COMPARE_OP               2 (==)
+            154 POP_JUMP_IF_FALSE      190
+
+605         156 LOAD_FAST                0 (self)
+            158 LOAD_ATTR                1 (player)
+            160 LOAD_ATTR                2 (chips)
+            162 DUP_TOP
+            164 LOAD_ATTR                5 (amount)
+
+606         166 LOAD_FAST                0 (self)
+            168 LOAD_ATTR                1 (player)
+            170 LOAD_ATTR                2 (chips)
+            172 LOAD_ATTR                3 (bet_amount)
+            174 LOAD_FAST                0 (self)
+            176 LOAD_ATTR                1 (player)
+            178 LOAD_ATTR                2 (chips)
+            180 LOAD_ATTR                7 (insurance)
+            182 BINARY_ADD
+
+605         184 INPLACE_SUBTRACT
+            186 ROT_TWO
+            188 STORE_ATTR               5 (amount)
+        >>  190 LOAD_CONST               0 (None)
+            192 RETURN_VALUE
+
+Disassembly of <code object result_exhibit at 0x10589a030, file "./blackjack.py", line 609>:
+610           0 LOAD_CLOSURE             0 (content)
+              2 LOAD_CLOSURE             1 (self)
+              4 BUILD_TUPLE              2
+              6 LOAD_CONST               1 (<code object get_color at 0x1058a1f50, file "./blackjack.py", line 610>)
+              8 LOAD_CONST               2 ('BlackJack.result_exhibit.<locals>.get_color')
+             10 MAKE_FUNCTION            8 (closure)
+             12 STORE_FAST               1 (get_color)
+
+620          14 LOAD_GLOBAL              0 (COLOR)
+             16 LOAD_METHOD              1 (get)
+             18 LOAD_CONST               3 ('END')
+             20 CALL_METHOD              1
+             22 STORE_FAST               2 (end)
+
+621          24 LOAD_GLOBAL              2 (str)
+             26 LOAD_DEREF               1 (self)
+             28 LOAD_ATTR                3 (res)
+             30 CALL_FUNCTION            1
+             32 STORE_DEREF              0 (content)
+
+622          34 LOAD_FAST                1 (get_color)
+             36 CALL_FUNCTION            0
+             38 STORE_FAST               3 (color)
+
+623          40 LOAD_FAST                3 (color)
+             42 LOAD_CONST               4 ('\n\t>> {content} <<\n')
+             44 BINARY_ADD
+             46 LOAD_FAST                2 (end)
+             48 BINARY_ADD
+             50 STORE_FAST               4 (winner_fmt)
+
+624          52 LOAD_GLOBAL              4 (print)
+             54 LOAD_FAST                4 (winner_fmt)
+             56 LOAD_ATTR                5 (format)
+             58 LOAD_DEREF               0 (content)
+             60 LOAD_CONST               5 (('content',))
+             62 CALL_FUNCTION_KW         1
+             64 CALL_FUNCTION            1
+             66 POP_TOP
+             68 LOAD_CONST               0 (None)
+             70 RETURN_VALUE
+
+Disassembly of <code object get_color at 0x1058a1f50, file "./blackjack.py", line 610>:
+611           0 LOAD_CONST               1 ('BUST')
+              2 LOAD_DEREF               0 (content)
+              4 CONTAINS_OP              0
+              6 POP_JUMP_IF_FALSE       30
+
+612           8 LOAD_GLOBAL              0 (COLOR)
+             10 LOAD_METHOD              1 (get)
+             12 LOAD_CONST               2 ('Player')
+             14 LOAD_DEREF               0 (content)
+             16 CONTAINS_OP              0
+             18 POP_JUMP_IF_FALSE       24
+             20 LOAD_CONST               3 ('RED')
+             22 JUMP_FORWARD             2 (to 26)
+        >>   24 LOAD_CONST               4 ('GREEN')
+        >>   26 CALL_METHOD              1
+             28 RETURN_VALUE
+
+613     >>   30 LOAD_DEREF               1 (self)
+             32 LOAD_ATTR                2 (winner)
+             34 LOAD_CONST               2 ('Player')
+             36 COMPARE_OP               2 (==)
+             38 POP_JUMP_IF_FALSE       50
+
+614          40 LOAD_GLOBAL              0 (COLOR)
+             42 LOAD_METHOD              1 (get)
+             44 LOAD_CONST               4 ('GREEN')
+             46 CALL_METHOD              1
+             48 RETURN_VALUE
+
+615     >>   50 LOAD_DEREF               1 (self)
+             52 LOAD_ATTR                2 (winner)
+             54 LOAD_CONST               5 ('Dealer')
+             56 COMPARE_OP               2 (==)
+             58 POP_JUMP_IF_FALSE       70
+
+616          60 LOAD_GLOBAL              0 (COLOR)
+             62 LOAD_METHOD              1 (get)
+             64 LOAD_CONST               3 ('RED')
+             66 CALL_METHOD              1
+             68 RETURN_VALUE
+
+618     >>   70 LOAD_GLOBAL              0 (COLOR)
+             72 LOAD_METHOD              1 (get)
+             74 LOAD_CONST               6 ('YELLOW')
+             76 CALL_METHOD              1
+             78 RETURN_VALUE
+             80 LOAD_CONST               0 (None)
+             82 RETURN_VALUE
+
+Disassembly of <code object main at 0x10589a0e0, file "./blackjack.py", line 627>:
+628           0 SETUP_FINALLY           12 (to 14)
+
+629           2 LOAD_GLOBAL              0 (input)
+              4 LOAD_CONST               1 ('What is your name: ')
+              6 CALL_FUNCTION            1
+              8 STORE_FAST               0 (user_name)
+             10 POP_BLOCK
+             12 JUMP_FORWARD            26 (to 40)
+
+630     >>   14 DUP_TOP
+             16 LOAD_GLOBAL              1 (KeyboardInterrupt)
+             18 JUMP_IF_NOT_EXC_MATCH    38
+             20 POP_TOP
+             22 POP_TOP
+             24 POP_TOP
+
+631          26 LOAD_GLOBAL              2 (print)
+             28 LOAD_CONST               2 ('')
+             30 CALL_FUNCTION            1
+             32 POP_TOP
+             34 POP_EXCEPT
+             36 JUMP_FORWARD            20 (to 58)
+        >>   38 RERAISE
+
+633     >>   40 LOAD_GLOBAL              3 (BlackJack)
+             42 LOAD_FAST                0 (user_name)
+             44 LOAD_CONST               3 (('username',))
+             46 CALL_FUNCTION_KW         1
+             48 STORE_FAST               1 (black_jack)
+
+634          50 LOAD_FAST                1 (black_jack)
+             52 LOAD_METHOD              4 (play)
+             54 CALL_METHOD              0
+             56 POP_TOP
+        >>   58 LOAD_CONST               0 (None)
+             60 RETURN_VALUE

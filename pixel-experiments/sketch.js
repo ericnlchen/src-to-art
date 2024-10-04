@@ -1,26 +1,121 @@
+let existingCanvas;
 
 function preload() {
-  src = loadStrings('data/brick')
+  srcEight = loadStrings('data/eight');
+  srcBlackjack = loadStrings('data/blackjack');
+  srcBrick = loadStrings('data/brick');
+  srcs = [
+    srcBrick,
+    srcEight,
+    srcBlackjack,
+  ]
+  srcIndex = 0;
+}
+
+function drawLineNumbers() {
+  // Draw line numbers
+  textSize(18);
+  textFont("Monaco");
+  fill(111, 118, 128);
+  textAlign(RIGHT, BOTTOM);
+  let yCoord = 25;
+  let counter = 1;
+  while (yCoord < height) {
+    text(`${counter}`, 60, yCoord);
+    yCoord+=28;
+    counter++;
+  }
+  stroke(111, 118, 128);
+  strokeWeight(0.5);
+  line(70, 10, 70, height - 10);
 }
 
 function setup() {
-  createCanvas(900, 1000);
+  pixelDensity(2);
+  let canvas = createCanvas(1450, 750);
+  canvas.parent('sketch-holder-0');
+  editor = document.getElementById('editor');
+  resizeCanvas(editor.offsetWidth, editor.offsetHeight);
   background(31, 31, 31);
-  speed = 100;
 
-  // speedSlider = createSlider(1, 1000, 100);
+  // Add click event to each tab
+  const tabs = document.querySelectorAll('.tab');
+  tabs.forEach((tab, ind) => {
+    if (ind > 0) {
+      tab.addEventListener('click', () => {
+        reset(ind - 1);
+      });
+    }
+  });
+
+  speed = 100;
+  margin = 0;
+
+  drawLineNumbers();
+
+  currFrameCount = 0;
+
+  playing = true;
+
+  let playButton = createButton('\u23f8');
+  playButton.position(1400, 30);
+  playButton.style("font-family", "Times New Roman");
+  playButton.style("font-size", "23px");
+  playButton.style("height", "35px");
+  playButton.style("width", "35px");
+  playButton.style("background-color", "rgb(130, 130, 130)");
+  playButton.style("border-style", "none");
+  playButton.style("border-radius", "2px");
+  playButton.mouseClicked(() => {
+    if (playButton.elt.innerHTML === '\u23f5') {
+      playButton.elt.innerHTML = '\u23f8';
+      playing = true;
+    }
+    else {
+      playButton.elt.innerHTML = '\u23f5';
+      playing = false;
+    }
+  })
+
+  let stopButton = createButton('\u23f9');
+  stopButton.position(1450, 30);
+  stopButton.style("font-family", "Times New Roman");
+  stopButton.style("font-size", "23px");
+  stopButton.style("height", "35px");
+  stopButton.style("width", "35px");
+  stopButton.style("background-color", "rgb(130, 130, 130)");
+  stopButton.style("border-style", "none");
+  stopButton.style("border-radius", "2px");
+  stopButton.mouseClicked(() => {
+    reset(srcIndex);
+    playing = false;
+    playButton.elt.innerHTML = '\u23f5';
+  })
 }
 
 function draw() {
+  // Note: transformations are cumulative and they don't automatically reset between draw calls.
+  // This is part of what makes the behavior so interesting and unpredictable.
+  
+  if (srcIndex === null) {
+    return;
+  }
+
+  let src = srcs[srcIndex];
+
   // speed = speedSlider.value();
-  if (frameCount % 600 === 0) {
-    fill(31, 31, 31, 5);
+  if (currFrameCount > 60 * 60) {
+    return;
+  }
+  if (currFrameCount % 600 === 0 && currFrameCount > 1) {
+    fill(31, 31, 31, 4);
     rect(0, 0, width, height)
     filter(BLUR, 1);
   }
+
   noStroke();
 
-  let frameFactor = (speed / 1500) * frameCount;
+  let frameFactor = (speed / 1500) * currFrameCount;
 
   translate(width/2, height/2);
   let col = [50, 50, 50, 255];
@@ -34,7 +129,7 @@ function draw() {
     let originX = drawingContext.getTransform().e - width/2;
     let originY = drawingContext.getTransform().f - height/2;
 
-    if (originX > width || originX < 0 || originY > height || originY < 0) {
+    if (originX > width - margin || originX < margin || originY > height - margin || originY < margin) {
       translate(width/2 - originX, height/2 - originY);
     }
 
@@ -138,7 +233,7 @@ function draw() {
         col[3] -= 10;
         break;
       case 'STORE_NAME':
-        colStep += 0.0005 * frameCount;
+        colStep += 0.0005 * currFrameCount;
         // colStep += 1;
         break;
       case 'IMPORT_NAME':
@@ -159,4 +254,13 @@ function draw() {
         break;
     }
   }
+  if (playing)
+    currFrameCount += 1;
+}
+
+function reset(ind) {
+  srcIndex = ind;
+  clear();
+  // drawLineNumbers();
+  currFrameCount = 0;
 }
