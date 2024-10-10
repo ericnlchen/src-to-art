@@ -94,9 +94,9 @@ function setup() {
 }
 
 function draw() {
-  // Note: transformations are cumulative and they don't automatically reset between draw calls.
-  // This is part of what makes the behavior so interesting and unpredictable.
-  
+  // Note: I think transformations are cumulative and they don't automatically reset between draw calls.
+  // Makes the behavior interesting and unpredictable.
+
   if (srcIndex === null) {
     return;
   }

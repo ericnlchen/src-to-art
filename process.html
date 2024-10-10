@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VCS</title>
+    <link rel="stylesheet" href="process.css">
+</head>
+<body>
+    <div class="above-bar"></div>
+    <div id="vscode">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-icon active"></div>
+            <div class="sidebar-icon"></div>
+            <div class="sidebar-icon"></div>
+        </div>
+
+        <!-- Main Area -->
+        <div class="main">
+            <!-- Fake Editor Area -->
+            <div class="home-button"><a href="./app.html">Home</a></div>
+            <div class="editor" id="editor">
+                <div id="content">
+                    <h1>
+                        The Process
+                    </h1>
+                    <h2>
+                        Initial Idea
+                    </h2>
+                    <p>
+                        A variety of existing systems empower us to transform code into drawings. <a href="https://p5js.org/">P5.js</a>, <a href="https://processing.org/">Processing</a>, and <a href="https://openframeworks.cc/">openFrameworks</a> let us
+                        write programs to manipulate shapes, colors, and forms. These tools are intended to enable visual creation. But rich complexity exists within code, regardless of intention. <strong>What if we could build a system to map arbitrary works of code to visual representations? My goal was to reinterpret utility as wonder.</strong>
+                        
+                    </p>
+                    <h2>
+                        Mapping Tokens to Shapes
+                    </h2>
+                    <p>
+                        Initially, I thought of L-systems. Maybe each semantic token of a program could be interpreted as a drawing instruction. I considered "turtle" instructions like <em>draw forward</em> or <em>turn right</em> but guessed that this approach might be visually messy without capturing the inherent structure in the code. Next I imagined mapping tokens to primitive shapes, with parameters governing properties of the shapes. For example, a for-loop with 6 iterations could map to 6 consecutive circles.
+                    </p>
+                    <div class="center-container">
+                        <img src="./images/process-0.png">
+                    </div>
+                    <p>
+                        Some concerns about this approach...
+                    </p>
+                    <ul>
+                        <li><strong>Composition</strong>&mdash;how can I place the primitives in a visually interesting way that reflects something about the code?</li>
+                        <li><strong>Primitives</strong>&mdash;just using simple shapes could be pretty limiting.</li>
+                    </ul>
+                    <h2>
+                        Using Text as an Element
+                    </h2>
+                    <p>
+                        Inspired by Travess's guidance towards <a href="https://en.wikipedia.org/wiki/Concrete_poetry">concrete poetry</a>, I began experimenting with a pretty different idea: <strong>using the text of the code itself to create visual elements</strong>. A blurring and thresholding procedure transformed the example text <code>"random(100, 256)"</code> into these forms:
+                    </p>
+                    <div class="center-container">
+                        <img src="./images/form-grid.png" id="forms-img">
+                    </div>
+                    <p>
+                        Another interesting discovery was the unexpected appearance of all kinds of cartoony faces!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

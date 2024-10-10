@@ -8,15 +8,10 @@ display images instead of source code.
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
     font-family: 'Arial', monospace;
+    color: rgb(205, 205, 205);
     font-size: 0.95rem;
-    overscroll-behavior: none;
-    overflow: hidden;
-}
-
-#top-headings {
-    margin-bottom: 40px;
+    background-color: rgb(31, 31, 31);
 }
 
 h1 {
@@ -34,6 +29,7 @@ h2 {
     font-size: 1.8rem;
     letter-spacing: -0.5px;
     margin: 0px;
+    margin-left: 50px;
     padding: 0px;
 }
 
@@ -48,28 +44,6 @@ ul.no-bullet {
     list-style: none;
 }
 
-ul {
-    padding-left: 25px;
-}
-
-ul.line-num {
-    color: rgb(98, 107, 117);
-    font-family: 'Monaco', monospace;
-    font-size: 1.2rem;
-    width: 50px;
-    padding-left:0px;
-    overflow: hidden;
-}
-
-
-ul.line-num>li {
-    display: flex;
-    margin-bottom: 9px;
-    justify-content: right;
-    overflow: hidden;
-
-}
-
 a {
     color: rgb(101, 166, 242);
 }
@@ -82,8 +56,6 @@ li.blue {
 
 #vscode {
     display: flex;
-    height: 96.5vh;
-    background-color: rgb(31, 31, 31);
 }
 
 /* Sidebar */
@@ -114,13 +86,14 @@ li.blue {
     flex: 1;
     display: flex;
     flex-direction: column;
+    margin-right: 70px;
 }
 
 /* Tab Bar */
-.tab-bar {
+/* .tab-bar {
     display: flex;
     background-color: rgb(24, 24, 24);
-}
+} */
 
 .above-bar {
     background-color: rgb(24, 24, 24);
@@ -129,7 +102,7 @@ li.blue {
     height: 30px;
 }
 
-.tab {
+/* .tab {
     padding: 9px 30px;
     color: #ccc;
     cursor: pointer;
@@ -142,42 +115,28 @@ li.blue {
     background-color: #1e1e1e;
     color: white;
     border-bottom: none;
-}
+} */
 
 /* Editor */
 .editor {
-    flex: 1;
-    position: relative;
-}
-
-.content {
-    display: none;
-    overflow: hidden;
-    overscroll-behavior: none;
-}
-
-.content.active {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     border-radius: 5px;
 }
 
-#welcome-message {
-    margin-top: 100px;
-    margin-left: 90px;
+#content {
+    margin-top: 50px;
 }
 
-#welcome-tab {
-    font-style: italic;
-}
-
-div.sketch-holder {
+/* div.sketch-holder {
     width: 96.5vw;
-}
+} */
 
 .home-button {
     font-size: 16px;
@@ -185,6 +144,38 @@ div.sketch-holder {
 
 p {
     color: rgb(205, 205, 205);
-    margin-left: 25px;
-    font-size: 16px;
+    margin-left: 100px;
+    margin-bottom: 1.3em;
+    font-size: 1.125em;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+ul {
+    font-size: 1.125em;
+    line-height: 1.6;
+    margin-left: 100px;
+}
+
+strong {
+    font-weight: bold;
+    color: rgb(197, 148, 124);
+}
+
+div.center-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    /* background-color: #f4f4f4; */
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+}
+
+#forms-img {
+    border-style: solid;
+    border-color: #444444;
 }
