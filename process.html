@@ -40,7 +40,7 @@
                         Initially, I thought of L-systems. Maybe each semantic token of a program could be interpreted as a drawing instruction. I considered "turtle" instructions like <em>draw forward</em> or <em>turn right</em> but guessed that this approach might be visually messy without capturing the inherent structure in the code. Next I imagined mapping tokens to primitive shapes, with parameters governing properties of the shapes. For example, a for-loop with 6 iterations could map to 6 consecutive circles.
                     </p>
                     <div class="center-container">
-                        <img src="./images/process-0.png">
+                        <img src="./images/process-0.png" id="process-0-img">
                     </div>
                     <p>
                         Some concerns about this approach...
@@ -53,13 +53,60 @@
                         Using Text as an Element
                     </h2>
                     <p>
-                        Inspired by Travess's guidance towards <a href="https://en.wikipedia.org/wiki/Concrete_poetry">concrete poetry</a>, I began experimenting with a pretty different idea: <strong>using the text of the code itself to create visual elements</strong>. A blurring and thresholding procedure transformed the example text <code>"random(100, 256)"</code> into these forms:
+                        Inspired by Travess's guidance towards <a href="https://en.wikipedia.org/wiki/Concrete_poetry">concrete poetry</a>, I began experimenting with a pretty different approach: <strong>using the text of the code itself to build visual elements</strong>. A blurring and thresholding procedure transformed the example text <code>"random(100, 256)"</code> into these forms:
                     </p>
                     <div class="center-container">
                         <img src="./images/form-grid.png" id="forms-img">
                     </div>
                     <p>
-                        Another interesting discovery was the unexpected appearance of all kinds of cartoony faces!
+                        Another interesting discovery was the unexpected appearance of all kinds of cartoony faces! These were generated from a variety of test words:
+                    </p>
+                    <div class="center-container">
+                        <img src="./images/face-grid.png" id="faces-img">
+                    </div>
+                    <p>
+                        Composition was still a struggle with this approach. Here is an initial attempts where I took entire source code files, created visual forms from each textual token by blurring and thresholding, then composited them together. The placement of the forms is random. The colors are taken from Visual Studio Code. Here is a Python file:
+                    </p>
+                    <div class="center-container">
+                        <img src="./textual-experiments/results/first-result.png" id="textual-result">
+                    </div>
+                    <p>
+                        I wasn't compelled to continue with these experiments because it seemed hard to really capture the inherent structure of the code in this way. I considered composing the elements in structured ways depending on other parameters of the code, but didn't make much progress.
+                    </p>
+                    <h2>Using Assembly Instructions</h2>
+                    <p>
+                        I went back to brainstorming. I considered a key issue: the structure hidden in code isn't easily deducible without dynamic analysis (ie. running the code and seeing what happens). Python source code is analagous to the production rules of an L-system rather the generated L-string that gets visually interpreted. As a result, attempting to find structure in high-level source code is pretty hard. <strong>It would be easier to find structure in a more "unrolled" or "inlined" version of the code. This led me to consider assembly languages.</strong>
+                    </p>
+                    <p>
+                        To continue with the Python theme, I assigned various pixel-based operations to the instructions of Python bytecode&mdash;for example, the <code>LOAD_CONST</code> instruction would move vertically and place a pixel, the <code>CALL_FUNCTION</code> instruction would change the current drawing color. There were also instructions to change pixel size, return to saved location, etc. Instructions were assigned without much rationale besides attempting to achieve a visually intriguing result on test cases. Here is the result of a Python file implementing the Breakout game:
+                    </p>
+                    <div class="center-container">
+                        <img src="./images/brick-break.png" class="pixel-result">
+                    </div>
+                    <p>
+                        Here is the result for a puzzle solver:
+                    </p>
+                    <div class="center-container">
+                        <img src="./images/puzzle-solver.png" class="pixel-result">
+                    </div>
+                    <p>
+                        And this one was created from a blackjack simulator:
+                    </p>
+                    <div class="center-container">
+                        <img src="./images/blackjack.png" class="pixel-result">
+                    </div>
+                    <p>
+                        These results varied greatly from program to program which showed that the process had some merit. They also revealed some degree of visual complexity. The downside was that they were pretty nonsensical and difficult to interpret. I also experimented with animated versions where the rules of interpretation change on every frame:
+                    </p>
+                    <div class="center-container">
+                        <img src="./images/animated-pixels.gif" class="anim-result">
+                    </div>
+                    <div class="center-container">
+                        <img src="./images/brick-anim.gif" class="anim-result">
+                    </div>
+                    <h2>Towards Better Interpretability</h2>
+                    <p>
+                        I still wanted to find a method that could be simultaneously visually interesting and (at least slightly) interpretable.
                     </p>
                 </div>
             </div>
