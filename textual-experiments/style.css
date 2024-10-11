@@ -13,3 +13,14 @@ canvas {
   display: block;
   border-style: solid;
 }
+
+.doubled::before {
+  content: "Visual"; /* Same content as the title */
+  position: absolute;
+  top: 5px; /* Adjust vertical offset for the "shadow" effect */
+  left: 5px; /* Adjust horizontal offset for the "shadow" effect */
+}
+
+.doubled-orig {
+  position: relative;
+}
